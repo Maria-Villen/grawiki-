@@ -1,9 +1,17 @@
 {
-  "name": "root",
+  "name": "Grawiki",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "start:front": "lerna run --scope=@grawiki/frontend start",
+    "dev:front": "lerna run --scope=@grawiki/frontend dev",
+    "start:back": "lerna run --scope=@grawiki/backend start",
+    "dev:back": "lerna run --scope=@grawiki/backend dev",
+    "start:both": "lerna run --parallel start",
+    "dev:both": "lerna run --parallel dev"
+  },
   "devDependencies": {
     "lerna": "^6.6.1"
   }
