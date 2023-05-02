@@ -9,8 +9,8 @@
     "dev:front": "lerna run --scope=@grawiki/frontend dev",
     "start:back": "lerna run --scope=@grawiki/backend start",
     "dev:back": "lerna run --scope=@grawiki/backend dev",
-    "start:both": "lerna run --parallel start",
-    "dev:both": "lerna run --parallel dev"
+    "start:all": "lerna run --parallel start",
+    "dev:all": "lerna run --parallel dev"
   },
   "devDependencies": {
     "lerna": "^6.6.1"
