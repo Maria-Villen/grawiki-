@@ -9,5 +9,5 @@ export const services = new ServiceCollection();
 //Users
 
 services.register<IUserRepository>("UserRepository", UserRepository);
-services.register("CreateUserHandler", CreateUserHandler);
-services.register("CreateUserController", CreateUserController);
+services.register("CreateUserHandler", CreateUserHandler, ["UserRepository"]);
+services.register("CreateUserController", CreateUserController, ["CreateUserHandler"]);

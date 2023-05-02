@@ -11,12 +11,12 @@ type CreatePostRequest = Request & {
 };
 
 export class CreateUserController implements IController {
-    constructor(private createUserHandler: CreateUserHandler) {}
+    constructor(private CreateUserHandler: CreateUserHandler) {}
 
     async run(req: CreatePostRequest, res: Response, next: NextFunction): Promise<void> {
         const { nickname, password } = req.body;
 
-        this.createUserHandler
+        this.CreateUserHandler
             .handle({ nickname, password })
             .then((result) => {
                 res.status(httpStatus.CREATED).send(result);
