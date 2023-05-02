@@ -16,5 +16,5 @@ export function ValidateReqSchema(req: Request, res: Response, next: NextFunctio
         .map((err: ValidationError) => ({ [err.type]: err.msg }));
 
     const response = new ResponseBase(false, "one or more validation errors was found", errors);
-    return res.status(httpStatus.UNPROCESSABLE_ENTITY).json({ response });
+    return res.status(httpStatus.UNPROCESSABLE_ENTITY).json(response );
 }
