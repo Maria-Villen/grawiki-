@@ -9,7 +9,7 @@ export class UserNickname extends StringValueObject {
   
     private ensureLengthIsAtLeast6Characters(value: string) {
       if (value.length < 8) {
-        throw new Error("El nickname debe tener al menos 6 caracteres.");
+        throw new Error("El nickname debe tener al menos 8 caracteres.");
       }
     }
   }

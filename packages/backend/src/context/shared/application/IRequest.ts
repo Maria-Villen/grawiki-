@@ -1,1 +1,1 @@
-export interface IRequest<T>{}
+export interface IRequest{}

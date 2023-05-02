@@ -1,13 +1,16 @@
 import { EntityBase } from "../domain/EntityBase";
 import { IRepository } from "../domain/IRepository";
+import "reflect-metadata";
+import {injectable} from "inversify";
 
-
+@injectable()
 export class MemoryRepository<T extends EntityBase> implements IRepository<T> {
 
     protected entities: T[] = [];
 
     async create(entity: T): Promise<void> {
         this.entities.push(entity);
+        console.log(this.entities);
     }
 
     async update(entity: T): Promise<void> {

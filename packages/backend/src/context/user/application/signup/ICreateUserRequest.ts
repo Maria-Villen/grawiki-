@@ -3,6 +3,7 @@ import { ResponseBase } from "src/context/shared/application/ResponseBase";
 
 
 export interface ICreateUserRequest extends IRequest<Promise<ResponseBase<void>>>{
+    email: string;
     nickname: string;
     password: string;
 }
