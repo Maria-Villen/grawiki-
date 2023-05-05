@@ -1,0 +1,26 @@
+.wrapp {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+.wrappLeft {
+  width: 140px;
+  background-color: #fff;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.wrappContent {
+  margin-left: 140px;
+  padding: 20px;
+  background-color: #333;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

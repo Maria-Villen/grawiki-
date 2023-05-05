@@ -1,0 +1,60 @@
+.signup {
+  width: 440px;
+  height: 582px;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 50px 60px;
+  border-radius: 10px;
+  background-color: #fff;
+  position: absolute;
+}
+.wrappLogo {
+  width: 128px;
+  height: 101px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+.logo {
+  width: 44px;
+  height: 60px;
+  background-color: crimson;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.logoText {
+  width: 128px;
+  height: 18px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.23em;
+  color: #000000;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.slogan {
+  width: 128px;
+  height: 18px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #000000;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
