@@ -1,5 +1,5 @@
 {
-  "name": "Grawiki",
+  "name": "grawiki",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -10,7 +10,9 @@
     "start:back": "lerna run --scope=@grawiki/backend start",
     "dev:back": "lerna run --scope=@grawiki/backend dev",
     "start:all": "lerna run --parallel start",
-    "dev:all": "lerna run --parallel dev"
+    "dev:all": "lerna run --parallel dev",
+    "storybook": "lerna run --scope=@grawiki/frontend storybook",
+    "chromatic": "lerna run --scope=@grawiki/frontend chromatic"
   },
   "devDependencies": {
     "lerna": "^6.6.1"
