@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/react";
+import { withRouter } from "storybook-addon-react-router-v6";
 
 const preview: Preview = {
   parameters: {
@@ -9,6 +10,7 @@ const preview: Preview = {
         { name: "dark", value: "#1e1e1e" },
       ],
     },
+    decorators: [withRouter],
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
