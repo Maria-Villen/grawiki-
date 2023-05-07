@@ -1,0 +1,38 @@
+@use "./variables" as *
+
+* 
+  margin: 0
+  font-family: $typo, sans-serif
+  box-sizing: border-box
+  
+body
+  position: relative
+  margin: 0
+  scrollbar-width: none
+  font-size: 16px
+  @include fontStyles("regular")
+  @include mq("small")
+    font-size: 14px
+
+#root 
+  /* display: flex
+   flex-grow: 1*/
+  min-height: 100vh
+
+h1 
+  20px
+
+h2
+  18px
+
+h3
+  16px
+
+button
+  18px 
+    
+.subtitle
+  12px
+
+.slogan
+  10px
