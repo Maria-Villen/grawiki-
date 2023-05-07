@@ -1,0 +1,10 @@
+<svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="State=Hidden">
+<path id="Vector" d="M1 7.54545C1 7.54545 4.27273 1 10 1C15.7273 1 19 7.54545 19 7.54545" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M1 7.54541C1 7.54541 4.27273 14.0909 10 14.0909C15.7273 14.0909 19 7.54541 19 7.54541" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse id="Ellipse 10" cx="10" cy="8" rx="8" ry="6" fill="currentColor"/>
+<path id="Vector_3" d="M9.99996 9.99991C11.3556 9.99991 12.4545 8.90097 12.4545 7.54537C12.4545 6.18976 11.3556 5.09082 9.99996 5.09082C8.64435 5.09082 7.54541 6.18976 7.54541 7.54537C7.54541 8.90097 8.64435 9.99991 9.99996 9.99991Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle id="Ellipse 9" cx="10" cy="7.5" r="1.5" fill="white"/>
+<path id="Vector_4" d="M3 1L18 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
