@@ -3,7 +3,7 @@ import { MenuIcon, ArrowDown, ArrowUp } from "../../../assets";
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 
 export default {
-  title: "Atoms/Buttons/ToggleButton",
+  title: "Buttons/ToggleButton",
   component: ToggleButton,
   tags: ["autodocs"],
 };
