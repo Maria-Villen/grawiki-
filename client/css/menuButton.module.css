@@ -2,17 +2,22 @@
 /* fontStyles */
 /* Break Points */
 .menuButton {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
   background: #0066FF;
   text-decoration: none;
   color: white;
   border-radius: 0.95rem;
   border: none;
-  padding: 1em 2em;
-  font-size: 0.8rem;
+  font-size: 1rem;
   align-self: flex-end;
-  margin: 2rem;
   max-width: 100%;
+  width: 163px;
+  height: 65px;
 }
 .menuButton:hover {
   background: #01193D;
@@ -20,21 +25,27 @@
 @media screen and (min-width: 562px) {
   .menuButton {
     flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1em 3em;
+    padding: 0;
     gap: 5px;
     align-self: center;
-    margin: 1rem auto;
-    margin-top: 3rem;
+    width: 117px;
+    height: 78px;
   }
 }
 .menuButton img {
-  height: 2rem;
-  width: 2rem;
+  height: 24px;
+  width: 24px;
   filter: invert(1);
 }
 .menuButton img, .menuButton span {
   vertical-align: middle;
+}
+
+.fluid {
+  width: 100%;
+}
+@media screen and (min-width: 562px) {
+  .fluid {
+    width: 100%;
+  }
 }/*# sourceMappingURL=menuButton.module.css.map */

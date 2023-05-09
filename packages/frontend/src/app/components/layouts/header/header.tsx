@@ -18,7 +18,14 @@ const Header: FC = () => {
         <ul className={classes.header_navbar_itemlist}>
           {menuItems.map(({ id, icon, text, link }: IMenuItem) => {
             return (
-              <MenuListItem key={id} icon={icon} text={text} link={link} />
+              <MenuListItem
+                className={classes.header_navbar_item}
+                key={id}
+                icon={icon}
+                text={text}
+                link={link}
+                fluid
+              />
             );
           })}
         </ul>

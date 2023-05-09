@@ -15,11 +15,22 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
+
+export const BankButtonFluid: Story = {
+  args: {
+    icon: Bank,
+    link: "/",
+    text: "Button",
+    fluid: true,
+  },
+};
+
 export const BankButton: Story = {
   args: {
     icon: Bank,
     link: "/",
     text: "Button",
+    fluid: false,
   },
 };
 
@@ -28,6 +39,7 @@ export const ToyButton: Story = {
     icon: Toys,
     link: "/",
     text: "Button",
+    fluid: false,
   },
 };
 
@@ -36,6 +48,7 @@ export const HealthButton: Story = {
     icon: Health,
     link: "/",
     text: "Button",
+    fluid: false,
   },
 };
 
@@ -44,5 +57,6 @@ export const GovernmentButton: Story = {
     icon: Government,
     link: "/",
     text: "Button",
+    fluid: false,
   },
 };

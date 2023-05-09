@@ -17,6 +17,16 @@ export const EditButton: Story = {
   args: {
     icon: Edit,
     link: "/create",
-    text: "Create",
+    text: "Crear",
+    fluid: false,
+  },
+};
+
+export const EditFluidButton: Story = {
+  args: {
+    icon: Edit,
+    link: "/create",
+    text: "Crear",
+    fluid: true,
   },
 };

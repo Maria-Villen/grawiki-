@@ -1,34 +1,43 @@
 @use "../../../styles/variables" as *
     
 .menuButton
-  display: inline-block
+  display: flex
+  flex-direction: row
+  flex-shrink: 0
+  justify-content: center
+  align-items: center
+  align-items: center
   background: $primary-blue
   text-decoration: none
   color: white
   border-radius: 0.95rem
   border: none
-  padding: 1em 2em
-  font-size: 0.8rem
+  font-size: 1rem
   align-self: flex-end
-  margin: 2rem
   max-width: 100%
+  width: 163px
+  height: 65px
   &:hover
     background: $primary-black
 
   @include mq("small") 
     flex-direction: column
-    display: flex
-    justify-content: center
-    align-items: center
-    padding: 1em 3em
+    padding: 0
     gap: 5px
     align-self: center
-    margin: 1rem auto
-    margin-top: 3rem
+    width: 117px
+    height: 78px
 
   img 
-    height: 2rem
-    width: 2rem
+    height: 24px
+    width: 24px
     filter: invert(1)
+
   img, span
     vertical-align: middle
+
+.fluid
+  width: 100%
+  @include mq("small")
+    width: 100%
+  

@@ -7,17 +7,9 @@
   justify-content: right;
   align-items: center;
   gap: 1rem;
-  padding: 1em;
-}
-.menulist:hover {
-  background: #0066FF;
-  color: white;
-}
-.menulist:hover .text {
-  color: white;
-}
-.menulist:hover .icon {
-  filter: invert(1);
+  font-size: 1rem;
+  line-height: 1.188rem;
+  width: 100%;
 }
 @media screen and (min-width: 562px) {
   .menulist {
@@ -28,13 +20,42 @@
   color: black;
   text-decoration: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   gap: 0.5rem;
+  width: 127px;
+  height: 32px;
+}
+.menulist_link:hover {
+  background: #0066FF;
+  color: white;
+}
+.menulist_link:hover .text {
+  color: white;
+}
+.menulist_link:hover .icon {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
 }
 @media screen and (min-width: 562px) {
   .menulist_link {
     flex-direction: column-reverse;
     justify-content: center;
+    width: 128px;
+    height: 87px;
+  }
+}
+.menulist.fluid {
+  padding: 0;
+}
+.menulist.fluid .menulist_link {
+  width: 100%;
+  flex-grow: 1;
+}
+@media screen and (min-width: 562px) {
+  .menulist.fluid .menulist_link {
+    width: 100%;
+    flex-grow: 1;
   }
 }/*# sourceMappingURL=menuListItem.module.css.map */

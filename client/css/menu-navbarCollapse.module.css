@@ -20,6 +20,10 @@
   width: 1rem;
   margin: 2.5rem 0rem 2.5rem 2rem;
 }
+.navbar_btnClose img {
+  height: 100%;
+  width: 100%;
+}
 @media screen and (min-width: 562px) {
   .navbar_btnClose {
     display: none;

@@ -6,16 +6,23 @@ interface IMenuListItemProps {
   link: string;
   icon: string;
   text: string;
+  fluid?: boolean;
+  className?: string;
 }
 
 const MenuListItem: FC<IMenuListItemProps> = ({
   link,
   icon,
   text,
+  fluid,
+  className,
   ...props
 }) => {
   return (
-    <li className={classes.menulist} {...props}>
+    <li
+      className={`${classes.menulist} ${fluid && classes.fluid} ${className}`}
+      {...props}
+    >
       <Link className={classes.menulist_link} to={link}>
         <span className={classes.text}>{text}</span>
         <img className={classes.icon} src={icon} />
