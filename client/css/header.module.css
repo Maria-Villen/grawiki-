@@ -1,0 +1,59 @@
+/* COLORS */
+/* fontStyles */
+/* Break Points */
+.header {
+  max-height: 88px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+}
+@media screen and (min-width: 562px) {
+  .header {
+    max-width: 128px;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    display: inline-block;
+    max-height: initial;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+}
+.header_logo_mobile {
+  max-height: 88px;
+}
+@media screen and (min-width: 562px) {
+  .header_logo_mobile {
+    display: none;
+  }
+}
+.header_logo_desktop {
+  display: none;
+}
+@media screen and (min-width: 562px) {
+  .header_logo_desktop {
+    display: block;
+  }
+  .header_logo_desktop img {
+    padding: 1em;
+  }
+}
+.header_navbar {
+  background: inherit;
+  max-width: 100%;
+  height: 100%;
+}
+.header_navbar_itemlist {
+  margin: 1rem;
+}
+@media screen and (min-width: 562px) {
+  .header_navbar_itemlist {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}/*# sourceMappingURL=header.module.css.map */

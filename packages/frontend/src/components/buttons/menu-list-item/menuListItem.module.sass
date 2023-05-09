@@ -1,0 +1,32 @@
+@use "../../../styles/variables" as *
+
+.menulist 
+  text-decoration: none
+  display: flex
+  justify-content: right
+  align-items: center
+  gap: 1rem
+  padding: 1em
+  &:hover
+    background: $primary-blue
+    color: white
+    & .text
+      color: white
+    & .icon
+      filter: invert(1)
+
+  @include mq("small")
+    justify-content: center
+  
+
+  &_link
+    color: black
+    text-decoration: none
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 0.5rem
+    
+    @include mq("small")
+      flex-direction: column-reverse
+      justify-content: center

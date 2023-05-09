@@ -1,0 +1,27 @@
+@use "../../../../styles/variables" as *
+  
+.footerLinks
+  display: none
+
+  @include mq("medium")
+    display: initial
+
+  &_title
+    font-weight: bolder
+    line-height: 1.5
+
+  &_list
+    padding: 0
+    list-style: none
+    line-height: 1.5
+
+  &_item
+    
+    & a
+      color: inherit
+      text-decoration: none
+      display: flex
+      flex-wrap: none
+      align-items: center
+    & img
+      padding: 4px

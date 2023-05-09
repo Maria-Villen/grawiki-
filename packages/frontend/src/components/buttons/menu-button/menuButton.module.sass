@@ -1,0 +1,34 @@
+@use "../../../styles/variables" as *
+    
+.menuButton
+  display: inline-block
+  background: $primary-blue
+  text-decoration: none
+  color: white
+  border-radius: 0.95rem
+  border: none
+  padding: 1em 2em
+  font-size: 0.8rem
+  align-self: flex-end
+  margin: 2rem
+  max-width: 100%
+  &:hover
+    background: $primary-black
+
+  @include mq("small") 
+    flex-direction: column
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 1em 3em
+    gap: 5px
+    align-self: center
+    margin: 1rem auto
+    margin-top: 3rem
+
+  img 
+    height: 2rem
+    width: 2rem
+    filter: invert(1)
+  img, span
+    vertical-align: middle

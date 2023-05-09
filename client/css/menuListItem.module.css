@@ -1,0 +1,40 @@
+/* COLORS */
+/* fontStyles */
+/* Break Points */
+.menulist {
+  text-decoration: none;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 1rem;
+  padding: 1em;
+}
+.menulist:hover {
+  background: #0066FF;
+  color: white;
+}
+.menulist:hover .text {
+  color: white;
+}
+.menulist:hover .icon {
+  filter: invert(1);
+}
+@media screen and (min-width: 562px) {
+  .menulist {
+    justify-content: center;
+  }
+}
+.menulist_link {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media screen and (min-width: 562px) {
+  .menulist_link {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=menuListItem.module.css.map */

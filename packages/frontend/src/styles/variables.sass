@@ -20,7 +20,7 @@ $fontWeight: (black: 800,bold: 700,regular: 400,thin: 300)
 
 
 /* fontStyles */
-@mixin fontStyles($fs-styles, $fs-style: $fontWeight) 
+@mixin fontStyles($fs-style, $fs-styles: $fontWeight) 
   @if map-has-key($fs-styles, $fs-style)
     $fs-style: map-get($fs-styles, $fs-style)
     color-weight: $fs-style

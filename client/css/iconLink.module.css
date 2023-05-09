@@ -1,0 +1,18 @@
+/* COLORS */
+/* fontStyles */
+/* Break Points */
+.iconLink {
+  padding: 0;
+  line-height: 1rem;
+}
+.iconLink span {
+  padding-right: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .iconLink span {
+    font-weight: bolder;
+  }
+}
+.iconLink img {
+  padding: 5px;
+}/*# sourceMappingURL=iconLink.module.css.map */

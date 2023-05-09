@@ -1,0 +1,18 @@
+/* COLORS */
+/* fontStyles */
+/* Break Points */
+.container {
+  width: 100%;
+  padding: 1rem;
+  max-width: 1120px;
+  margin: 0 auto;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 90%;
+    border-radius: 1rem;
+  }
+}/*# sourceMappingURL=footer.module.css.map */

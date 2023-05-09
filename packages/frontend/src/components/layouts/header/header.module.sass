@@ -1,0 +1,48 @@
+@use "../../../styles/variables" as *
+
+.header
+  max-height: 88px
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background: white
+  @include mq("small")
+    max-width: 128px 
+    border-top-right-radius: 1rem
+    border-bottom-right-radius: 1rem
+    display: inline-block
+    max-height: initial
+    position: fixed
+    top:0
+    left: 0
+    height: 100vh
+  
+  &_logo_mobile
+    max-height: 88px
+    @include mq("small")
+      display: none
+
+  &_logo_desktop
+    display: none
+    @include mq("small")
+      display: block
+      img
+        padding: 1em
+
+
+  &_navbar
+    background: inherit
+    max-width: 100%
+    height: 100%
+
+    &_itemlist
+      margin: 1rem
+
+      @include mq("small") 
+        padding: 0
+        display: flex
+        flex-direction: column
+        gap: 1.5rem
+
+     

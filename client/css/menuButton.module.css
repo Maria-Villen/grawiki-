@@ -1,0 +1,40 @@
+/* COLORS */
+/* fontStyles */
+/* Break Points */
+.menuButton {
+  display: inline-block;
+  background: #0066FF;
+  text-decoration: none;
+  color: white;
+  border-radius: 0.95rem;
+  border: none;
+  padding: 1em 2em;
+  font-size: 0.8rem;
+  align-self: flex-end;
+  margin: 2rem;
+  max-width: 100%;
+}
+.menuButton:hover {
+  background: #01193D;
+}
+@media screen and (min-width: 562px) {
+  .menuButton {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 3em;
+    gap: 5px;
+    align-self: center;
+    margin: 1rem auto;
+    margin-top: 3rem;
+  }
+}
+.menuButton img {
+  height: 2rem;
+  width: 2rem;
+  filter: invert(1);
+}
+.menuButton img, .menuButton span {
+  vertical-align: middle;
+}/*# sourceMappingURL=menuButton.module.css.map */
