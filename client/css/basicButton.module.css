@@ -1,0 +1,87 @@
+/* COLORS */
+/* fontStyles */
+/* Break Points */
+.button {
+  border-radius: 10px;
+  display: flex;
+  border: none;
+  padding: 0.4rem;
+  min-height: 27px;
+  min-width: 117px;
+  font-size: 1rem;
+  transition: background 200ms ease-in-out;
+  justify-content: center;
+  align-items: center;
+}
+.button img {
+  padding-right: 10px;
+}
+
+.default {
+  background: white;
+  color: black;
+}
+.default:hover {
+  background: #D9D9D9;
+}
+
+.primary img, .secondary img {
+  filter: invert(1);
+}
+
+.primary {
+  background: #0066FF;
+  color: white;
+  transition: background 200ms ease-in-out;
+}
+.primary:hover {
+  background: #06367D;
+}
+
+.secondary {
+  background: #D84B4B;
+  color: white;
+  transition: background 200ms ease-in-out;
+}
+.secondary:hover {
+  background: #FF3434;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+.reverse img {
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+.small {
+  width: 117px;
+  height: 27px;
+  font-size: 14px;
+  line-height: 28px;
+  border-radius: 5px;
+}
+
+.medium {
+  width: 237px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.large {
+  width: 280px;
+  height: 56px;
+  font-size: 18px;
+}
+
+.xlarge {
+  width: 320px;
+  height: 40px;
+  font-size: 18px;
+}
+
+.fluid {
+  width: 100%;
+  flex-grow: 1;
+}/*# sourceMappingURL=basicButton.module.css.map */
