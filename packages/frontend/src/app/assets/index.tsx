@@ -25,3 +25,11 @@ export { default as Facebook } from "./icons/Facebook.svg";
 export { default as Instagram } from "./icons/Instagram.svg";
 export { default as Twitter } from "./icons/Twitter.svg";
 export { default as Copyright } from "./icons/copyright.svg";
+
+/** Navitation Icons */
+export { default as Search } from "./icons/search.svg";
+
+/**Login Icons */
+export { default as PassOpen } from "./icons/Passopen.svg";
+export { default as PassHidden } from "./icons/PassHidden.svg";
+export { default as Exclamation } from "./icons/exclamation.svg";
