@@ -9,6 +9,9 @@ const meta = {
   component: MenuListItem,
   tags: ["autodocs"],
   decorators: [withRouter],
+  parameters: {
+    backgrounds: { default: "ligth" },
+  },
 } satisfies Meta<typeof MenuListItem>;
 
 export default meta;

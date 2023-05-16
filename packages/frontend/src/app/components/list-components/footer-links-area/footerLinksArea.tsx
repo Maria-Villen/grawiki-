@@ -1,37 +1,32 @@
-import { Link } from "react-router-dom";
-import classes from "./footerLinksList.module.sass";
+import classes from "./footerLinksArea.module.sass";
 import { IFooterLink } from "../../layouts/footer/footerConfig";
 import { FC } from "react";
+import { BasicListWithLink } from "../..";
 
 /**
  * @Component
  * @Description A section that contains a title and various links to use with or without icon
  */
 
-interface IFooterLinksListProps {
+interface IFooterLinksAreaProps {
   title: string;
   links: Array<IFooterLink>;
 }
 
-const FooterLinksList: FC<IFooterLinksListProps> = ({
+const FooterLinksArea: FC<IFooterLinksAreaProps> = ({
   title,
   links,
-}: IFooterLinksListProps) => {
+}: IFooterLinksAreaProps) => {
   return (
     <div className={classes.footerLinks}>
       <p className={classes.footerLinks_title}>{title}</p>
       <ul className={classes.footerLinks_list}>
         {links.map(({ id, icon, text, link }: IFooterLink) => (
-          <li key={id} className={classes.footerLinks_item}>
-            <Link to={link}>
-              {icon ? <img src={icon} alt="icon" /> : null}
-              <span>{text}</span>
-            </Link>
-          </li>
+          <BasicListWithLink key={id} link={link} icon={icon} text={text} />
         ))}
       </ul>
     </div>
   );
 };
 
-export default FooterLinksList;
+export default FooterLinksArea;

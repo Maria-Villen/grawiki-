@@ -13,20 +13,16 @@ const FooterMobile = () => {
       <div className={classes.footerMobile_follow}>
         <span>Síguenos en</span>
         <IconLink
-          link="https://instagram.com/"
+          to="https://instagram.com/"
           icon={Instagram}
           altText="Instagram"
         />
         <IconLink
-          link="https://Facebook.com/"
+          to="https://Facebook.com/"
           icon={Facebook}
           altText="Facebook"
         />
-        <IconLink
-          link="https://twitter.com/"
-          icon={Twitter}
-          altText="Twitter"
-        />
+        <IconLink to="https://twitter.com/" icon={Twitter} altText="Twitter" />
       </div>
       <div className={classes.footerMobile_copyright}>
         <img src={Copyright} alt="Copyright" />

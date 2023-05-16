@@ -11,11 +11,13 @@ const meta = {
   decorators: [withRouter],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
-    layout: "fullscreen",
+    padding: "1em",
   },
 } satisfies Meta<typeof Footer>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {},
+};

@@ -1,8 +1,7 @@
-import { FC } from "react";
 import { Link } from "react-router-dom";
 import classes from "./menuListItem.module.sass";
 
-interface IMenuListItemProps {
+interface IMenuListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
   link: string;
   icon: string;
   text: string;
@@ -10,14 +9,14 @@ interface IMenuListItemProps {
   className?: string;
 }
 
-const MenuListItem: FC<IMenuListItemProps> = ({
+const MenuListItem = ({
   link,
   icon,
   text,
   fluid,
   className,
   ...props
-}) => {
+}: IMenuListItemProps) => {
   return (
     <li
       className={`${classes.menulist} ${fluid && classes.fluid} ${className}`}
@@ -32,3 +31,7 @@ const MenuListItem: FC<IMenuListItemProps> = ({
 };
 
 export default MenuListItem;
+
+MenuListItem.defaultProps = {
+  link: "#",
+};

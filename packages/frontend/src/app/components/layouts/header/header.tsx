@@ -1,10 +1,9 @@
-import { FC } from "react";
 import classes from "./header.module.sass";
 import { Logo, MenuListItem, MenuButton, MenuNavbarCollapse } from "../..";
 import { menuItems, IMenuItem } from "./navbarmenuConfig";
 import { Edit } from "../../../assets";
 
-const Header: FC = () => {
+const Header = () => {
   return (
     <div className={classes.header}>
       <div className={classes.header_logo_mobile}>
@@ -14,7 +13,7 @@ const Header: FC = () => {
         <div className={classes.header_logo_desktop}>
           <Logo type="vertical" />
         </div>
-        <MenuButton link="/create" icon={Edit} text="Crear" />
+        <MenuButton to="/create" icon={Edit} text="Crear" />
         <ul className={classes.header_navbar_itemlist}>
           {menuItems.map(({ id, icon, text, link }: IMenuItem) => {
             return (

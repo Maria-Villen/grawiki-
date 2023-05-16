@@ -17,21 +17,21 @@ type Story = StoryObj<typeof meta>;
 export const FacebookIconLink: Story = {
   args: {
     icon: Facebook,
-    link: "https://facebook.com",
+    to: "https://facebook.com",
     altText: "Facebook",
   },
 };
 export const InstagramIconLink: Story = {
   args: {
     icon: Instagram,
-    link: "https://Instagram.com",
+    to: "https://Instagram.com",
     altText: "Instagram",
   },
 };
 export const TwitterIconLink: Story = {
   args: {
     icon: Twitter,
-    link: "https://Twitter.com",
+    to: "https://Twitter.com",
     altText: "Twitter",
   },
 };

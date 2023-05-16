@@ -1,24 +1,24 @@
-import { FC } from "react";
-import { Link } from "react-router-dom";
+import { Link, LinkProps } from "react-router-dom";
 import classes from "./menuButton.module.sass";
 
-interface IMenuButtonProps {
-  link: string;
+interface IMenuButtonProps extends LinkProps {
+  /**
+   * The icon for the button
+   */
   icon: string;
+  /**
+   * The text in the button
+   */
   text: string;
+  /**
+   * An button that can adapt to the parent container
+   */
   fluid?: boolean;
 }
 
-const MenuButton: FC<IMenuButtonProps> = ({
-  link,
-  icon,
-  text,
-  fluid,
-  ...props
-}) => {
+const MenuButton = ({ icon, text, fluid, ...props }: IMenuButtonProps) => {
   return (
     <Link
-      to={link}
       className={`${classes.menuButton} ${fluid && classes.fluid}`}
       {...props}
     >
@@ -31,4 +31,5 @@ export default MenuButton;
 
 MenuButton.defaultProps = {
   fluid: false,
+  to: "#",
 };

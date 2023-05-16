@@ -7,14 +7,29 @@ const meta = {
   title: "Buttons/BasicButton",
   component: BasicButton,
   tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
+  args: {
+    label: "Button",
+    dimension: "medium",
+    fluid: false,
+  },
   argTypes: {
     dimension: {
-      control: "select",
+      control: "radio",
       options: ["small", "medium", "large", "xlarge"],
     },
     category: {
-      control: "select",
+      control: "radio",
       options: ["default", "primary", "secondary"],
+    },
+    reverse: {
+      control: "boolean",
+      if: { arg: "icon" },
+    },
+    onClick: {
+      control: false,
     },
   },
 } satisfies Meta<typeof BasicButton>;
@@ -24,12 +39,7 @@ type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 
-export const Normal: Story = {
-  args: {
-    label: "Button",
-    dimension: "medium",
-  },
-};
+export const Normal: Story = {};
 
 Normal.parameters = {
   design: {
@@ -55,6 +65,9 @@ NormalIcon.parameters = {
 };
 
 export const Primary: Story = {
+  parameters: {
+    backgrounds: { default: "light" },
+  },
   args: {
     label: "Button",
     dimension: "medium",

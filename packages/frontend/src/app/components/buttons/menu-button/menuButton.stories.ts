@@ -14,9 +14,12 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const EditButton: Story = {
+  parameters: {
+    backgrounds: { value: "#fff" },
+  },
   args: {
     icon: Edit,
-    link: "/create",
+    to: "/create",
     text: "Crear",
     fluid: false,
   },
@@ -25,7 +28,7 @@ export const EditButton: Story = {
 export const EditFluidButton: Story = {
   args: {
     icon: Edit,
-    link: "/create",
+    to: "/create",
     text: "Crear",
     fluid: true,
   },

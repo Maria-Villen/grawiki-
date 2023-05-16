@@ -1,17 +1,43 @@
 import classes from "./basicButton.module.sass";
-import { FC, MouseEventHandler } from "react";
+import { MouseEventHandler } from "react";
 
-interface IBasicButton extends React.HTMLProps<HTMLButtonElement> {
+interface IBasicButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /**
+   * Optional: The category of the button.Can be "primary", "secondary", or "default".
+   */
   category?: "primary" | "secondary" | "default";
+  /**
+   * The label text of the button.
+   */
   label: string;
+  /**
+   * Optional: Indicates whether the button should expand to fill the available width.
+   */
   fluid?: boolean;
+  /**
+   * Optional: The URL of the icon to display on the button.
+   */
   icon?: string;
+  /**
+   * Optional: Indicates whether the icon should be displayed before the label.
+   */
   reverse?: boolean;
+  /**
+   * Optional: The dimension size of the button. Can be "small", "medium", "large", or "xlarge".
+   */
   dimension?: "small" | "medium" | "large" | "xlarge";
+  /**
+   * The event handler for the button click event.
+   */
   onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-const BasicButton: FC<IBasicButton> = ({
+/**
+ * BasicButton component.
+ * The rendered BasicButton component.
+ */
+
+const BasicButton = ({
   category,
   label,
   fluid,
@@ -19,7 +45,8 @@ const BasicButton: FC<IBasicButton> = ({
   reverse,
   dimension,
   onClick,
-}) => {
+  ...props
+}: IBasicButton) => {
   return (
     <button
       className={`
@@ -30,6 +57,7 @@ const BasicButton: FC<IBasicButton> = ({
         ${dimension && classes[dimension]}
         `}
       onClick={onClick || null}
+      {...props}
     >
       {icon && <img src={icon} alt={label} />}
       <span>{label}</span>
@@ -39,11 +67,13 @@ const BasicButton: FC<IBasicButton> = ({
 
 export default BasicButton;
 
+/**
+ * Default props for the BasicButton component.
+ */
 BasicButton.defaultProps = {
+  category: "default" as const,
   label: "Button",
-  type: "button",
   fluid: false,
   reverse: false,
-  category: "default",
-  dimension: "medium",
+  dimension: "medium" as const,
 };

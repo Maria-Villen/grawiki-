@@ -6,6 +6,17 @@ export default {
   title: "Buttons/ToggleButton",
   component: ToggleButton,
   tags: ["autodocs"],
+  parameters: {
+    backgrounds: { default: "light" },
+  },
+  argTypes: {
+    className: {
+      table: { disable: true },
+    },
+    onClick: {
+      control: false,
+    },
+  },
 };
 
 export const Menu = {
