@@ -1,0 +1,25 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.checkbox_input {
+  position: relative;
+  appearance: none;
+  border: none;
+  background: #E4E4E4;
+  box-shadow: inset 0px 0.615385px 2.46154px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+}
+.checkbox_input:checked:before {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  content: "";
+  background: black;
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+}/*# sourceMappingURL=checkInput.module.css.map */

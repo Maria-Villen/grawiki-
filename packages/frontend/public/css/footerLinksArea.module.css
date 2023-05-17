@@ -1,0 +1,21 @@
+/* COLORS */
+/* fontStyles */
+/* Break Points */
+.footerLinks {
+  display: none;
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .footerLinks {
+    display: initial;
+  }
+}
+.footerLinks_title {
+  font-weight: bolder;
+  line-height: 1.5;
+}
+.footerLinks_list {
+  padding: 0;
+  list-style: none;
+  line-height: 1.5;
+}/*# sourceMappingURL=footerLinksArea.module.css.map */

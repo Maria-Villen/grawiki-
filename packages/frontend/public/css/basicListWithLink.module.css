@@ -1,0 +1,13 @@
+.item {
+  list-style: none;
+}
+.item a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: none;
+  align-items: center;
+}
+.item img {
+  padding: 4px;
+}/*# sourceMappingURL=basicListWithLink.module.css.map */
