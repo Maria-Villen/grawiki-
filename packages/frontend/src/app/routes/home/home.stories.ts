@@ -1,35 +1,24 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
-import BasicListWithLink from "./basicListWithLink";
-import { English } from "../../../assets";
+import Home from "./home";
 
 const meta = {
-  title: "ListComponents/BasicListWithLink",
-  component: BasicListWithLink,
+  title: "Pages/Home",
+  component: Home,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ["autodocs"],
-  decorators: [withRouter],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
     layout: "fullscreen",
-    backgrounds: { default: "light" },
   },
-} satisfies Meta<typeof BasicListWithLink>;
+  decorators: [withRouter],
+} satisfies Meta<typeof Home>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Basic: Story = {
-  args: {
-    text: "List Basic With Link",
-    link: "#",
-  },
+export const HomePage: Story = {
+  args: {},
 };
 
-export const WithIcon: Story = {
-  args: {
-    text: "English",
-    link: "#",
-    icon: English,
-  },
-};
+// export const LoggedOut: Story = {};

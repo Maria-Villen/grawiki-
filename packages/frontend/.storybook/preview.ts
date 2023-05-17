@@ -2,8 +2,6 @@ import type { Preview } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
-// const { withPropsTable } = require("storybook-addon-react-docgen");
-
 const preview: Preview = {
   parameters: {
     zeplinLink: "https://app.zeplin.io/project/644325fc6c3cec23e0985ad3",
