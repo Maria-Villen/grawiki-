@@ -1,0 +1,43 @@
+@use "../../../styles/variables" as *
+    
+.menuButton
+  display: flex
+  flex-direction: row
+  flex-shrink: 0
+  justify-content: center
+  align-items: center
+  align-items: center
+  background: $primary-blue
+  text-decoration: none
+  color: white
+  border-radius: 0.95rem
+  border: none
+  font-size: 1rem
+  align-self: flex-end
+  max-width: 100%
+  width: 163px
+  height: 65px
+  &:hover
+    background: $primary-black
+
+  @include mq("small") 
+    flex-direction: column
+    padding: 0
+    gap: 5px
+    align-self: center
+    width: 117px
+    height: 78px
+
+  img 
+    height: 24px
+    width: 24px
+    filter: invert(1)
+
+  img, span
+    vertical-align: middle
+
+.fluid
+  width: 100%
+  @include mq("small")
+    width: 100%
+  

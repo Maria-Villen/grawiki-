@@ -1,0 +1,17 @@
+@use "../../../styles/variables" as *
+  
+.footerLinks
+  display: none
+  font-size: 18px
+
+  @include mq("medium")
+    display: initial
+
+  &_title
+    font-weight: bolder
+    line-height: 1.5
+
+  &_list
+    padding: 0
+    list-style: none
+    line-height: 1.5

@@ -1,0 +1,57 @@
+@use "../../../styles/variables" as *
+  
+.navbar
+  height: 100%
+
+  &_btnmenu
+    border: none
+    background: transparent
+    height: 100%
+    @include mq("small")
+      display: none
+  
+  &_btnClose
+    align-self: flex-start
+    height: 1rem
+    width: 1rem
+    margin: 2.5rem 0rem 2.5rem 2rem
+    
+    img
+      height: 100%
+      width: 100%
+
+    @include mq("small")
+      display: none 
+
+  &_list
+    top: 0
+    position: fixed
+    justify-content: right
+    height: 100vh
+    right: 0
+    width: 50vw
+    border-bottom-right-radius: 1rem
+    border-top-right-radius: 1rem
+    background: white
+    text-align: right
+    max-width: 0px
+    overflow-x: hidden
+    transition: max-width 200ms ease-in-out 
+    z-index: 100
+
+    @include mq("small") 
+      max-width: unset
+      position: static
+      width: auto
+      border-radius: none
+      margin: 0
+      display: flex
+      flex-direction: column
+      background: transparent
+
+    &__open
+      display: flex
+      flex-direction: column
+      max-width: 50vh
+    
+
