@@ -9,6 +9,11 @@ const meta = {
   component: Logo,
   tags: ["autodocs"],
   decorators: [withRouter],
+  argTypes: {
+    className: {
+      table: { disable: true },
+    },
+  },
 } satisfies Meta<typeof Logo>;
 
 export default meta;

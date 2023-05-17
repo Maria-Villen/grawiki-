@@ -7,7 +7,7 @@ interface IPassInput extends React.InputHTMLAttributes<HTMLInputElement> {
   fluid?: boolean;
 }
 
-const Searchbar = ({ className, fluid, ...props }: IPassInput) => {
+const PassInput = ({ className, fluid, ...props }: IPassInput) => {
   const [hidePass, setHidePass] = useState<boolean>(true);
   const toggleHiddenPass = () => {
     setHidePass(!hidePass);
@@ -34,4 +34,4 @@ const Searchbar = ({ className, fluid, ...props }: IPassInput) => {
   );
 };
 
-export default Searchbar;
+export default PassInput;

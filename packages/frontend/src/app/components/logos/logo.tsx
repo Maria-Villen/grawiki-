@@ -1,5 +1,3 @@
-import { FC } from "react";
-
 import {
   GrawikiLogo,
   GrawikiLogoHorizontal,
@@ -12,9 +10,10 @@ import { Link } from "react-router-dom";
 
 interface ILogoProps {
   type?: string;
+  className?: string;
 }
 
-const Logo: FC<ILogoProps> = ({ type }) => {
+const Logo = ({ type, className }: ILogoProps) => {
   const getLogo = () => {
     switch (type) {
       case "horizontal":
@@ -27,7 +26,7 @@ const Logo: FC<ILogoProps> = ({ type }) => {
   };
 
   return (
-    <Link to="/" className={classes.link}>
+    <Link to="/" className={`${classes.link} ${className}`}>
       <img className={classes.logo} src={getLogo()} />
     </Link>
   );
