@@ -30,3 +30,4 @@ export { default as Searchbar } from "./inputs/search-bar/searchbar";
 
 /** Messages */
 export { default as ErrorFormMsg } from "./messages/error-form-msg/errorFormMsg";
+export { default as MsgSuccessMsg } from "./messages/msg-success/msgSuccess";

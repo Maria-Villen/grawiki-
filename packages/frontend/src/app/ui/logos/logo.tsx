@@ -26,8 +26,12 @@ const Logo = ({ type, className }: ILogoProps) => {
   };
 
   return (
-    <Link to="/" className={className ? className : classes.link}>
-      <img className={classes.logo} src={getLogo()} />
+    <Link
+      to="/"
+      className={className ? className : classes.link}
+      aria-label="Ir a la página principal de grawiki"
+    >
+      <img className={classes.logo} src={getLogo()} alt="Logo Grawiki" />
     </Link>
   );
 };

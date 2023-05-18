@@ -21,17 +21,11 @@ const LoginForm = () => {
         <div className={classes.loginForm_content}>
           <div className={classes.loginForm_group}>
             <BaseInput type="email" placeholder="E-mail" />
-            <ErrorFormMsg
-              className={classes.error}
-              text="Ingrese una dirección de e-mail válida."
-            />
+            <ErrorFormMsg text="Ingrese una dirección de e-mail válida." />
           </div>
           <div className={classes.loginForm_group}>
             <PassInput placeholder="Contraseña" />
-            <ErrorFormMsg
-              className={classes.loginForm_error}
-              text="Ingrese una contraseña válida."
-            />
+            <ErrorFormMsg text="Ingrese una contraseña válida." />
           </div>
         </div>
         <div className={classes.loginForm_politics}>

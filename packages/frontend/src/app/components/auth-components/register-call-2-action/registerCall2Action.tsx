@@ -16,7 +16,6 @@ const RegisterCall2Action = () => {
         ¿Te gustaría poder publicar y editar tus temas en nuestra plataforma?
       </p>
       <p>
-        {" "}
         Al registrarte, tendrás acceso a una amplia variedad de herramientas y
         funciones que te permitirán interactuar con otros usuarios de manera más
         eficiente.

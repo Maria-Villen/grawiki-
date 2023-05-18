@@ -17,38 +17,26 @@ const RegisterForm = () => {
   return (
     <LayoutCardForm withLogo>
       <p>Regístrate para poder publicar y editar temas</p>
-      <form className={classes.loginForm_form}>
-        <div className={classes.loginForm_content}>
-          <div className={classes.loginForm_group}>
+      <form className={classes.contentForm_form}>
+        <div className={classes.contentForm_content}>
+          <div className={classes.contentForm_group}>
             <BaseInput type="text" placeholder="Nombre de usuario" />
-            <ErrorFormMsg
-              className={classes.error}
-              text="El nombre de usuario ya existe. Ingrese otro."
-            />
+            <ErrorFormMsg text="El nombre de usuario ya existe. Ingrese otro." />
           </div>
-          <div className={classes.loginForm_group}>
+          <div className={classes.contentForm_group}>
             <BaseInput type="email" placeholder="E-mail" />
-            <ErrorFormMsg
-              className={classes.error}
-              text="Ingrese una dirección de e-mail válida."
-            />
+            <ErrorFormMsg text="Ingrese una dirección de e-mail válida." />
           </div>
-          <div className={classes.loginForm_group}>
+          <div className={classes.contentForm_group}>
             <PassInput placeholder="Contraseña" />
-            <ErrorFormMsg
-              className={classes.loginForm_error}
-              text="Contraseña insegura. Requisitos: 8 caracteres, mayúscula, minúscula y caracter especial."
-            />
+            <ErrorFormMsg text="Contraseña insegura. Requisitos: 8 caracteres, mayúscula, minúscula y caracter especial." />
           </div>
-          <div className={classes.loginForm_group}>
+          <div className={classes.contentForm_group}>
             <PassInput placeholder="Repetir contraseña" />
-            <ErrorFormMsg
-              className={classes.loginForm_error}
-              text="Las contraseñas no coinciden."
-            />
+            <ErrorFormMsg text="Las contraseñas no coinciden." />
           </div>
         </div>
-        <div className={classes.loginForm_politics}>
+        <div className={classes.contentForm_politics}>
           <CheckInput>
             <Link to="/passchange">
               Acepto los Terminos y condiciones de uso
