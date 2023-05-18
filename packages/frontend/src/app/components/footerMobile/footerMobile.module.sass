@@ -1,0 +1,27 @@
+@use "../../styles/variables" as *
+  
+.footerMobile
+  text-align: center
+  background: white
+  @include mq("small")
+    align-self: end
+  
+  &_follow
+    flex-wrap: nowrap
+    align-items: center
+    justify-content: center
+    line-height: 2.5rem
+    display: flex
+    @include mq("medium")
+
+  &_copyright
+    justify-content: center
+    @include mq("medium")
+      display: none
+    & img
+      padding: 3px
+      vertical-align: middle
+    & span
+      vertical-align: middle
+
+      

@@ -33,3 +33,9 @@ export { default as Search } from "./icons/search.svg";
 export { default as PassOpen } from "./icons/Passopen.svg";
 export { default as PassHidden } from "./icons/PassHidden.svg";
 export { default as Exclamation } from "./icons/exclamation.svg";
+
+/** Images */
+export { default as SuccessImage } from "./images/StateCorrect.svg";
+export { default as NotFoundImage } from "./images/error404.svg";
+export { default as FailImage } from "./images/incorrect.svg";
+export { default as EmailImage } from "./images/emailsent.svg";
