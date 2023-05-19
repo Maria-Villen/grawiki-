@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import {
   LayoutCardForm,
   CheckInput,
-  PassInput,
   BasicButton,
   ErrorFormMsg,
 } from "../../../ui";
@@ -12,7 +11,7 @@ import { useFormik } from "formik";
 import { validationSchema, initialValues, onSubmit } from "./registerDataForm";
 
 const RegisterForm = () => {
-  const { handleSubmit, errors, touched, getFieldProps, values } = useFormik({
+  const { handleSubmit, errors, touched, getFieldProps } = useFormik({
     initialValues,
     validationSchema,
     onSubmit,
@@ -60,7 +59,7 @@ const RegisterForm = () => {
               Acepto los Terminos y condiciones de uso
             </Link>
           </div>
-          {touched.terms && errors.terms && (
+          {errors.terms && (
             <ErrorFormMsg text="Debes aceptar los términos y condiciones." />
           )}
         </div>

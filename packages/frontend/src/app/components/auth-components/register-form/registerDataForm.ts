@@ -23,7 +23,7 @@ export const validationSchema = Yup.object({
   confirmPass: Yup.string().when("password", (password, field) =>
     password ? field.required().oneOf([Yup.ref("password")]) : field
   ),
-  terms: Yup.boolean().required("required"),
+  terms: Yup.boolean().required("required").oneOf([true], "Error"),
 });
 
 export const onSubmit = (values: IUserRegister) => {
