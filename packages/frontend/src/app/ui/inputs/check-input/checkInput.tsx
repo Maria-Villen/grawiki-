@@ -1,23 +1,17 @@
-import { ReactNode } from "react";
 import classes from "./checkInput.module.sass";
 
-interface ICheckInput {
-  name?: string;
-  children: ReactNode;
+interface ICheckInput extends React.InputHTMLAttributes<HTMLInputElement> {
+  className?: string;
 }
 
-const CheckInput = ({ name, children }: ICheckInput) => {
+const CheckInput = ({ className, ...props }: ICheckInput) => {
   return (
-    <label htmlFor={name} className={classes.checkbox}>
-      <input name={name} type="checkbox" className={classes.checkbox_input} />
-      {children}
-    </label>
+    <input
+      type="checkbox"
+      className={`${classes.checkbox_input} ${className}`}
+      {...props}
+    />
   );
 };
 
 export default CheckInput;
-
-CheckInput.defaultProps = {
-  name: "CheckInput",
-  children: "Label",
-};

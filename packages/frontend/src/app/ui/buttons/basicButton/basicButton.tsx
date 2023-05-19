@@ -29,7 +29,7 @@ interface IBasicButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * The event handler for the button click event.
    */
-  onClick: MouseEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 /**
@@ -56,7 +56,7 @@ const BasicButton = ({
         ${reverse && classes.reverse}
         ${dimension && classes[dimension]}
         `}
-      onClick={onClick || null}
+      onClick={onClick || undefined}
       {...props}
     >
       {icon && <img src={icon} alt={label} />}

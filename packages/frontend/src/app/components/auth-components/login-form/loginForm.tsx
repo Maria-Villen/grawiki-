@@ -1,35 +1,41 @@
 import classes from "./loginForm.module.sass";
 import { Link } from "react-router-dom";
-import {
-  LayoutCardForm,
-  BaseInput,
-  CheckInput,
-  PassInput,
-  BasicButton,
-  ErrorFormMsg,
-} from "../../../ui";
+import { LayoutCardForm, CheckInput, BasicButton } from "../../../ui";
+import { useFormik } from "formik";
+import { validationSchema, initialValues, onSubmit } from "./loginDataForm";
+import { EmailChamp, PassChamp } from "../champs";
 
 const LoginForm = () => {
-  const SubmitEventHandler = () => {
-    console.log("login");
-  };
+  const { handleSubmit, errors, touched, getFieldProps } = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit,
+  });
 
   return (
     <LayoutCardForm withLogo>
       <p>Inicia sesión para ingresar tu cuenta</p>
-      <form className={classes.loginForm_form}>
+      <form className={classes.loginForm_form} onSubmit={handleSubmit}>
         <div className={classes.loginForm_content}>
-          <div className={classes.loginForm_group}>
-            <BaseInput type="email" placeholder="E-mail" />
-            <ErrorFormMsg text="Ingrese una dirección de e-mail válida." />
-          </div>
-          <div className={classes.loginForm_group}>
-            <PassInput placeholder="Contraseña" />
-            <ErrorFormMsg text="Ingrese una contraseña válida." />
-          </div>
+          <EmailChamp
+            className={classes.loginForm_group}
+            placeholder="E-mail"
+            isTouched={touched.email}
+            isError={errors.email}
+            {...getFieldProps("email")}
+          />
+          <PassChamp
+            className={classes.loginForm_group}
+            placeholder="Contraseña"
+            isTouched={touched.password}
+            isError={errors.password}
+            {...getFieldProps("password")}
+          />
         </div>
         <div className={classes.loginForm_politics}>
-          <CheckInput>Recordarme</CheckInput>
+          <label htmlFor="rememberMe" className={classes.checkbox}>
+            <CheckInput id="rememberMe" /> Recordarme
+          </label>
           <Link to="/passchange">Olvidé mi contraseña</Link>
         </div>
         <BasicButton
@@ -37,7 +43,6 @@ const LoginForm = () => {
           type="submit"
           fluid
           label="Iniciar Sesión"
-          onClick={SubmitEventHandler}
         />
       </form>
     </LayoutCardForm>

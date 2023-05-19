@@ -11,6 +11,7 @@ const meta = {
   decorators: [withRouter],
   parameters: {
     backgrounds: { default: "ligth" },
+    layout: "centered",
   },
   argTypes: {
     className: {

@@ -1,16 +1,16 @@
 import classes from "./recoverPassForm.module.sass";
 
-import {
-  LayoutCardForm,
-  BaseInput,
-  BasicButton,
-  ErrorFormMsg,
-} from "../../../ui";
+import { LayoutCardForm, BasicButton } from "../../../ui";
+import { validationSchema, initialValues, onSubmit } from "./recoverDataForm";
+import { useFormik } from "formik";
+import { EmailChamp } from "../champs";
 
 function RecoverPassForm() {
-  const submitHanlder = () => {
-    console.log("submit");
-  };
+  const { handleSubmit, errors, touched, getFieldProps } = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit,
+  });
   return (
     <LayoutCardForm withLogo>
       <h2>Recuperación de contraseña</h2>
@@ -19,17 +19,19 @@ function RecoverPassForm() {
         Le enviaremos un enlace para restablecer la contraseña a esa dirección
         de correo electrónico
       </p>
-      <form className={classes.form}>
-        <div className={classes.form_group}>
-          <BaseInput type="email" placeholder="E-mail" />
-          <ErrorFormMsg text="Ingrese una dirección de e-mail válida" />
-        </div>
+      <form className={classes.form} onSubmit={handleSubmit}>
+        <EmailChamp
+          className={classes.contentForm_group}
+          placeholder="E-mail"
+          isTouched={touched.email}
+          isError={errors.email}
+          {...getFieldProps("email")}
+        />
         <BasicButton
           category="primary"
           label="Recuperar contraseña"
           fluid
           type="submit"
-          onClick={submitHanlder}
         />
       </form>
     </LayoutCardForm>

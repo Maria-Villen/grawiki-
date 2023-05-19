@@ -2,53 +2,69 @@ import classes from "./registerForm.module.sass";
 import { Link } from "react-router-dom";
 import {
   LayoutCardForm,
-  BaseInput,
   CheckInput,
   PassInput,
   BasicButton,
   ErrorFormMsg,
 } from "../../../ui";
+import { PassChamp, EmailChamp, UserNameChamp } from "../champs";
+import { useFormik } from "formik";
+import { validationSchema, initialValues, onSubmit } from "./registerDataForm";
 
 const RegisterForm = () => {
-  const SubmitEventHandler = () => {
-    console.log("login");
-  };
-
+  const { handleSubmit, errors, touched, getFieldProps, values } = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit,
+  });
   return (
     <LayoutCardForm withLogo>
       <p>Regístrate para poder publicar y editar temas</p>
-      <form className={classes.contentForm_form}>
+      <form className={classes.contentForm_form} onSubmit={handleSubmit}>
         <div className={classes.contentForm_content}>
-          <div className={classes.contentForm_group}>
-            <BaseInput type="text" placeholder="Nombre de usuario" />
-            <ErrorFormMsg text="El nombre de usuario ya existe. Ingrese otro." />
-          </div>
-          <div className={classes.contentForm_group}>
-            <BaseInput type="email" placeholder="E-mail" />
-            <ErrorFormMsg text="Ingrese una dirección de e-mail válida." />
-          </div>
-          <div className={classes.contentForm_group}>
-            <PassInput placeholder="Contraseña" />
-            <ErrorFormMsg text="Contraseña insegura. Requisitos: 8 caracteres, mayúscula, minúscula y caracter especial." />
-          </div>
-          <div className={classes.contentForm_group}>
-            <PassInput placeholder="Repetir contraseña" />
-            <ErrorFormMsg text="Las contraseñas no coinciden." />
-          </div>
+          <UserNameChamp
+            className={classes.contentForm_group}
+            placeholder="Nombre de usuario"
+            isTouched={touched.userName}
+            isError={errors.userName}
+            {...getFieldProps("userName")}
+          />
+
+          <EmailChamp
+            className={classes.contentForm_group}
+            placeholder="E-mail"
+            isTouched={touched.email}
+            isError={errors.email}
+            {...getFieldProps("email")}
+          />
+
+          <PassChamp
+            className={classes.contentForm_group}
+            placeholder="Contraseña"
+            isTouched={touched.password}
+            isError={errors.password}
+            {...getFieldProps("password")}
+          />
+
+          <PassChamp
+            className={classes.contentForm_group}
+            placeholder="Repetir contraseña"
+            isTouched={touched.confirmPass}
+            isError={errors.confirmPass}
+          />
         </div>
-        <div className={classes.contentForm_politics}>
-          <CheckInput>
+        <div className={classes.contentForm_group}>
+          <div className={classes.checkbox}>
+            <CheckInput id="terms" {...getFieldProps("terms")} />
             <Link to="/passchange">
               Acepto los Terminos y condiciones de uso
             </Link>
-          </CheckInput>
+          </div>
+          {touched.terms && errors.terms && (
+            <ErrorFormMsg text="Debes aceptar los términos y condiciones." />
+          )}
         </div>
-        <BasicButton
-          category="primary"
-          type="submit"
-          fluid
-          onClick={SubmitEventHandler}
-        />
+        <BasicButton category="primary" type="submit" fluid />
       </form>
     </LayoutCardForm>
   );

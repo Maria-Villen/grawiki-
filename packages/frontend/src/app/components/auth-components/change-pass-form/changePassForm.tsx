@@ -1,16 +1,20 @@
 import classes from "./changePassForm.module.sass";
 
+import { LayoutCardForm, BasicButton } from "../../../ui";
+import { useFormik } from "formik";
 import {
-  LayoutCardForm,
-  PassInput,
-  BasicButton,
-  ErrorFormMsg,
-} from "../../../ui";
+  validationSchema,
+  initialValues,
+  onSubmit,
+} from "./changePassDataForm";
+import { PassChamp } from "../champs";
 
 function ChangePassForm() {
-  const submitHanlder = () => {
-    console.log("submit");
-  };
+  const { handleSubmit, errors, touched, getFieldProps } = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit,
+  });
   return (
     <LayoutCardForm withLogo>
       <h2>Se ha verificado su cuenta</h2>
@@ -19,21 +23,26 @@ function ChangePassForm() {
         menos 8 caracteres, una letra mayúscula, una letra minúscula y un
         caracter especial.
       </p>
-      <form className={classes.form}>
-        <div className={classes.form_group}>
-          <PassInput placeholder="Contraseña" />
-          <ErrorFormMsg text="Contraseña insegura. Requisitos: 8 caracteres, mayúscula, minúscula y caracter especial." />
-        </div>
-        <div className={classes.form_group}>
-          <PassInput placeholder="Contraseña" />
-          <ErrorFormMsg text="Contraseña no coincide. Inténtelo de nuevo." />
-        </div>
+      <form className={classes.form} onSubmit={handleSubmit}>
+        <PassChamp
+          className={classes.contentForm_group}
+          placeholder="Contraseña"
+          isTouched={touched.password}
+          isError={errors.password}
+          {...getFieldProps("password")}
+        />
+
+        <PassChamp
+          className={classes.contentForm_group}
+          placeholder="Repetir contraseña"
+          isTouched={touched.confirmPass}
+          isError={errors.confirmPass}
+        />
         <BasicButton
           category="primary"
           label="Modificar contraseña"
           fluid
           type="submit"
-          onClick={submitHanlder}
         />
       </form>
     </LayoutCardForm>
