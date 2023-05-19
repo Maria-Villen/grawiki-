@@ -56,14 +56,14 @@ const footerLinkMenu: Array<IFooterLinks> = [
       { id: "23", icon: undefined, text: "F.A.Q.", link: "/faq" },
     ],
   },
-  {
-    id: "3",
-    title: "Idiomas",
-    links: [
-      { id: "31", icon: English, text: "Inglés", link: "/en" },
-      { id: "32", icon: Spanish, text: "Español", link: "/es" },
-    ],
-  },
+  // {
+  //   id: "3",
+  //   title: "Idiomas",
+  //   links: [
+  //     { id: "31", icon: English, text: "Inglés", link: "/en" },
+  //     { id: "32", icon: Spanish, text: "Español", link: "/es" },
+  //   ],
+  // },
 ];
 
 export { footerLinkMenu };

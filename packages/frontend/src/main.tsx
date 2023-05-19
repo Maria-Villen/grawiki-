@@ -1,16 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Home, NotFound } from "./app/routes";
+import { Home, NotFound, Login, Register } from "./app/routes";
 import { Layout } from "./app/components";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    element: <Layout />,
+    element: <Layout withFooter />,
     children: [
       {
         path: "/",
         element: <Home />,
+      },
+    ],
+  },
+  {
+    element: <Layout withFooter={false} />,
+    children: [
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
       },
     ],
   },

@@ -1,9 +1,11 @@
 import classes from "./registerCall2Action.module.sass";
 import { LayoutCardForm, BasicButton } from "../../../ui";
+import { useNavigate } from "react-router-dom";
 
 const RegisterCall2Action = () => {
+  const navigate = useNavigate();
   const SubmitEventHandler = () => {
-    console.log("Register");
+    navigate("/register");
   };
 
   return (
@@ -24,7 +26,7 @@ const RegisterCall2Action = () => {
 
       <BasicButton
         category="primary"
-        type="submit"
+        type="button"
         fluid
         label="!Quiero registrarme!"
         onClick={SubmitEventHandler}

@@ -7,6 +7,7 @@ interface IMenuListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
   text: string;
   fluid?: boolean;
   className?: string;
+  dark?: boolean;
 }
 
 const MenuListItem = ({
@@ -15,6 +16,7 @@ const MenuListItem = ({
   text,
   fluid,
   className,
+  dark,
   ...props
 }: IMenuListItemProps) => {
   return (
@@ -24,7 +26,9 @@ const MenuListItem = ({
     >
       <Link className={classes.menulist_link} to={link}>
         <span className={classes.text}>{text}</span>
-        <img className={classes.icon} src={icon} />
+        <span className={`${classes.icon} ${dark && classes.dark}`}>
+          <img src={icon} alt={text} />
+        </span>
       </Link>
     </li>
   );

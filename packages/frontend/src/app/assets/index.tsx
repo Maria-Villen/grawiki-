@@ -15,6 +15,7 @@ export { default as MenuIcon } from "./icons/Menu.svg";
 export { default as ArrowDown } from "./icons/arrowDown.svg";
 export { default as ArrowUp } from "./icons/arrow-top.svg";
 export { default as CloseMenu } from "./icons/close.svg";
+export { default as Create } from "./icons/create.svg";
 
 /** Flags */
 export { default as English } from "./icons/english.svg";
@@ -33,6 +34,7 @@ export { default as Search } from "./icons/search.svg";
 export { default as PassOpen } from "./icons/Passopen.svg";
 export { default as PassHidden } from "./icons/PassHidden.svg";
 export { default as Exclamation } from "./icons/exclamation.svg";
+export { default as Avatar } from "./icons/user-avatar.svg";
 
 /** Images */
 export { default as SuccessImage } from "./images/StateCorrect.svg";

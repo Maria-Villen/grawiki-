@@ -1,5 +1,5 @@
 @use "../../../styles/variables" as *
-    
+
 .menuButton
   display: flex
   flex-direction: row
@@ -20,7 +20,7 @@
   &:hover
     background: $primary-black
 
-  @include mq("small") 
+  @include mq("small")
     flex-direction: column
     padding: 0
     gap: 5px
@@ -28,7 +28,7 @@
     width: 117px
     height: 78px
 
-  img 
+  img
     height: 24px
     width: 24px
     filter: invert(1)
@@ -40,4 +40,3 @@
   width: 100%
   @include mq("small")
     width: 100%
-  
