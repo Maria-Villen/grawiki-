@@ -1,0 +1,73 @@
+@use "../.././../styles/variables" as *
+
+.button
+  border-radius: 10px
+  display: flex
+  border: none
+  padding: 0.4rem
+  min-height: 27px
+  min-width: 117px
+  font-size: 1rem
+  transition: background 200ms ease-in-out
+  justify-content: center
+  align-items: center
+  text-decoration: none
+
+  img
+    padding-right: 10px
+
+.default
+  background: white
+  color: black
+  &:hover
+    background: $primary-gray
+
+.primary, .secondary
+  img
+    filter: invert(1)
+
+.primary
+  background: $primary-blue
+  color: white
+  transition: background 200ms ease-in-out
+  &:hover
+    background: $button-color-blue
+
+.secondary
+  background: $primary-red
+  color: white
+  transition: background 200ms ease-in-out
+  &:hover
+    background: $secondary-red
+
+.reverse
+  flex-direction: row-reverse
+  img
+    padding-right: 0
+    padding-left: 10px
+
+.small
+  width: 117px
+  height: 27px
+  font-size: 14px
+  line-height: 28px
+  border-radius: 5px
+
+.medium
+  width: 237px
+  height: 40px
+  font-size: 16px
+
+.large
+  width: 280px
+  height: 56px
+  font-size: 18px
+
+.xlarge
+  width: 320px
+  height: 40px
+  font-size: 18px
+
+.fluid
+  width: 100%
+  flex-grow: 1

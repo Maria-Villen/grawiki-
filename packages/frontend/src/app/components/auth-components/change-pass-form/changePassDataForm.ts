@@ -1,22 +1,45 @@
 import * as Yup from "yup";
+import { IChangePassForm } from "../../../interfaces/auth";
+import { userChangePass } from "../../../redux/slices/auth/authActions";
+import { useAppDispatch } from "../../../redux/store";
+import { useFormik } from "formik";
 
-interface IUserLogin {
-  password: string;
-  confirmPass: string;
-}
+const useChangePassDataForm = () => {
+  const dispatch = useAppDispatch();
 
-export const initialValues: IUserLogin = {
-  password: "",
-  confirmPass: "",
+  const initialValues: IChangePassForm = {
+    password: "",
+    confirmPass: "",
+  };
+
+  const validationSchema = Yup.object({
+    password: Yup.string()
+      .matches(
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d!@#$%^&*()\-_+{}[\]:;\\/.]{8,20}$/,
+        "Contraseña insegura. Requisitos: 8 caracteres, mayúscula, minúscula y caracter especial."
+      )
+      .required("La contraseña es obligatoria."),
+    confirmPass: Yup.string()
+      .required("Repite la contraseña.")
+      .oneOf([Yup.ref("password")], "Las contraseñas no coinciden."),
+  });
+
+  const onSubmit = (values: IChangePassForm) => {
+    dispatch(userChangePass(values.password));
+  };
+
+  const { handleSubmit, errors, touched, getFieldProps } = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit,
+  });
+
+  return {
+    handleSubmit,
+    errors,
+    touched,
+    getFieldProps,
+  };
 };
 
-export const validationSchema = Yup.object({
-  password: Yup.string().min(6, "Min. 6 characters").required("Required"),
-  confirmPass: Yup.string().when("password", (password, field) =>
-    password ? field.required().oneOf([Yup.ref("password")]) : field
-  ),
-});
-
-export const onSubmit = (values: IUserLogin) => {
-  console.log(values);
-};
+export default useChangePassDataForm;

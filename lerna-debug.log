@@ -1,0 +1,13 @@
+0 silly argv {
+0 silly argv   _: [ 'add' ],
+0 silly argv   scope: '@grawiki/frontend',
+0 silly argv   globs: [],
+0 silly argv   lernaVersion: '6.6.1',
+0 silly argv   '$0': 'C:\\Program Files\\nodejs\\node_modules\\lerna\\dist\\cli.js',
+0 silly argv   pkg: 'react/redux'
+0 silly argv }
+1 notice cli v6.6.1
+2 verbose rootPath C:\Users\Maria\Documents\Proyectos\orggrawiki\grawiki
+3 error Error: An unknown git error occurred
+3 error     at makeError (C:\Users\Maria\Documents\Proyectos\orggrawiki\grawiki\node_modules\@npmcli\git\lib\make-error.js:28:13)
+3 error     at C:\Users\Maria\Documents\Proyectos\orggrawiki\grawiki\node_modules\@npmcli\git\lib\spawn.js:37:26

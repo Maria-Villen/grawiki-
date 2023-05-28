@@ -7,66 +7,106 @@ import {
   ErrorFormMsg,
 } from "../../../ui";
 import { PassChamp, EmailChamp, UserNameChamp } from "../champs";
-import { useFormik } from "formik";
-import { validationSchema, initialValues, onSubmit } from "./registerDataForm";
+import useRegisterDataForm from "./registerDataForm";
+import { useAppSelector } from "../../../redux/store";
+import { useEffect } from "react";
+import { MsgSuccess } from "../../../ui";
 
 const RegisterForm = () => {
-  const { handleSubmit, errors, touched, getFieldProps } = useFormik({
-    initialValues,
-    validationSchema,
-    onSubmit,
-  });
-  return (
-    <LayoutCardForm withLogo>
-      <p>Regístrate para poder publicar y editar temas</p>
-      <form className={classes.contentForm_form} onSubmit={handleSubmit}>
-        <div className={classes.contentForm_content}>
-          <UserNameChamp
-            className={classes.contentForm_group}
-            placeholder="Nombre de usuario"
-            isTouched={touched.userName}
-            isError={errors.userName}
-            {...getFieldProps("userName")}
-          />
+  const { handleSubmit, handleBlurWithAction, errors, touched, getFieldProps } =
+    useRegisterDataForm();
 
-          <EmailChamp
-            className={classes.contentForm_group}
-            placeholder="E-mail"
-            isTouched={touched.email}
-            isError={errors.email}
-            {...getFieldProps("email")}
-          />
+  const {
+    loggedUser: user,
+    error,
+    loading,
+  } = useAppSelector((state) => state.auth);
 
-          <PassChamp
-            className={classes.contentForm_group}
-            placeholder="Contraseña"
-            isTouched={touched.password}
-            isError={errors.password}
-            {...getFieldProps("password")}
-          />
+  useEffect(() => {
+    if (user) {
+      console.log("success!");
+    }
+    if (error.message) {
+      console.log(error.message);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user, error]);
 
-          <PassChamp
-            className={classes.contentForm_group}
-            placeholder="Repetir contraseña"
-            isTouched={touched.confirmPass}
-            isError={errors.confirmPass}
-          />
-        </div>
-        <div className={classes.contentForm_group}>
-          <div className={classes.checkbox}>
-            <CheckInput id="terms" {...getFieldProps("terms")} />
-            <Link to="/passchange">
-              Acepto los Terminos y condiciones de uso
-            </Link>
+  if (user) {
+    return (
+      <MsgSuccess
+        message="Registro realizado con éxito"
+        label="Ir a perfil"
+        link="/profile"
+      />
+    );
+  } else if (error.message) {
+    return <p>Errror ${error.message}</p>;
+  } else {
+    return (
+      <LayoutCardForm withLogo>
+        <p>Regístrate para poder publicar y editar temas</p>
+        <form className={classes.contentForm_form} onSubmit={handleSubmit}>
+          <div className={classes.contentForm_content}>
+            <UserNameChamp
+              className={classes.contentForm_group}
+              placeholder="Nombre de usuario"
+              isTouched={touched.userName}
+              isError={errors.userName}
+              autoComplete="name"
+              {...getFieldProps("userName")}
+              onBlur={handleBlurWithAction}
+            />
+
+            <EmailChamp
+              className={classes.contentForm_group}
+              placeholder="E-mail"
+              isTouched={touched.email}
+              isError={errors.email}
+              autoComplete="email"
+              {...getFieldProps("email")}
+            />
+
+            <PassChamp
+              className={classes.contentForm_group}
+              placeholder="Contraseña"
+              isTouched={touched.password}
+              isError={errors.password}
+              autoComplete="off"
+              {...getFieldProps("password")}
+            />
+
+            <PassChamp
+              className={classes.contentForm_group}
+              placeholder="Repetir contraseña"
+              isTouched={touched.confirmPass}
+              isError={errors.confirmPass}
+              autoComplete="off"
+              {...getFieldProps("confirmPass")}
+            />
           </div>
-          {errors.terms && (
-            <ErrorFormMsg text="Debes aceptar los términos y condiciones." />
-          )}
-        </div>
-        <BasicButton category="primary" type="submit" fluid />
-      </form>
-    </LayoutCardForm>
-  );
+
+          <div className={classes.contentForm_group}>
+            <div className={classes.checkbox}>
+              <CheckInput id="terms" {...getFieldProps("terms")} />
+              <Link to="/terms">Acepto los Terminos y condiciones de uso</Link>
+            </div>
+            {touched.terms && errors.terms && (
+              <ErrorFormMsg text={errors.terms} />
+            )}
+          </div>
+
+          <BasicButton
+            category="primary"
+            type="submit"
+            fluid
+            label="Registrarse"
+          />
+        </form>
+        {loading && <p>Loading</p>}
+      </LayoutCardForm>
+    );
+  }
 };
 
 export default RegisterForm;

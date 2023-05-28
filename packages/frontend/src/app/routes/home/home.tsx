@@ -1,9 +1,8 @@
-import classes from "./home.module.sass";
 import { LoginForm } from "../../components";
 
 const Home = () => {
   return (
-    <div className={classes.home}>
+    <div className="centeredPages">
       <LoginForm />
     </div>
   );

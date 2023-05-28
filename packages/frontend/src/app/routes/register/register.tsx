@@ -1,10 +1,12 @@
-import classes from "./register.module.sass";
 import { RegisterForm } from "../../components";
+import CheckUserLogged from "../check-user-logged/checkUserLogged";
 
 const Register = () => {
   return (
-    <div className={classes.register}>
-      <RegisterForm />
+    <div className="centeredPages">
+      <CheckUserLogged>
+        <RegisterForm />
+      </CheckUserLogged>
     </div>
   );
 };

@@ -43,7 +43,7 @@ const Header = () => {
               key="Perfil"
               icon={Avatar}
               text="Perfil"
-              link="/profile"
+              link="/login"
               fluid
               dark
             />

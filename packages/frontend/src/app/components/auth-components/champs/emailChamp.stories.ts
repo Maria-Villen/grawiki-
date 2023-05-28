@@ -2,6 +2,7 @@ import EmailChamp from "./emailchamp";
 import { withRouter } from "storybook-addon-react-router-v6";
 import type { Meta, StoryObj } from "@storybook/react";
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
+import { useTranslation } from "react-i18next";
 
 const meta = {
   title: "Forms/Champs/EmailChamp",

@@ -21,6 +21,7 @@ export { default as BasicButton } from "./buttons/basicButton/basicButton";
 /** Links */
 export { default as IconLink } from "./links/icon-link/iconLink";
 export { default as MenuListItem } from "./links/menu-list-item/menuListItem";
+export { default as BasicBtnLink } from "./links/basic-btn-link/basicBtnLink";
 
 /** Inputs */
 export { default as BaseInput } from "./inputs/base-input/baseInput";
@@ -30,4 +31,4 @@ export { default as Searchbar } from "./inputs/search-bar/searchbar";
 
 /** Messages */
 export { default as ErrorFormMsg } from "./messages/error-form-msg/errorFormMsg";
-export { default as MsgSuccessMsg } from "./messages/msg-success/msgSuccess";
+export { default as MsgSuccess } from "./messages/msg-success/msgSuccess";

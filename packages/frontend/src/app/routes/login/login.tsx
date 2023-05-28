@@ -1,11 +1,13 @@
-import classes from "./login.module.sass";
 import { LoginForm, RegisterCall2Action } from "../../components";
+import CheckUserLogged from "../check-user-logged/checkUserLogged";
 
 const Login = () => {
   return (
-    <div className={classes.login}>
-      <LoginForm />
-      <RegisterCall2Action />
+    <div className="centeredPages">
+      <CheckUserLogged>
+        <LoginForm />
+        <RegisterCall2Action />
+      </CheckUserLogged>
     </div>
   );
 };

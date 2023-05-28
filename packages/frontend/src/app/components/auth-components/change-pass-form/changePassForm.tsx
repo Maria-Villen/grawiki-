@@ -1,20 +1,30 @@
 import classes from "./changePassForm.module.sass";
-
 import { LayoutCardForm, BasicButton } from "../../../ui";
-import { useFormik } from "formik";
-import {
-  validationSchema,
-  initialValues,
-  onSubmit,
-} from "./changePassDataForm";
 import { PassChamp } from "../champs";
+import useChangePassDataForm from "./changePassDataForm";
+import { useAppSelector } from "../../../redux/store";
+import { useEffect } from "react";
 
 function ChangePassForm() {
-  const { handleSubmit, errors, touched, getFieldProps } = useFormik({
-    initialValues,
-    validationSchema,
-    onSubmit,
-  });
+  const { handleSubmit, errors, touched, getFieldProps } =
+    useChangePassDataForm();
+
+  const {
+    loggedUser: user,
+    error,
+    loading,
+  } = useAppSelector((state) => state.auth);
+
+  useEffect(() => {
+    if (user) {
+      console.log("success!");
+    }
+    if (error.message) {
+      console.log(error.message);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user, error]);
+
   return (
     <LayoutCardForm withLogo>
       <h2>Se ha verificado su cuenta</h2>
@@ -37,6 +47,7 @@ function ChangePassForm() {
           placeholder="Repetir contraseña"
           isTouched={touched.confirmPass}
           isError={errors.confirmPass}
+          {...getFieldProps("confirmPass")}
         />
         <BasicButton
           category="primary"
@@ -45,6 +56,7 @@ function ChangePassForm() {
           type="submit"
         />
       </form>
+      {loading && <p>Loading</p>}
     </LayoutCardForm>
   );
 }
