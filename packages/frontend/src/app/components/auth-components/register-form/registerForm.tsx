@@ -9,7 +9,6 @@ import {
 import { PassChamp, EmailChamp, UserNameChamp } from "../champs";
 import useRegisterDataForm from "./registerDataForm";
 import { useAppSelector } from "../../../redux/store";
-import { useEffect } from "react";
 import { MsgSuccess } from "../../../ui";
 
 const RegisterForm = () => {
@@ -22,16 +21,6 @@ const RegisterForm = () => {
     loading,
   } = useAppSelector((state) => state.auth);
 
-  useEffect(() => {
-    if (user) {
-      console.log("success!");
-    }
-    if (error.message) {
-      console.log(error.message);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user, error]);
-
   if (user) {
     return (
       <MsgSuccess
@@ -41,7 +30,7 @@ const RegisterForm = () => {
       />
     );
   } else if (error.message) {
-    return <p>Errror ${error.message}</p>;
+    return <p>Error ${error.message}</p>;
   } else {
     return (
       <LayoutCardForm withLogo>

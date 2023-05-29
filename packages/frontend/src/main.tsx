@@ -2,7 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import store from "./app/redux/store";
 import { Provider } from "react-redux";
-import { Home, NotFound, Login, Register, ChangePass } from "./app/routes";
+import {
+  Home,
+  NotFound,
+  Login,
+  Register,
+  ChangePass,
+  RecoverPass,
+} from "./app/routes";
 import { Layout } from "./app/components";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { I18nextProvider } from "react-i18next";
@@ -43,7 +50,8 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register />,
       },
-      { path: "/changePass", element: <ChangePass /> },
+      { path: "/recover", element: <RecoverPass /> },
+      { path: "/password/:token", element: <ChangePass /> },
     ],
   },
   {
