@@ -1,6 +1,8 @@
 import LoginForm from "./loginForm";
 import { withRouter } from "storybook-addon-react-router-v6";
 import type { Meta, StoryObj } from "@storybook/react";
+import { withRedux } from "../../../../stories/decorators";
+
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 
 const meta = {
@@ -11,12 +13,7 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  decorators: [withRouter],
-  argTypes: {
-    onClick: {
-      control: false,
-    },
-  },
+  decorators: [withRouter, withRedux],
 } satisfies Meta<typeof LoginForm>;
 
 export default meta;

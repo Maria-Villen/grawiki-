@@ -1,6 +1,7 @@
 import type { Preview } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
+import { withRedux } from "../src/stories/decorators";
 
 const preview: Preview = {
   parameters: {
@@ -12,11 +13,14 @@ const preview: Preview = {
         { name: "dark", value: "#1e1e1e" },
       ],
     },
+    reactRouter: {
+      routePath: "/",
+    },
     viewport: {
       viewports: INITIAL_VIEWPORTS,
     },
     layout: "padding",
-    decorators: [withRouter],
+    decorators: [withRouter, withRedux],
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
@@ -26,5 +30,6 @@ const preview: Preview = {
     },
   },
 };
+console.log(preview);
 
 export default preview;

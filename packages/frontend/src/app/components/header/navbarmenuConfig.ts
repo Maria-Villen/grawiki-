@@ -12,24 +12,24 @@ export const menuItems: Array<IMenuItem> = [
     id: "1",
     icon: Health,
     text: "Salud",
-    link: "/health",
+    link: "/category/health",
   },
   {
     id: "2",
     icon: Toys,
     text: "Juguetes",
-    link: "/Toys",
+    link: "/category/Toys",
   },
   {
     id: "3",
     icon: Bank,
     text: "Bancos",
-    link: "/banks",
+    link: "/category/banks",
   },
   {
     id: "4",
     icon: Government,
     text: "Gobierno",
-    link: "/government",
+    link: "/category/government",
   },
 ];

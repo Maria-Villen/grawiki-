@@ -3,7 +3,7 @@ import { LoginForm } from "../../components";
 const Home = () => {
   return (
     <div className="centeredPages">
-      <LoginForm />
+      <p>Esta es la home Page </p>
     </div>
   );
 };

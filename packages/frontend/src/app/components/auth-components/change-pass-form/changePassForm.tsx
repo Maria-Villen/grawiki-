@@ -1,13 +1,24 @@
 import classes from "./changePassForm.module.sass";
-import { LayoutCardForm, BasicButton, MsgSuccess } from "../../../ui";
+import { LayoutCardForm, BasicButton, MsgSuccess, MsgError } from "../../../ui";
 import { PassChamp } from "../champs";
 import useChangePassDataForm from "./changePassDataForm";
-import { useAppSelector } from "../../../redux/store";
+import { useAppSelector, useAppDispatch } from "../../../redux/store";
+import { reset } from "../../../redux/slices/auth/authSlice";
+
+/**
+ * Form for the change of the password
+ */
 
 function ChangePassForm() {
   // get token from url and see if url matches with some user.
+  const dispatch = useAppDispatch();
+
   const { handleSubmit, errors, touched, getFieldProps } =
     useChangePassDataForm();
+
+  const resetStates = () => {
+    dispatch(reset());
+  };
 
   const {
     loggedUser: user,
@@ -24,7 +35,16 @@ function ChangePassForm() {
       />
     );
   } else if (error.message) {
-    return <p>Errror ${error.message}</p>;
+    return (
+      <MsgError
+        message={
+          error.message || "Hubo un problema. Intenta mas tarde nuevamente."
+        }
+        label="Ir a iniciar sesión"
+        link="/password"
+        cb={resetStates}
+      />
+    );
   } else {
     return (
       <LayoutCardForm withLogo>

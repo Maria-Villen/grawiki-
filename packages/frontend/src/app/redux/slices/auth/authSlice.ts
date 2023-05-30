@@ -22,6 +22,9 @@ const authSlice = createSlice({
       console.log("logout");
       return { ...initialState };
     },
+    reset: () => {
+      return { ...initialState, loading: false, error: {} };
+    },
   },
   extraReducers: (builder) => {
     /**
@@ -103,4 +106,4 @@ const authSlice = createSlice({
 });
 
 export default authSlice.reducer;
-export const { logout } = authSlice.actions;
+export const { logout, reset } = authSlice.actions;

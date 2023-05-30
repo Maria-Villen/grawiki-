@@ -20,7 +20,7 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^12.3.1",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.11.1",
+    "react-router-dom": "^6.11.2",
     "yup": "^1.1.1"
   },
   "devDependencies": {
@@ -45,7 +45,8 @@
     "sass": "^1.58.0",
     "storybook": "^7.0.10",
     "storybook-addon-designs": "^7.0.0-beta.2",
-    "storybook-addon-react-router-v6": "^1.0.0",
+    "storybook-addon-react-router-v6": "^1.0.1",
+    "@storybook/addon-measure": "^7.0.18",
     "storybook-zeplin": "^2.0.0",
     "typescript": "^5.0.2",
     "vite": "^4.3.2"

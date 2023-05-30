@@ -1,11 +1,12 @@
 import classes from "./header.module.sass";
-import { Logo, MenuListItem, MenuButton, MenuNavbarCollapse } from "../../ui";
+import { Logo, MenuListItem, MenuNavbarCollapse } from "../../ui";
 import { menuItems, IMenuItem } from "./navbarmenuConfig";
-import { Avatar, Create, Edit } from "../../assets";
+import { Avatar, Create } from "../../assets";
+import { HTMLProps } from "react";
 
-const Header = () => {
+const Header = ({ className }: HTMLProps<HTMLDivElement>) => {
   return (
-    <div className={classes.header}>
+    <div className={`${classes.header} ${className}`}>
       <div className={classes.header_logo_mobile}>
         <Logo type="vertical" />
       </div>

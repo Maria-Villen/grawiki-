@@ -1,22 +1,18 @@
 import ChangePassForm from "./changePassForm";
-import { withRouter } from "storybook-addon-react-router-v6";
 import type { Meta, StoryObj } from "@storybook/react";
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
+import { withRedux } from "../../../../stories/decorators";
+import { withRouter } from "storybook-addon-react-router-v6";
 
 const meta = {
   title: "Forms/ChangePassForm",
   component: ChangePassForm,
   tags: ["autodocs"],
   args: {},
+  decorators: [withRouter, withRedux],
   parameters: {
     layout: "centered",
   },
-  decorators: [withRouter],
-  argTypes: {
-    onClick: {
-      control: false,
-    },
-  },
+  argTypes: {},
 } satisfies Meta<typeof ChangePassForm>;
 
 export default meta;

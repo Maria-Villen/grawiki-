@@ -1,16 +1,24 @@
 import * as Yup from "yup";
+import { useFormik } from "formik";
+import { FocusEvent } from "react";
 import { IUserRegisterForm, IUserRegister } from "../../../interfaces/auth";
 import { userRegister } from "../../../redux/slices/auth/authActions";
 import { useAppDispatch } from "../../../redux/store";
 import { auth } from "../../../services/useMockServices";
-import { useFormik } from "formik";
-import { FocusEvent } from "react";
+
+/**
+ * Hook to handle the register form logic
+ */
 
 const useRegisterDataForm = () => {
   const dispatch = useAppDispatch();
   const { checkUserName, checkEmailExists } = auth;
+
+  // Flag Checkapi: says yup when the api must be use for check the email and username existence.
+  // This flag avoid call the api at each onchange event. Only call the api on blur event.
   let checkApi = false;
 
+  //Initial values for de register form
   const initialValues: IUserRegisterForm = {
     userName: "",
     email: "",
@@ -19,6 +27,7 @@ const useRegisterDataForm = () => {
     terms: false,
   };
 
+  // Validation schema of yup
   const validationSchema = Yup.object({
     userName: Yup.string()
       .required("El nombre de usuario es obligatorio.")
@@ -79,12 +88,18 @@ const useRegisterDataForm = () => {
     ),
   });
 
+  /**
+   * This event dispatch when onBlur, so in that case,
+   * checkApi is true to allow YUP to use the api on validation
+   */
   const handleBlurWithAction = (e: FocusEvent<HTMLInputElement>) => {
     console.log("onblur");
     checkApi = true;
     console.log("set api check set to true", (checkApi = true));
     handleBlur(e);
   };
+
+  /** Function called on submit, send the values to redux handler */
 
   const onSubmit = (values: IUserRegister) => {
     console.log("register");
@@ -97,6 +112,7 @@ const useRegisterDataForm = () => {
     );
   };
 
+  /** Formik hook to handle the form */
   const { handleSubmit, handleBlur, errors, touched, getFieldProps } =
     useFormik({
       initialValues,

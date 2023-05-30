@@ -2,10 +2,11 @@ import * as Yup from "yup";
 import { IUserLogin } from "../../../interfaces/auth";
 import { useAppDispatch } from "../../../redux/store";
 import { userLogin } from "../../../redux/slices/auth/authActions";
+import { useFormik } from "formik";
 
-//
-// onclick = ()=>dispatch(login({email:"dfjd", password:"DEfdsfa"}));
-// const user = useAppSelector(state => state.auth.loggedUser);
+/**
+ * Handles de logic of Login Form
+ */
 
 const useLoginDataForm = () => {
   const dispatch = useAppDispatch();
@@ -23,14 +24,20 @@ const useLoginDataForm = () => {
   });
 
   const onSubmit = (values: IUserLogin) => {
-    console.log("login");
     dispatch(userLogin({ email: values.email, password: values.password }));
   };
 
-  return {
+  const { handleSubmit, errors, touched, getFieldProps } = useFormik({
     initialValues,
     validationSchema,
     onSubmit,
+  });
+
+  return {
+    handleSubmit,
+    errors,
+    touched,
+    getFieldProps,
   };
 };
 

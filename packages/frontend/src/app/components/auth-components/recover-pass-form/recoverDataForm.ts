@@ -1,9 +1,10 @@
 import * as Yup from "yup";
 import { auth } from "../../../services/useMockServices";
 import { useFormik } from "formik";
-import { Dispatch, SetStateAction } from "react";
+import useStateCall from "../../../services/useStateCall";
 
-const useRecoverPassDataForm = (setState: Dispatch<SetStateAction<string>>) => {
+const useRecoverPassDataForm = () => {
+  const { setState, loading, error, success } = useStateCall();
   const { userRecoverPass } = auth;
   interface IRecoverPassForm {
     email: string;
@@ -44,6 +45,10 @@ const useRecoverPassDataForm = (setState: Dispatch<SetStateAction<string>>) => {
     errors,
     touched,
     getFieldProps,
+    loading,
+    error,
+    success,
+    setState,
   };
 };
 

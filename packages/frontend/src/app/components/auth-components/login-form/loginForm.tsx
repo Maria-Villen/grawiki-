@@ -1,23 +1,23 @@
 import classes from "./loginForm.module.sass";
 import { Link } from "react-router-dom";
-import { LayoutCardForm, CheckInput, BasicButton } from "../../../ui";
-import { useFormik } from "formik";
+import { LayoutCardForm, CheckInput, BasicButton, MsgError } from "../../../ui";
 import useLoginDataForm from "./useLoginDataForm";
 import { EmailChamp, PassChamp } from "../champs";
-import { useAppSelector } from "../../../redux/store";
-import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "../../../redux/store";
 import { useNavigate } from "react-router-dom";
+import { reset } from "../../../redux/slices/auth/authSlice";
 
+/**
+ * Login Form Component
+ */
 const LoginForm = () => {
-  const { initialValues, validationSchema, onSubmit } = useLoginDataForm();
-
-  const { handleSubmit, errors, touched, getFieldProps } = useFormik({
-    initialValues,
-    validationSchema,
-    onSubmit,
-  });
-
+  const { handleSubmit, errors, touched, getFieldProps } = useLoginDataForm();
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+
+  const resetStates = () => {
+    dispatch(reset());
+  };
 
   const {
     loggedUser: user,
@@ -25,15 +25,18 @@ const LoginForm = () => {
     loading,
   } = useAppSelector((state) => state.auth);
 
-  useEffect(() => {
-    if (user) {
-      navigate("/profile");
-    }
-    if (error.message) {
-      alert(`error: ${error.message}`);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user, error]);
+  if (user) {
+    navigate("/profile");
+  } else if (error.message) {
+    return (
+      <MsgError
+        message={error.message}
+        label="Aceptar"
+        link="/login"
+        cb={resetStates}
+      />
+    );
+  }
 
   return (
     <LayoutCardForm withLogo>
@@ -59,7 +62,7 @@ const LoginForm = () => {
           <label htmlFor="rememberMe" className={classes.checkbox}>
             <CheckInput id="rememberMe" /> Recordarme
           </label>
-          <Link to="/passchange">Olvidé mi contraseña</Link>
+          <Link to="/recover">Olvidé mi contraseña</Link>
         </div>
         <BasicButton
           category="primary"

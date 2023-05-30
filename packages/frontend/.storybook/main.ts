@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-vite";
+
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   staticDirs: ["../public"],
@@ -10,6 +11,7 @@ const config: StorybookConfig = {
     "storybook-zeplin",
     "storybook-addon-react-router-v6",
     "@storybook/addon-a11y",
+    "@storybook/addon-measure",
   ],
   typescript: {
     // Overrides the default Typescript configuration to allow multi-package components to be documented via Autodocs.

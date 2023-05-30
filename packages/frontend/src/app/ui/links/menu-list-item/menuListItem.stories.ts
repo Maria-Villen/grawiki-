@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Bank, Toys, Government, Health } from "../../../assets";
-import { withRouter } from "storybook-addon-react-router-v6";
 import MenuListItem from "./menuListItem";
+import { withRouter } from "storybook-addon-react-router-v6";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -22,7 +22,7 @@ type Story = StoryObj<typeof meta>;
 export const BankButtonFluid: Story = {
   args: {
     icon: Bank,
-    link: "/",
+    link: "/category/bank",
     text: "Button",
     fluid: true,
   },
@@ -31,8 +31,8 @@ export const BankButtonFluid: Story = {
 export const BankButton: Story = {
   args: {
     icon: Bank,
-    link: "/",
-    text: "Button",
+    link: "/category/bank",
+    text: "Bancos",
     fluid: false,
   },
 };
@@ -40,8 +40,8 @@ export const BankButton: Story = {
 export const ToyButton: Story = {
   args: {
     icon: Toys,
-    link: "/",
-    text: "Button",
+    link: "/category/toys",
+    text: "Juguetes",
     fluid: false,
   },
 };
@@ -49,8 +49,8 @@ export const ToyButton: Story = {
 export const HealthButton: Story = {
   args: {
     icon: Health,
-    link: "/",
-    text: "Button",
+    link: "/category/health",
+    text: "Salud",
     fluid: false,
   },
 };
@@ -58,8 +58,8 @@ export const HealthButton: Story = {
 export const GovernmentButton: Story = {
   args: {
     icon: Government,
-    link: "/",
-    text: "Button",
+    link: "/category/government",
+    text: "Gobierno",
     fluid: false,
   },
 };

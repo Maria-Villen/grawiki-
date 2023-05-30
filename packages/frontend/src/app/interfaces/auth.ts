@@ -1,5 +1,11 @@
 export interface IUserLogin {
+  /**
+   * Email del usuario
+   */
   email: string;
+  /**
+   * Password del usuario
+   */
   password: string;
 }
 

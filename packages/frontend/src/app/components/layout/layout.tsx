@@ -9,7 +9,7 @@ interface ILayout {
 const Layout = ({ withFooter }: ILayout) => {
   return (
     <div className={classes.container}>
-      <Header />
+      <Header className={classes.header} />
       <main
         className={`${classes.main} ${withFooter === false && classes.fluid}`}
       >

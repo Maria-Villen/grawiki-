@@ -37,5 +37,5 @@ const MenuListItem = ({
 export default MenuListItem;
 
 MenuListItem.defaultProps = {
-  link: "#",
+  link: "/",
 };

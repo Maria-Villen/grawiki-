@@ -7,6 +7,7 @@ const meta = {
   title: "Layouts/Layout",
   component: Layout,
   decorators: [withRouter],
+  args: { withFooter: true },
   tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",

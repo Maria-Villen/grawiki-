@@ -37,3 +37,10 @@ export const Normal: Story = {
     isError: "",
   },
 };
+
+export const Error: Story = {
+  args: {
+    isTouched: true,
+    isError: "Un nombre de usuario es requerido.",
+  },
+};

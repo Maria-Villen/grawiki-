@@ -1,25 +1,31 @@
 import classes from "./recoverPassForm.module.sass";
-import useStateCall from "../../../services/useStateCall";
-import { LayoutCardForm, BasicButton } from "../../../ui";
+import { LayoutCardForm, BasicButton, MsgError } from "../../../ui";
+import { MsgEmailSent } from "../..";
 import { EmailChamp } from "../champs";
 import useRecoverPassDataForm from "./recoverDataForm";
-import { MsgEmailSent } from "../..";
-import { useEffect } from "react";
 
 function RecoverPassForm() {
-  const { setState, loading, error, success } = useStateCall();
-  const { handleSubmit, errors, touched, getFieldProps } =
-    useRecoverPassDataForm(setState);
-
-  useEffect(() => {
-    console.log("rendering");
-    console.log("error", error);
-    console.log("loading", loading);
-    console.log("success", success);
-  }, [loading, error, success]);
+  const {
+    handleSubmit,
+    errors,
+    touched,
+    getFieldProps,
+    error,
+    loading,
+    success,
+    setState,
+  } = useRecoverPassDataForm();
 
   if (error) {
-    return <p>Se produjo un error</p>;
+    return (
+      <MsgError
+        message="Hubo un error"
+        label="Reintentar"
+        link="/recover"
+        cb={() => setState("reset")}
+        linkInit
+      />
+    );
   } else if (success) {
     return <MsgEmailSent />;
   } else
