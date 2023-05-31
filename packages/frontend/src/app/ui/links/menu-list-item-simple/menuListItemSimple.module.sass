@@ -1,0 +1,59 @@
+@use "../../../styles/variables" as *
+
+.menulist
+  text-decoration: none
+  display: flex
+  justify-content: left
+  align-items: center
+  gap: 1rem
+  font-size: 1rem
+  line-height: 1.188rem
+  width: 100%
+
+  &_link
+    color: black
+    text-decoration: none
+    display: flex
+    justify-content: start
+    align-items: center
+    gap: 0.5rem
+    width: auto
+    height: 32px
+
+    & .text
+      padding-right: 1rem
+
+    & .icon
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 11.5px
+      & img
+        width: 24px
+        height: 24px
+        object-fit: contain
+
+  &:hover
+    background: $primary-blue
+    & a
+      color: white
+    & img
+      filter: none
+
+  &.fluid
+    padding: 0
+    & .menulist_link
+      width: 100%
+      flex-grow: 1
+
+      @include mq("small")
+        width: 100%
+        flex-grow: 1
+
+.inverse
+  & img
+    filter: invert(1)
+  &:hover
+    background: $primary-blue
+    & a
+      color: white

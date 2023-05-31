@@ -1,8 +1,8 @@
 // LOGIN USER
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import { AxiosError } from "axios";
 import { IUserRegister, IUserLogin } from "../../../interfaces/auth";
 import { auth } from "../../../services/useMockServices";
-import { AxiosError } from "axios";
 
 export const userLogin = createAsyncThunk(
   "authSlice/userLogin",

@@ -11,7 +11,7 @@ const meta = {
   decorators: [withRouter],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
-    layout: "fullscreen",
+    layout: "centered",
     backgrounds: {
       default: "light",
     },

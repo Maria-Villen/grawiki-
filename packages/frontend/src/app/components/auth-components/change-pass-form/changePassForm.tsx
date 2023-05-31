@@ -13,13 +13,16 @@ function ChangePassForm() {
   // get token from url and see if url matches with some user.
   const dispatch = useAppDispatch();
 
+  // Hook for the logic of the form
   const { handleSubmit, errors, touched, getFieldProps } =
     useChangePassDataForm();
 
+  // reset the states of the redux auth data
   const resetStates = () => {
     dispatch(reset());
   };
 
+  // get Auth redux info
   const {
     loggedUser: user,
     error,
@@ -30,8 +33,8 @@ function ChangePassForm() {
     return (
       <MsgSuccess
         message="Se ha cambiado la contraseña"
-        label="Ir a iniciar sesión"
-        link="/login"
+        label="Ir al perfil"
+        link="/profile"
       />
     );
   } else if (error.message) {

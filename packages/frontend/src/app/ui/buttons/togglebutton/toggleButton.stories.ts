@@ -7,6 +7,7 @@ export default {
   component: ToggleButton,
   tags: ["autodocs"],
   parameters: {
+    layout: "centered",
     backgrounds: { default: "light" },
   },
   argTypes: {
@@ -19,17 +20,17 @@ export default {
   },
 };
 
-export const Menu = {
-  args: {
-    iconClose: MenuIcon,
-    isOpen: false,
-  },
-};
-
 export const Arrow = {
   args: {
     iconOpen: ArrowUp,
     iconClose: ArrowDown,
+    isOpen: false,
+  },
+};
+
+export const Menu = {
+  args: {
+    iconClose: MenuIcon,
     isOpen: false,
   },
 };

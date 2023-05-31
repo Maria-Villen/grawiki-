@@ -5,16 +5,26 @@ import {
   CheckInput,
   BasicButton,
   ErrorFormMsg,
+  MsgError,
 } from "../../../ui";
 import { PassChamp, EmailChamp, UserNameChamp } from "../champs";
 import useRegisterDataForm from "./registerDataForm";
-import { useAppSelector } from "../../../redux/store";
+import { useAppSelector, useAppDispatch } from "../../../redux/store";
 import { MsgSuccess } from "../../../ui";
+import { reset } from "../../../redux/slices/auth/authSlice";
 
+/**
+ * Register form
+ */
 const RegisterForm = () => {
   const { handleSubmit, handleBlurWithAction, errors, touched, getFieldProps } =
     useRegisterDataForm();
+  const dispatch = useAppDispatch();
 
+  // Reset the state of the auth redux when the button was clicked. Avoid multiple renders.
+  const resetStates = () => {
+    dispatch(reset());
+  };
   const {
     loggedUser: user,
     error,
@@ -30,7 +40,14 @@ const RegisterForm = () => {
       />
     );
   } else if (error.message) {
-    return <p>Error ${error.message}</p>;
+    return (
+      <MsgError
+        message="El registro falló, reintente de vuelta."
+        label="Reintentar de vuelta."
+        link="/register"
+        cb={resetStates}
+      />
+    );
   } else {
     return (
       <LayoutCardForm withLogo>

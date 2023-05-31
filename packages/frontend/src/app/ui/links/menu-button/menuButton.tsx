@@ -16,6 +16,8 @@ interface IMenuButtonProps extends LinkProps {
   fluid?: boolean;
 }
 
+/** Link acting as button */
+
 const MenuButton = ({ icon, text, fluid, ...props }: IMenuButtonProps) => {
   return (
     <Link

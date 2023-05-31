@@ -38,9 +38,23 @@ export const Normal: Story = {
   },
 };
 
+Normal.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki---Screens?type=design&node-id=2079-23483&t=0g41u4YcLjzSx1YV-4",
+  },
+};
+
 export const Error: Story = {
   args: {
     isTouched: true,
-    isError: "El email ya está siendo utilizado",
+    isError: "Ingrese una dirección de e-mail válida.",
+  },
+};
+
+Error.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki---Screens?type=design&node-id=2079-25092&t=0g41u4YcLjzSx1YV-4",
   },
 };

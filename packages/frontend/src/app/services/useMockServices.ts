@@ -25,6 +25,7 @@ export const auth = {
     console.log(password, userName, email);
     return { id: "100", role: "user", token: "secret-token" };
   },
+
   // via direct call
   checkEmailExists: (email: string): boolean => {
     const emailExists = users.find(
@@ -36,6 +37,7 @@ export const auth = {
       return false;
     }
   },
+
   // via direct call
   checkUserName: (userName: string): boolean => {
     const usernameExists = users.find(
@@ -47,11 +49,13 @@ export const auth = {
       return false;
     }
   },
-  // via reducer user
+
+  // via reducer auth
   changePass: (password: string): IUserLoggedIn => {
     console.log(password);
     return { id: "100", role: "user", token: "secret-token" };
   },
+
   // via direct call
   tokenPassVerify: (token: string): boolean => {
     if (token === "mocktoken") {

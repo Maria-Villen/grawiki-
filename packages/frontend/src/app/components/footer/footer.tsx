@@ -3,6 +3,7 @@ import { FooterLinksArea } from "../../ui";
 import { FooterMobile } from "../";
 import classes from "./footer.module.sass";
 
+/** Footer component of the app */
 function Footer() {
   return (
     <div className={classes.container}>

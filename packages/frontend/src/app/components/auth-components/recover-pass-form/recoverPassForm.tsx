@@ -4,6 +4,9 @@ import { MsgEmailSent } from "../..";
 import { EmailChamp } from "../champs";
 import useRecoverPassDataForm from "./recoverDataForm";
 
+/**
+ * Recover password component (email form to send link to recover password)
+ */
 function RecoverPassForm() {
   const {
     handleSubmit,
@@ -19,7 +22,7 @@ function RecoverPassForm() {
   if (error) {
     return (
       <MsgError
-        message="Hubo un error"
+        message="No se ha podido realizar el envío. Es posible que no exista una cuenta con ese e-mail, o que se haya producido un error. Reintente nuevamente."
         label="Reintentar"
         link="/recover"
         cb={() => setState("reset")}

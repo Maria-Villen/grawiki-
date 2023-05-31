@@ -45,7 +45,11 @@
         padding-bottom: 40px
 
     &_itemlist
-      margin: 1rem
+      display: flex
+      flex-direction: column
+      justify-content: start
+      padding: 0 1rem
+      max-width: 100%
       @include mq("small")
         margin: 1rem 0
         padding: 0
@@ -53,6 +57,7 @@
         flex-direction: column
         gap: 10px
     &_item
-      margin: 1rem
+      margin: 1rem 0
+      padding: 1rem 0
       @include mq("small")
         margin: 0

@@ -2,6 +2,9 @@ import { EmailImage } from "../../../assets";
 import { LayoutCardForm } from "../../../ui";
 import classes from "./megEmailSent.module.sass";
 
+/**
+ * Message component for mail sent (below to recover password)
+ */
 const MsgEmailSent = () => {
   return (
     <LayoutCardForm withLogo>

@@ -23,6 +23,6 @@ export const Normal: Story = {};
 Normal.parameters = {
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki---Screens?type=design&node-id=1541-12797&t=LYhyfabqOwT1ZqHE-4",
+    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki---Screens?type=design&node-id=1541-12644&t=0g41u4YcLjzSx1YV-4",
   },
 };

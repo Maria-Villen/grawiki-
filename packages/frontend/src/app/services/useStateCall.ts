@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
 
+/**
+ * @Hook
+ * @description This hook manage the states of the api call that are not via reducers.
+ */
+
 function useStateCall() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -28,6 +33,7 @@ function useStateCall() {
     };
   }, [state]);
 
+  /** To reset the states to initial */
   const reset = () => {
     setLoading(false);
     setError(false);

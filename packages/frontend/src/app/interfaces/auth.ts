@@ -20,13 +20,12 @@ export interface IUserRegister {
   email: string;
   password: string;
 }
+export interface IUserRegisterForm extends IUserRegister {
+  confirmPass: string;
+  terms: boolean;
+}
 
 export interface IChangePassForm {
   password: string;
   confirmPass: string;
-}
-
-export interface IUserRegisterForm extends IUserRegister {
-  confirmPass: string;
-  terms: boolean;
 }

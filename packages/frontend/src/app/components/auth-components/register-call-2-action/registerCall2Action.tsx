@@ -2,6 +2,9 @@ import classes from "./registerCall2Action.module.sass";
 import { LayoutCardForm, BasicButton } from "../../../ui";
 import { useNavigate } from "react-router-dom";
 
+/**
+ * Call to Register Action Component
+ */
 const RegisterCall2Action = () => {
   const navigate = useNavigate();
   const SubmitEventHandler = () => {

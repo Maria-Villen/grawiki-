@@ -38,9 +38,23 @@ export const Normal: Story = {
   },
 };
 
+Normal.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki---Screens?type=design&node-id=1991-18726&t=0g41u4YcLjzSx1YV-4",
+  },
+};
+
 export const Error: Story = {
   args: {
     isTouched: true,
     isError: "Un nombre de usuario es requerido.",
+  },
+};
+
+Error.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki---Screens?type=design&node-id=1991-19655&t=0g41u4YcLjzSx1YV-4",
   },
 };

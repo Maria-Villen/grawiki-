@@ -12,7 +12,7 @@ const meta = {
   },
   argTypes: {
     fluid: {
-      control: "boolean",
+      table: { disable: true },
     },
     className: {
       table: { disable: true },

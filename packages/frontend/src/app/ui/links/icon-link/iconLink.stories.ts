@@ -5,10 +5,14 @@ import IconLink from "./iconLink";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
-  title: "Buttons/IconLink",
+  title: "Links/IconLink",
   component: IconLink,
   tags: ["autodocs"],
   decorators: [withRouter],
+  parameters: {
+    backgrounds: { default: "light" },
+    layout: "centered",
+  },
 } satisfies Meta<typeof IconLink>;
 
 export default meta;
@@ -21,6 +25,7 @@ export const FacebookIconLink: Story = {
     altText: "Facebook",
   },
 };
+
 export const InstagramIconLink: Story = {
   args: {
     icon: Instagram,

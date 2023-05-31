@@ -1,6 +1,7 @@
 import { BaseInput, ErrorFormMsg } from "../../../ui";
 import { IChamp } from "../../../interfaces/champs";
 
+/** UserName champ with error message */
 const UserNameChamp = ({ className, isTouched, isError, ...props }: IChamp) => {
   return (
     <div className={className && className}>

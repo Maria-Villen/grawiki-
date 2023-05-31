@@ -11,7 +11,6 @@ const config: StorybookConfig = {
     "storybook-zeplin",
     "storybook-addon-react-router-v6",
     "@storybook/addon-a11y",
-    "@storybook/addon-measure",
   ],
   typescript: {
     // Overrides the default Typescript configuration to allow multi-package components to be documented via Autodocs.

@@ -1,21 +1,23 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Bank, Toys, Government, Health } from "../../../assets";
-import MenuListItem from "./menuListItem";
+import {
+  Bank,
+  Toys,
+  Government,
+  Health,
+  Avatar,
+  CreateWhite,
+} from "../../../assets";
+import MenuListItemSimple from "./menuListItemSimple";
 import { withRouter } from "storybook-addon-react-router-v6";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
-  title: "Links/MenuListItem",
-  component: MenuListItem,
+  title: "Links/MenuListItemSimple",
+  component: MenuListItemSimple,
   tags: ["autodocs"],
   decorators: [withRouter],
-  args: {
-    dark: true,
-  },
+  args: { inverse: true },
   argTypes: {
-    dark: {
-      control: "boolean",
-    },
     className: {
       table: { disable: true },
     },
@@ -24,7 +26,7 @@ const meta = {
     backgrounds: { default: "ligth" },
     layout: "centered",
   },
-} satisfies Meta<typeof MenuListItem>;
+} satisfies Meta<typeof MenuListItemSimple>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -75,6 +77,24 @@ export const GovernmentButton: Story = {
     icon: Government,
     link: "/category/government",
     text: "Gobierno",
+    fluid: false,
+  },
+};
+
+export const CreateTheme: Story = {
+  args: {
+    icon: CreateWhite,
+    link: "/create",
+    text: "Crear",
+    fluid: false,
+  },
+};
+
+export const User: Story = {
+  args: {
+    icon: Avatar,
+    link: "/profile",
+    text: "Perfil",
     fluid: false,
   },
 };

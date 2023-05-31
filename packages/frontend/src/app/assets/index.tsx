@@ -16,6 +16,7 @@ export { default as ArrowDown } from "./icons/arrowDown.svg";
 export { default as ArrowUp } from "./icons/arrow-top.svg";
 export { default as CloseMenu } from "./icons/close.svg";
 export { default as Create } from "./icons/create.svg";
+export { default as CreateWhite } from "./icons/createWhite.svg";
 
 /** Flags */
 export { default as English } from "./icons/english.svg";

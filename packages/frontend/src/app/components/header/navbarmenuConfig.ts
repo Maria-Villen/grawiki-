@@ -1,4 +1,4 @@
-import { Bank, Government, Health, Toys, Create } from "../../assets";
+import { Bank, Government, Health, Toys } from "../../assets";
 
 export interface IMenuItem {
   id: string;
