@@ -65,6 +65,13 @@ export const auth = {
     }
   },
 
+  getNewToken: () => {
+    return {
+      id: "1",
+      role: "user",
+      token: "secret-token",
+    };
+  },
   // via direct call
   userRecoverPass: (email: string): boolean => {
     const emailExists = users.find(

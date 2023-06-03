@@ -36,7 +36,7 @@ export { default as PassOpen } from "./icons/Passopen.svg";
 export { default as PassHidden } from "./icons/PassHidden.svg";
 export { default as Exclamation } from "./icons/exclamation.svg";
 export { default as Avatar } from "./icons/user-avatar.svg";
-
+export { default as LogoutIcon } from "./icons/logoutIcon.svg";
 /** Images */
 export { default as SuccessImage } from "./images/StateCorrect.svg";
 export { default as NotFoundImage } from "./images/error404.svg";

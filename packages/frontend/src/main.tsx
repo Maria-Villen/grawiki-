@@ -9,6 +9,10 @@ import {
   Register,
   ChangePass,
   RecoverPass,
+  AdminPannel,
+  Unauthorised,
+  ProtectedRoute,
+  Profile,
 } from "./app/routes";
 import { Layout } from "./app/components";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -53,6 +57,35 @@ const router = createBrowserRouter([
       },
       { path: "/recover", element: <RecoverPass /> },
       { path: "/password/:token", element: <ChangePass /> },
+      { path: "/unauthorized", element: <Unauthorised /> },
+    ],
+  },
+  {
+    element: <ProtectedRoute allowedRoles={["admin"]} />,
+    children: [
+      {
+        element: <Layout />,
+        children: [
+          {
+            path: "/adminPannel",
+            element: <AdminPannel />,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    element: <ProtectedRoute allowedRoles={["user", "admin"]} />,
+    children: [
+      {
+        element: <Layout />,
+        children: [
+          {
+            path: "/profile",
+            element: <Profile />,
+          },
+        ],
+      },
     ],
   },
   {

@@ -1,6 +1,7 @@
 import { useEffect, ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "../../redux/store";
+import { PersistLogin, ProtectedRoute } from "..";
 
 interface ICheckUserLoggedProps {
   children: ReactNode;
@@ -17,7 +18,7 @@ const CheckUserLogged = ({ children }: ICheckUserLoggedProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <>{children}</>;
+  return <PersistLogin>{children}</PersistLogin>;
 };
 
 export default CheckUserLogged;

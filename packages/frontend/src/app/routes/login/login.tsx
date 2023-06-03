@@ -3,12 +3,12 @@ import CheckUserLogged from "../check-user-logged/checkUserLogged";
 
 const Login = () => {
   return (
-    <div className="centeredPages">
-      <CheckUserLogged>
+    <CheckUserLogged>
+      <div className="centeredPages">
         <LoginForm />
         <RegisterCall2Action />
-      </CheckUserLogged>
-    </div>
+      </div>
+    </CheckUserLogged>
   );
 };
 

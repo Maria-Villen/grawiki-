@@ -6,8 +6,9 @@ import {
   MenuNavbarCollapse,
 } from "../../ui";
 import { menuItems, IMenuItem } from "./navbarmenuConfig";
-import { Avatar, Create } from "../../assets";
+import { Avatar, Create, LogoutIcon } from "../../assets";
 import { HTMLProps, useEffect, useState } from "react";
+import { useAppSelector } from "../../redux/store";
 
 /**
  * @component
@@ -30,6 +31,8 @@ const Header = ({ className }: HTMLProps<HTMLDivElement>) => {
   }, []);
 
   const isMobile = width <= 768;
+
+  const { loggedUser } = useAppSelector((state) => state.auth);
 
   return (
     <div className={`${classes.header} ${className}`}>
@@ -91,14 +94,36 @@ const Header = ({ className }: HTMLProps<HTMLDivElement>) => {
           </ul>
           <ul className={classes.header_navbar_itemlist}>
             {isMobile ? (
-              <MenuListItemSimple
+              loggedUser ? (
+                <MenuListItemSimple
+                  className={classes.header_navbar_item}
+                  key="cerrarSesión"
+                  icon={LogoutIcon}
+                  text="Cerrar Sesión"
+                  link="/logout"
+                  fluid
+                  inverse
+                />
+              ) : (
+                <MenuListItemSimple
+                  className={classes.header_navbar_item}
+                  key="Perfil"
+                  icon={Avatar}
+                  text="Perfil"
+                  link="/login"
+                  fluid
+                  inverse
+                />
+              )
+            ) : loggedUser ? (
+              <MenuListItem
                 className={classes.header_navbar_item}
-                key="Perfil"
-                icon={Avatar}
-                text="Perfil"
-                link="/login"
+                key="cerrarSesión"
+                icon={LogoutIcon}
+                text="Cerrar sesión"
+                link="/logout"
                 fluid
-                inverse
+                dark
               />
             ) : (
               <MenuListItem

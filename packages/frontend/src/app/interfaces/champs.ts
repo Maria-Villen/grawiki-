@@ -11,4 +11,6 @@ export interface IChamp extends React.InputHTMLAttributes<HTMLInputElement> {
    * To add custom styles for the input.
    */
   className?: string;
+
+  ref?: React.MutableRefObject<HTMLInputElement | null>;
 }

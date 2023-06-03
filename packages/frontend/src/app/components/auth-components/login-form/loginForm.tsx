@@ -3,30 +3,35 @@ import { Link } from "react-router-dom";
 import { LayoutCardForm, CheckInput, BasicButton, MsgError } from "../../../ui";
 import useLoginDataForm from "./useLoginDataForm";
 import { EmailChamp, PassChamp } from "../champs";
-import { useAppDispatch, useAppSelector } from "../../../redux/store";
-import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../../../redux/store";
+import { Navigate, useLocation } from "react-router-dom";
 import { reset } from "../../../redux/slices/auth/authSlice";
 
 /**
  * Login Form Component
  */
 const LoginForm = () => {
-  const { handleSubmit, errors, touched, getFieldProps } = useLoginDataForm();
-  const navigate = useNavigate();
+  const {
+    handleSubmit,
+    errors,
+    touched,
+    getFieldProps,
+    rememberThisDevice,
+    user,
+    loading,
+    error,
+    persist,
+  } = useLoginDataForm();
+
+  const location = useLocation();
   const dispatch = useAppDispatch();
 
   const resetStates = () => {
     dispatch(reset());
   };
 
-  const {
-    loggedUser: user,
-    error,
-    loading,
-  } = useAppSelector((state) => state.auth);
-
   if (user) {
-    navigate("/profile");
+    return <Navigate to="/profile" state={{ from: location }} replace />;
   } else if (error.message) {
     return (
       <MsgError
@@ -49,6 +54,7 @@ const LoginForm = () => {
             isTouched={touched.email}
             isError={errors.email}
             {...getFieldProps("email")}
+            autoComplete={persist === "true" ? "on" : "off"}
           />
           <PassChamp
             className={classes.loginForm_group}
@@ -56,11 +62,17 @@ const LoginForm = () => {
             isTouched={touched.password}
             isError={errors.password}
             {...getFieldProps("password")}
+            autoComplete={persist === "true" ? "on" : "off"}
           />
         </div>
         <div className={classes.loginForm_politics}>
           <label htmlFor="rememberMe" className={classes.checkbox}>
-            <CheckInput id="rememberMe" /> Recordarme
+            <CheckInput
+              id="rememberMe"
+              onChange={rememberThisDevice}
+              checked={persist === "true" ? true : false}
+            />
+            Recordarme
           </label>
           <Link to="/recover">Olvidé mi contraseña</Link>
         </div>

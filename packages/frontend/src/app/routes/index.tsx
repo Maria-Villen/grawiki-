@@ -4,3 +4,8 @@ export { default as Login } from "./login/login";
 export { default as Register } from "./register/register";
 export { default as ChangePass } from "./change-pass/changePass";
 export { default as RecoverPass } from "./recover/recoverPass";
+export { default as AdminPannel } from "./admin-pannel/adminPannel";
+export { default as Unauthorised } from "./unauthorized/Unauthorized";
+export { default as ProtectedRoute } from "./protectedRoute/protectedRoute";
+export { default as PersistLogin } from "./persist-login/persistlogin";
+export { default as Profile } from "./profile/profile";
