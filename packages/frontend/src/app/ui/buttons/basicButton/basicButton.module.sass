@@ -1,72 +1,99 @@
-@use "../.././../styles/variables" as *
+@use "../../../ui/styles/variables" as *
 
 .button
   border-radius: 10px
   display: flex
-  border: none
+  border: 1px solid $triarty-hover
   padding: 0.4rem
-  min-height: 27px
-  min-width: 117px
+  min-height: 32px
+  min-width: 128px
   font-size: 1rem
   transition: background 200ms ease-in-out
   justify-content: center
   align-items: center
-
-  img
-    padding-right: 10px
-
-.default
-  background: white
-  color: black
+  background: $triarty-white
+  color: $greyscale-black
+  gap: 10px
   &:hover
-    background: $primary-gray
+    background: $triarty-hover
 
-.primary, .secondary
-  img 
-    filter: invert(1)
+  & .icon
+    height: 18px
+    width: 18px
 
-.primary 
-  background: $primary-blue
-  color: white
-  transition: background 200ms ease-in-out
+// Categories
+
+.disabled
+  background: $disable
+  color: $triarty-white
+  border: none
+
+.primary
+  border: none
+  background: $primary
+  color: $triarty-white
   &:hover
-    background: $button-color-blue
+    background: $primary-hover
 
 .secondary
-  background: $primary-red
-  color: white
-  transition: background 200ms ease-in-out
+  border: none
+  background: $negative
+  color: $triarty-white
   &:hover
-    background: $secondary-red
+    background: $negative-hover
+
+// Direction 
 
 .reverse
   flex-direction: row-reverse
-  img 
-    padding-right: 0
-    padding-left: 10px
 
+// dimensions
 .small
-  width: 117px
-  height: 27px
+  height: 32px
   font-size: 14px
-  line-height: 28px
+  line-height: 17px
   border-radius: 5px
+  &.onlyIcon
+    min-width: auto
+    width: 32px
+
+  & .icon
+    height: 12px
+    width: 12px
+
+.normal
+  width: 205px
+  height: 40px
+  &.onlyIcon
+    min-width: auto
+    width: 40px
 
 .medium
-  width: 237px
-  height: 40px
-  font-size: 16px
+  width: 320px
+  height: 45px
+  font-size: 18px
+  line-height: 22px
+  &.onlyIcon
+    min-width: auto
+    width: 45px
 
-.large
+.big
   width: 280px
   height: 56px
   font-size: 18px
+  line-height: 22px
+  &.onlyIcon
+    min-width: auto
+    width: 56px
+  & .icon
+    height: 24px
+    width: 24px
 
-.xlarge
-  width: 320px
-  height: 40px
-  font-size: 18px
-
-.fluid 
+.fluid
   width: 100%
   flex-grow: 1
+
+.onlyIcon
+  min-width: auto
+  min-height: auto
+  header: auto

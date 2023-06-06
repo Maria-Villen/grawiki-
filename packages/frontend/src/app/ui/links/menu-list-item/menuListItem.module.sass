@@ -1,4 +1,4 @@
-@use "../../../styles/variables" as *
+@use "../../../ui/styles/variables" as *
 
 .menulist
   text-decoration: none
@@ -10,11 +10,11 @@
   line-height: 1.188rem
   width: 100%
 
-  @include mq("small")
+  @include mq("mobile")
     justify-content: center
 
   &_link
-    color: black
+    color: $greyscale-black
     text-decoration: none
     display: flex
     justify-content: end
@@ -31,24 +31,12 @@
       padding: 11.5px
       box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.2)
 
-      &.dark
-        background: $primary-black
-        color: white
-
-      & img
-        width: 24px
-        height: 24px
-        object-fit: contain
-
     &:hover
       & .icon
-        background: $primary-blue
-        & img
-          filter: invert(1)
-      & .dark img
-        filter: none
+        background: $primary
+        color: $triarty-white
 
-    @include mq("small")
+    @include mq("mobile")
       flex-direction: column-reverse
       justify-content: center
       width: 128px
@@ -60,6 +48,6 @@
       width: 100%
       flex-grow: 1
 
-      @include mq("small")
+      @include mq("mobile")
         width: 100%
         flex-grow: 1

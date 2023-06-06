@@ -1,11 +1,13 @@
 import { Link, LinkProps } from "react-router-dom";
 import classes from "./menuButton.module.sass";
+import { IIcon } from "../../iconComponent/interfaceofIcon";
+import Icon from "../../iconComponent/Icon";
 
 interface IMenuButtonProps extends LinkProps {
   /**
    * The icon for the button
    */
-  icon: string;
+  icon: IIcon;
   /**
    * The text in the button
    */
@@ -24,7 +26,7 @@ const MenuButton = ({ icon, text, fluid, ...props }: IMenuButtonProps) => {
       className={`${classes.menuButton} ${fluid && classes.fluid}`}
       {...props}
     >
-      <img src={icon} alt="Crear un artículo" /> <span>{text}</span>
+      <Icon name={icon.name} {...icon.props} /> <span>{text}</span>
     </Link>
   );
 };

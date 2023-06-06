@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import classes from "./menuListItemSimple.module.sass";
+import { IIcon } from "../../iconComponent/interfaceofIcon";
+import Icon from "../../iconComponent/Icon";
 
 interface IMenuListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
   link: string;
-  icon: string;
+  icon: IIcon;
   text: string;
   fluid?: boolean;
   className?: string;
@@ -28,7 +30,7 @@ const MenuListItem = ({
     >
       <Link className={classes.menulist_link} to={link}>
         <span className={classes.icon}>
-          <img src={icon} alt={text} />
+          <Icon name={icon.name} {...icon.props} />
         </span>
         <span className={classes.text}>{text}</span>
       </Link>

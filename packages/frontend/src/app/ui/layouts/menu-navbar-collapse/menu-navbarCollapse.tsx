@@ -1,6 +1,6 @@
 import { FC, ReactNode, MouseEvent } from "react";
 import classes from "./menu-navbarCollapse.module.sass";
-import { MenuIcon, CloseMenu } from "../../../assets";
+import { MenuIcon, CloseIcon } from "../../icons";
 import { ToggleButton } from "../..";
 import { useState } from "react";
 
@@ -33,7 +33,7 @@ const MenuNavbarCollapse: FC<IMenuNavbarCollapseProps> = ({
     <nav className={`${classes.navbar} ${className}`}>
       <ToggleButton
         className={classes.navbar_btnmenu}
-        iconClose={MenuIcon}
+        iconClose={{ name: "MenuIcon" }}
         onClick={onToggleMenuView}
       />
       <div
@@ -43,7 +43,7 @@ const MenuNavbarCollapse: FC<IMenuNavbarCollapseProps> = ({
         }`}
       >
         <div className={classes.navbar_btnClose} onClick={closeMenuView}>
-          <img src={CloseMenu} alt="Cerrar lista de navegación" />
+          <CloseIcon />
         </div>
         {children}
       </div>

@@ -2,7 +2,7 @@ import classes from "./loginForm.module.sass";
 import { Link } from "react-router-dom";
 import { LayoutCardForm, CheckInput, BasicButton, MsgError } from "../../../ui";
 import useLoginDataForm from "./useLoginDataForm";
-import { EmailChamp, PassChamp } from "../champs";
+import { EmailField, PassField } from "../../../ui";
 import { useAppDispatch } from "../../../redux/store";
 import { Navigate, useLocation } from "react-router-dom";
 import { reset } from "../../../redux/slices/auth/authSlice";
@@ -48,7 +48,7 @@ const LoginForm = () => {
       <p>Inicia sesión para ingresar tu cuenta</p>
       <form className={classes.loginForm_form} onSubmit={handleSubmit}>
         <div className={classes.loginForm_content}>
-          <EmailChamp
+          <EmailField
             className={classes.loginForm_group}
             placeholder="E-mail"
             isTouched={touched.email}
@@ -56,7 +56,7 @@ const LoginForm = () => {
             {...getFieldProps("email")}
             autoComplete={persist === "true" ? "on" : "off"}
           />
-          <PassChamp
+          <PassField
             className={classes.loginForm_group}
             placeholder="Contraseña"
             isTouched={touched.password}

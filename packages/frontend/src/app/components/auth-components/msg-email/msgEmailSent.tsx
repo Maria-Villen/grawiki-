@@ -1,6 +1,5 @@
-import { EmailImage } from "../../../assets";
+import { EmailImage } from "../../../assets/index.ts";
 import { LayoutCardForm } from "../../../ui";
-import classes from "./megEmailSent.module.sass";
 
 /**
  * Message component for mail sent (below to recover password)
@@ -8,7 +7,7 @@ import classes from "./megEmailSent.module.sass";
 const MsgEmailSent = () => {
   return (
     <LayoutCardForm withLogo>
-      <p className={classes.centered}>
+      <p className="centered">
         Se ha enviado un correo. Revise su casilla para recuperar su contraseña.
       </p>
       <img src={EmailImage} alt="Correo enviado con éxito" />

@@ -20,7 +20,7 @@ import { I18nextProvider } from "react-i18next";
 import i18next from "i18next";
 import global_es from "./app/lang/locals/es/global.json";
 import global_en from "./app/lang/locals/en/global.json";
-import "./app/styles/reset.sass";
+import "./app/ui/styles/reset.sass";
 
 i18next.init({
   interpolation: { escapeValue: false },

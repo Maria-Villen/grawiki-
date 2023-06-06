@@ -7,7 +7,7 @@ import {
   ErrorFormMsg,
   MsgError,
 } from "../../../ui";
-import { PassChamp, EmailChamp, UserNameChamp } from "../champs";
+import { PassField, EmailField, TextField } from "../../../ui";
 import useRegisterDataForm from "./registerDataForm";
 import { useAppSelector, useAppDispatch } from "../../../redux/store";
 import { MsgSuccess } from "../../../ui";
@@ -54,7 +54,7 @@ const RegisterForm = () => {
         <p>Regístrate para poder publicar y editar temas</p>
         <form className={classes.contentForm_form} onSubmit={handleSubmit}>
           <div className={classes.contentForm_content}>
-            <UserNameChamp
+            <TextField
               className={classes.contentForm_group}
               placeholder="Nombre de usuario"
               isTouched={touched.userName}
@@ -64,7 +64,7 @@ const RegisterForm = () => {
               onBlur={handleBlurWithAction}
             />
 
-            <EmailChamp
+            <EmailField
               className={classes.contentForm_group}
               placeholder="E-mail"
               isTouched={touched.email}
@@ -73,7 +73,7 @@ const RegisterForm = () => {
               {...getFieldProps("email")}
             />
 
-            <PassChamp
+            <PassField
               className={classes.contentForm_group}
               placeholder="Contraseña"
               isTouched={touched.password}
@@ -82,7 +82,7 @@ const RegisterForm = () => {
               {...getFieldProps("password")}
             />
 
-            <PassChamp
+            <PassField
               className={classes.contentForm_group}
               placeholder="Repetir contraseña"
               isTouched={touched.confirmPass}

@@ -1,5 +1,5 @@
 import classes from "./passInput.module.sass";
-import { PassHidden, PassOpen } from "../../../assets";
+import { PasswordEyeIcon } from "../../icons";
 import { useState } from "react";
 
 interface IPassInput extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -25,10 +25,7 @@ const PassInput = ({ className, fluid, ...props }: IPassInput) => {
         type="button"
         onClick={toggleHiddenPass}
       >
-        <img
-          src={hidePass ? PassHidden : PassOpen}
-          alt={hidePass ? "Mostrar Password" : "Ocultar Password"}
-        />
+        <PasswordEyeIcon hidden={hidePass} />
       </button>
     </div>
   );

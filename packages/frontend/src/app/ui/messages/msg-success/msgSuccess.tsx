@@ -1,4 +1,4 @@
-import { SuccessImage } from "../../../assets";
+import { SuccessImage } from "../../../assets/index.ts";
 import { LayoutCardForm, BasicBtnLink } from "../..";
 
 interface IMsgSuccess {

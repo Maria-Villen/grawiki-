@@ -1,6 +1,8 @@
 import classes from "./basicListWithLink.module.sass";
 import { Link } from "react-router-dom";
 import React, { FC } from "react";
+import { IIcon } from "../../iconComponent/interfaceofIcon";
+import Icon from "../../iconComponent/Icon";
 
 interface IBasicListWithLinkProps
   extends React.DetailedHTMLProps<
@@ -18,7 +20,7 @@ interface IBasicListWithLinkProps
   /**
    * icono del item de la lista
    */
-  icon?: string;
+  icon?: IIcon;
 }
 
 /**
@@ -34,7 +36,9 @@ const BasicListWithLink: FC<IBasicListWithLinkProps> = ({
   return (
     <li className={classes.item}>
       <Link to={link}>
-        {icon ? <img src={icon} alt={text} /> : null}
+        {icon ? (
+          <Icon name={icon.name} {...(icon.props && { ...icon.props })} />
+        ) : null}
         <span>{text}</span>
       </Link>
     </li>

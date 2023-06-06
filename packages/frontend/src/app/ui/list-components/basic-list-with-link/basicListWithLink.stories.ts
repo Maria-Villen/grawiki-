@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 import BasicListWithLink from "./basicListWithLink";
-import { English } from "../../../assets";
 
 const meta = {
   title: "ListComponents/BasicListWithLink",
@@ -28,8 +27,8 @@ export const Basic: Story = {
 
 export const WithIcon: Story = {
   args: {
-    text: "English",
+    text: "Juguetes",
     link: "#",
-    icon: English,
+    icon: { name: "ToysIcon" },
   },
 };

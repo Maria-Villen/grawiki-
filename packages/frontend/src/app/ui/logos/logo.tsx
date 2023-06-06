@@ -2,7 +2,7 @@ import {
   GrawikiLogo,
   GrawikiLogoHorizontal,
   GrawikiLogoVertical,
-} from "../../assets";
+} from "../../assets/index.ts";
 
 import classes from "./logo.module.sass";
 

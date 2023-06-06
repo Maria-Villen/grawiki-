@@ -1,0 +1,52 @@
+{/* Layouts.mdx */}
+import { Meta } from "@storybook/blocks"
+
+<Meta title="Foundation/Layouts" />
+
+# Layouts
+
+<br />
+<br />
+
+## Breackpoints
+
+The breackpoints used are:
+
+<table style={{ width: "80%"}}>
+<th> Name</th>
+<th> pixels</th>
+<tr>
+  <td style={{ width: "70%"}}>mobile </td>
+  <td style={{ width: "30%"}}> 360px </td>
+</tr>
+<tr>
+  <td style={{ width: "70%"}}>mobilePerfectPixel </td> <td style={{ width: "30%"}}>375px</td>
+</tr>
+<tr>
+  <td style={{ width: "70%"}}>tablet </td>
+  <td style={{ width: "30%"}}> 768px </td>
+</tr>
+<tr>
+  <td style={{ width: "70%"}}>smallDesktop </td> <td style={{ width: "30%"}}>1024px</td>
+</tr>
+<tr>
+  <td style={{ width: "70%"}}>mediumDesktop </td>
+  <td style={{ width: "30%"}}> 1440px </td>
+</tr>
+<tr>
+  <td style={{ width: "70%"}}>largeDesktop </td> <td style={{ width: "30%"}}>1920px</td>
+</tr>
+
+</table>
+
+<br />
+<br />
+
+### How to use them:
+
+    We use SASS. You need to include them with @include:
+    #
+    Example: ``` @include mq("tablet") ```
+    #
+    Be sure you import variables.sass file in your module.sass:
+    ``` @use "../ui/styles/variables.sass ```

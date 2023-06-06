@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 import FooterLinksArea from "./footerLinksArea";
-import { English } from "../../../assets";
 
 const meta = {
   title: "Layouts/FooterLinksArea",
@@ -25,8 +24,13 @@ export const Basic: Story = {
   args: {
     title: "Title",
     links: [
-      { id: "01", icon: English, text: "Idioma Inlges", link: "#" },
-      { id: "02", icon: undefined, text: "Texto de ejemplo", link: "#" },
+      {
+        id: "01",
+        icon: { name: "ToysIcon" },
+        text: "Categoría Juguetes",
+        link: "#",
+      },
+      { id: "02", text: "Texto de ejemplo", link: "#" },
     ],
   },
 };

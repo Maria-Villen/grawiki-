@@ -1,4 +1,4 @@
-import { FailImage } from "../../../assets";
+import { FailImage } from "../../../assets/index.ts";
 import { LayoutCardForm, BasicBtnLink } from "../..";
 
 interface IMsgError {

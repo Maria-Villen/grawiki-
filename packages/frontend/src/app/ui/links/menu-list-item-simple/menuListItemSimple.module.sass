@@ -1,4 +1,4 @@
-@use "../../../styles/variables" as *
+@use "../../../ui/styles/variables" as *
 
 .menulist
   text-decoration: none
@@ -11,7 +11,7 @@
   width: 100%
 
   &_link
-    color: black
+    color: $greyscale-black
     text-decoration: none
     display: flex
     justify-content: start
@@ -34,9 +34,9 @@
         object-fit: contain
 
   &:hover
-    background: $primary-blue
+    background: $primary
     & a
-      color: white
+      color: $triarty-white
     & img
       filter: none
 
@@ -46,7 +46,7 @@
       width: 100%
       flex-grow: 1
 
-      @include mq("small")
+      @include mq("mobile")
         width: 100%
         flex-grow: 1
 
@@ -54,6 +54,6 @@
   & img
     filter: invert(1)
   &:hover
-    background: $primary-blue
+    background: $primary
     & a
-      color: white
+      color: $triarty-white

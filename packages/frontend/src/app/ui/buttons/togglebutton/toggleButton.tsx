@@ -1,11 +1,12 @@
 import { MouseEventHandler } from "react";
-import { MenuIcon } from "../../../assets";
 import classes from "./toggleButton.module.sass";
+import Icon from "../../iconComponent/Icon";
+import { IIcon } from "../../iconComponent/interfaceofIcon";
 
 interface IToggleButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  iconOpen?: string;
-  iconClose: string;
+  iconOpen?: IIcon;
+  iconClose: IIcon;
   isOpen?: boolean;
   onClick: MouseEventHandler<HTMLButtonElement>;
 }
@@ -25,14 +26,16 @@ const ToggleButton = ({
       onClick={onClick}
       {...props}
     >
-      <img src={isOpen ? iconOpen || iconClose : iconClose} alt="" />
+      <Icon
+        name={isOpen ? iconOpen?.name || iconClose.name : iconClose.name}
+        {...(isOpen ? iconOpen?.props || iconClose?.props : iconClose?.props)}
+      />
     </button>
   );
 };
 export default ToggleButton;
 
 ToggleButton.defaultProps = {
-  iconClose: MenuIcon,
+  iconClose: { name: "ArrowIcon", props: { direction: "up" } },
   isOpen: false,
-  onClick: undefined,
 };

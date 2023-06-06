@@ -1,12 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import {
-  Bank,
-  Toys,
-  Government,
-  Health,
-  Avatar,
-  CreateWhite,
-} from "../../../assets";
 import MenuListItemSimple from "./menuListItemSimple";
 import { withRouter } from "storybook-addon-react-router-v6";
 
@@ -38,7 +30,7 @@ export const BankButtonFluid: Story = {
     layout: "fullscreen",
   },
   args: {
-    icon: Bank,
+    icon: { name: "BankIcon" },
     link: "/category/bank",
     text: "Button",
     fluid: true,
@@ -47,7 +39,7 @@ export const BankButtonFluid: Story = {
 
 export const BankButton: Story = {
   args: {
-    icon: Bank,
+    icon: { name: "BankIcon" },
     link: "/category/bank",
     text: "Bancos",
     fluid: false,
@@ -56,7 +48,7 @@ export const BankButton: Story = {
 
 export const ToyButton: Story = {
   args: {
-    icon: Toys,
+    icon: { name: "ToysIcon" },
     link: "/category/toys",
     text: "Juguetes",
     fluid: false,
@@ -65,7 +57,7 @@ export const ToyButton: Story = {
 
 export const HealthButton: Story = {
   args: {
-    icon: Health,
+    icon: { name: "HealthIcon" },
     link: "/category/health",
     text: "Salud",
     fluid: false,
@@ -74,7 +66,7 @@ export const HealthButton: Story = {
 
 export const GovernmentButton: Story = {
   args: {
-    icon: Government,
+    icon: { name: "GovernmentIcon" },
     link: "/category/government",
     text: "Gobierno",
     fluid: false,
@@ -83,7 +75,7 @@ export const GovernmentButton: Story = {
 
 export const CreateTheme: Story = {
   args: {
-    icon: CreateWhite,
+    icon: { name: "CreateIcon" },
     link: "/create",
     text: "Crear",
     fluid: false,
@@ -92,7 +84,7 @@ export const CreateTheme: Story = {
 
 export const User: Story = {
   args: {
-    icon: Avatar,
+    icon: { name: "AvatarIcon" },
     link: "/profile",
     text: "Perfil",
     fluid: false,

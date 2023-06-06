@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import MenuButton from "./menuButton";
 import { withRouter } from "storybook-addon-react-router-v6";
-import { Edit } from "../../../assets";
 import { withLayout } from "../../../../stories/decorators";
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -20,7 +19,7 @@ export const EditButton: Story = {
     backgrounds: { value: "#fff" },
   },
   args: {
-    icon: Edit,
+    icon: { name: "Create" },
     to: "/create",
     text: "Crear",
     fluid: false,
@@ -30,7 +29,7 @@ export const EditButton: Story = {
 export const EditFluidButton: Story = {
   decorators: [withLayout],
   args: {
-    icon: Edit,
+    icon: { name: "Create" },
     to: "/create",
     text: "Crear",
     fluid: true,

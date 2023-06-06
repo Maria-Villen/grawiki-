@@ -1,31 +1,32 @@
 import BasicBtnLink from "./basicBtnLink";
-import type { Meta, StoryObj } from "@storybook/react";
-import { Edit } from "../../../assets";
+import { designLink } from "../../../../stories/designLinks";
 import { withRouter } from "storybook-addon-react-router-v6";
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Links/BasicBtnLink",
+  title: "Buttons/BasicBtnLink",
   component: BasicBtnLink,
   tags: ["autodocs"],
+  decorators: [withRouter],
   parameters: {
     layout: "centered",
   },
-  decorators: [withRouter],
   args: {
     label: "Button",
-    dimension: "medium",
+    category: "primary",
+    dimension: "normal",
     fluid: false,
-    to: "/",
+    reverse: false,
+    to: "#",
   },
   argTypes: {
     dimension: {
       control: "radio",
-      options: ["small", "medium", "large", "xlarge"],
+      options: ["small", "normal", "medium", "big"],
     },
     category: {
       control: "radio",
-      options: ["default", "primary", "secondary"],
+      options: ["primary", "secondary", "disabled"],
     },
     reverse: {
       control: "boolean",
@@ -37,170 +38,555 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-
-export const Normal: Story = {};
-
-Normal.parameters = {
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki?type=design&node-id=1480-9519&t=QRXAkNlTBMlFfIr8-4",
-  },
-};
-
-export const NormalIcon: Story = {
+export const PrimarySmall: Story = {
   args: {
-    label: "Button",
-    icon: Edit,
-    reverse: false,
-    dimension: "medium",
-  },
-};
-
-NormalIcon.parameters = {
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki?type=design&node-id=1480-9523&t=QRXAkNlTBMlFfIr8-4",
-  },
-};
-
-export const Primary: Story = {
-  parameters: {
-    backgrounds: { default: "light" },
-  },
-  args: {
-    label: "Button",
-    dimension: "medium",
-    category: "primary",
-  },
-};
-
-Primary.parameters = {
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki?type=design&node-id=1332-13765&t=en2YeTdExG9ojx4C-4",
-  },
-};
-
-export const PrimaryIcon: Story = {
-  args: {
-    label: "Button",
-    icon: Edit,
-    reverse: false,
-    dimension: "medium",
-    category: "primary",
-  },
-};
-
-PrimaryIcon.parameters = {
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki?type=design&node-id=1332-13769&t=en2YeTdExG9ojx4C-4",
-  },
-};
-
-export const PrimaryIconReverse: Story = {
-  args: {
-    label: "Button",
-    icon: Edit,
-    reverse: true,
-    dimension: "medium",
-    category: "primary",
-  },
-};
-
-PrimaryIconReverse.parameters = {
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki?type=design&node-id=1332-13707&t=en2YeTdExG9ojx4C-4",
-  },
-};
-
-export const PrimaryIconSmall: Story = {
-  args: {
-    label: "Button",
-    icon: Edit,
-    reverse: false,
     dimension: "small",
-    category: "primary",
   },
 };
 
-PrimaryIconSmall.parameters = {
+PrimarySmall.parameters = {
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki?type=design&node-id=1332-13793&t=en2YeTdExG9ojx4C-4",
+    url: designLink.buttons.basicButton.primarySmall,
   },
 };
 
-export const PrimaryIconLarge: Story = {
+export const PrimarySmallWithIcon: Story = {
   args: {
-    label: "Button",
-    icon: Edit,
-    reverse: false,
-    dimension: "large",
-    category: "primary",
+    dimension: "small",
+    icon: { name: "CreateIcon" },
   },
 };
 
-PrimaryIconLarge.parameters = {
+PrimarySmallWithIcon.parameters = {
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki?type=design&node-id=1332-13793&t=en2YeTdExG9ojx4C-4",
+    url: designLink.buttons.basicButton.primarySmallWithIcon,
   },
 };
 
-export const PrimaryIconXlarge: Story = {
+export const PrimarySmallWithIconReverse: Story = {
   args: {
-    label: "Button",
-    icon: Edit,
-    reverse: false,
-    dimension: "xlarge",
-    category: "primary",
+    dimension: "small",
+    icon: { name: "CreateIcon" },
+    reverse: true,
   },
 };
 
-PrimaryIconXlarge.parameters = {
+PrimarySmallWithIconReverse.parameters = {
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki?type=design&node-id=1332-13739&t=en2YeTdExG9ojx4C-4",
+    url: designLink.buttons.basicButton.primarySmallWithIconReverse,
   },
 };
 
-export const Secondary: Story = {
+// PRIMARY NORMAL
+
+export const PrimaryNormal: Story = {
   args: {
-    label: "Button",
+    dimension: "normal",
+  },
+};
+
+PrimaryNormal.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.primaryNormal,
+  },
+};
+
+export const PrimaryNormalWithIcon: Story = {
+  args: {
+    dimension: "normal",
+    icon: { name: "CreateIcon" },
+  },
+};
+
+PrimaryNormalWithIcon.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.primaryNormalWithIcon,
+  },
+};
+
+export const PrimaryNormalWithIconReverse: Story = {
+  args: {
+    dimension: "normal",
+    icon: { name: "CreateIcon" },
+    reverse: true,
+  },
+};
+
+PrimaryNormalWithIconReverse.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.primaryNormalWithIconReverse,
+  },
+};
+
+// PRIMARY MEDIUM
+
+export const PrimaryMedium: Story = {
+  args: {
+    dimension: "medium",
+  },
+};
+
+PrimaryMedium.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.primaryMedium,
+  },
+};
+
+export const PrimaryMediumWithIcon: Story = {
+  args: {
+    dimension: "medium",
+    icon: { name: "CreateIcon" },
+  },
+};
+
+PrimaryMediumWithIcon.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.primaryMediumWithIcon,
+  },
+};
+
+export const PrimaryMediumWithIconReverse: Story = {
+  args: {
+    dimension: "medium",
+    icon: { name: "CreateIcon" },
+    reverse: true,
+  },
+};
+
+PrimaryMediumWithIconReverse.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.primaryMediumWithIconReverse,
+  },
+};
+
+// Primary Big
+
+export const PrimaryBig: Story = {
+  args: {
+    dimension: "big",
+  },
+};
+
+PrimaryBig.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.primaryBig,
+  },
+};
+
+export const PrimaryBigWithIcon: Story = {
+  args: {
+    dimension: "big",
+    icon: { name: "CreateIcon" },
+  },
+};
+
+PrimaryBigWithIcon.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.primaryBigWithIcon,
+  },
+};
+
+export const PrimaryBigWithIconReverse: Story = {
+  args: {
+    dimension: "big",
+    icon: { name: "CreateIcon" },
+    reverse: true,
+  },
+};
+
+PrimaryBigWithIconReverse.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.primaryBigWithIconReverse,
+  },
+};
+
+// SECONDARY
+
+// Secondary Small
+
+export const SecondarySmall: Story = {
+  args: {
+    dimension: "small",
+    category: "secondary",
+  },
+};
+
+SecondarySmall.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.secondarySmall,
+  },
+};
+
+export const SecondarySmallWithIcon: Story = {
+  args: {
+    dimension: "small",
+    icon: { name: "CreateIcon" },
+    category: "secondary",
+  },
+};
+
+SecondarySmallWithIcon.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.secondarySmallWithIcon,
+  },
+};
+
+export const SecondarySmallWithIconReverse: Story = {
+  args: {
+    dimension: "small",
+    icon: { name: "CreateIcon" },
+    reverse: true,
+    category: "secondary",
+  },
+};
+
+SecondarySmallWithIconReverse.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.secondarySmallWithIconReverse,
+  },
+};
+
+// Secondary NORMAL
+
+export const SecondaryNormal: Story = {
+  args: {
+    dimension: "normal",
+    category: "secondary",
+  },
+};
+
+SecondaryNormal.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.secondaryNormal,
+  },
+};
+
+export const SecondaryNormalWithIcon: Story = {
+  args: {
+    dimension: "normal",
+    icon: { name: "CreateIcon" },
+    category: "secondary",
+  },
+};
+
+SecondaryNormalWithIcon.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.secondaryNormalWithIcon,
+  },
+};
+
+export const SecondaryNormalWithIconReverse: Story = {
+  args: {
+    dimension: "normal",
+    icon: { name: "CreateIcon" },
+    reverse: true,
+    category: "secondary",
+  },
+};
+
+SecondaryNormalWithIconReverse.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.secondaryNormalWithIconReverse,
+  },
+};
+
+// Secondary MEDIUM
+
+export const SecondaryMedium: Story = {
+  args: {
     dimension: "medium",
     category: "secondary",
   },
 };
 
-Secondary.parameters = {
+SecondaryMedium.parameters = {
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki?type=design&node-id=1332-13699&t=en2YeTdExG9ojx4C-4",
+    url: designLink.buttons.basicButton.secondaryMedium,
   },
 };
 
-export const SecondaryIcon: Story = {
+export const SecondaryMediumWithIcon: Story = {
   args: {
-    label: "Button",
-    icon: Edit,
-    reverse: false,
     dimension: "medium",
+    icon: { name: "CreateIcon" },
     category: "secondary",
   },
 };
 
-SecondaryIcon.parameters = {
+SecondaryMediumWithIcon.parameters = {
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki?type=design&node-id=1332-13703&t=en2YeTdExG9ojx4C-4",
+    url: designLink.buttons.basicButton.secondaryMediumWithIcon,
   },
 };
 
-export const Fluid = {
+export const SecondaryMediumWithIconReverse: Story = {
   args: {
-    fluid: true,
+    dimension: "medium",
+    icon: { name: "CreateIcon" },
+    reverse: true,
+    category: "secondary",
+  },
+};
+
+SecondaryMediumWithIconReverse.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.secondaryMediumWithIconReverse,
+  },
+};
+
+// Secondary Big
+
+export const SecondaryBig: Story = {
+  args: {
+    dimension: "big",
+    category: "secondary",
+  },
+};
+
+SecondaryBig.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.secondaryBig,
+  },
+};
+
+export const SecondaryBigWithIcon: Story = {
+  args: {
+    dimension: "big",
+    icon: { name: "CreateIcon" },
+    category: "secondary",
+  },
+};
+
+SecondaryBigWithIcon.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.secondaryBigWithIcon,
+  },
+};
+
+export const SecondaryBigWithIconReverse: Story = {
+  args: {
+    dimension: "big",
+    icon: { name: "CreateIcon" },
+    reverse: true,
+    category: "secondary",
+  },
+};
+
+SecondaryBigWithIconReverse.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.secondaryBigWithIconReverse,
+  },
+};
+
+// DISABLED
+
+// Disabled Small
+
+export const DisabledSmall: Story = {
+  args: {
+    dimension: "small",
+    category: "disabled",
+  },
+};
+
+DisabledSmall.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.disabledSmall,
+  },
+};
+
+export const DisabledSmallWithIcon: Story = {
+  args: {
+    dimension: "small",
+    icon: { name: "CreateIcon" },
+    category: "disabled",
+  },
+};
+
+DisabledSmallWithIcon.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.disabledSmallWithIcon,
+  },
+};
+
+export const DisabledSmallWithIconReverse: Story = {
+  args: {
+    dimension: "small",
+    icon: { name: "CreateIcon" },
+    category: "disabled",
+  },
+};
+
+DisabledSmallWithIconReverse.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.disabledSmallWithIconReverse,
+  },
+};
+
+// Disabled NORMAL
+
+export const DisabledNormal: Story = {
+  args: {
+    dimension: "normal",
+    category: "disabled",
+  },
+};
+
+DisabledNormal.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.disabledNormal,
+  },
+};
+
+export const DisabledNormalWithIcon: Story = {
+  args: {
+    dimension: "normal",
+    icon: { name: "CreateIcon" },
+    category: "disabled",
+  },
+};
+
+DisabledNormalWithIcon.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.disabledNormalWithIcon,
+  },
+};
+
+export const DisabledNormalWithIconReverse: Story = {
+  args: {
+    dimension: "normal",
+    icon: { name: "CreateIcon" },
+    reverse: true,
+    category: "disabled",
+  },
+};
+
+DisabledNormalWithIconReverse.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.disabledNormalWithIconReverse,
+  },
+};
+
+// Disabled MEDIUM
+
+export const DisabledMedium: Story = {
+  args: {
+    dimension: "medium",
+    category: "disabled",
+  },
+};
+
+DisabledMedium.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.disabledMedium,
+  },
+};
+
+export const DisabledMediumWithIcon: Story = {
+  args: {
+    dimension: "medium",
+    icon: { name: "CreateIcon" },
+    category: "disabled",
+  },
+};
+
+DisabledMediumWithIcon.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.disabledMediumWithIcon,
+  },
+};
+
+export const DisabledMediumWithIconReverse: Story = {
+  args: {
+    dimension: "medium",
+    icon: { name: "CreateIcon" },
+    reverse: true,
+    category: "disabled",
+  },
+};
+
+DisabledMediumWithIconReverse.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.disabledMediumWithIconReverse,
+  },
+};
+
+// Disabled Big
+
+export const DisabledBig: Story = {
+  args: {
+    dimension: "big",
+    category: "disabled",
+  },
+};
+
+DisabledBig.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.disabledBig,
+  },
+};
+
+export const DisabledBigWithIcon: Story = {
+  args: {
+    dimension: "big",
+    icon: { name: "CreateIcon" },
+    category: "disabled",
+  },
+};
+
+DisabledBigWithIcon.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.disabledBigWithIcon,
+  },
+};
+
+export const DisabledBigWithIconReverse: Story = {
+  args: {
+    dimension: "big",
+    icon: { name: "CreateIcon" },
+    reverse: true,
+    category: "disabled",
+  },
+};
+
+DisabledBigWithIconReverse.parameters = {
+  design: {
+    type: "figma",
+    url: designLink.buttons.basicButton.disabledBigWithIconReverse,
   },
 };

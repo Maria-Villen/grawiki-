@@ -1,6 +1,7 @@
 import classes from "./footerLinksArea.module.sass";
 import { FC } from "react";
 import { BasicListWithLink } from "../..";
+import { IIcon } from "../../iconComponent/interfaceofIcon";
 
 /**
  * @Component
@@ -9,7 +10,7 @@ import { BasicListWithLink } from "../..";
 
 export interface IFooterLink {
   id: string;
-  icon: string | undefined;
+  icon?: IIcon;
   text: string;
   link: string;
 }

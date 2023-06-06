@@ -1,18 +1,18 @@
-@use "../../styles/reset" as *
-@use "../../styles/variables" as *
+@use "../../ui/styles/reset" as *
+@use "../../ui/styles/variables" as *
 
 .container
   display: flex
   flex-flow: column nowrap
   min-height: 100vh
   height: 100%
-  background: $primary-black
+  background: $primary-dark
   min-width: 390px
   position: relative
   width: 100%
 
 .header
-  @include mq("small")
+  @include mq("tablet")
     position: fixed
     top: 0
     left: 0
@@ -24,10 +24,8 @@
   display: flex
   flex-direction: column
   align-items: center
-  /* justify-content: space-between
-  /*flex: 1
 
-  @include mq("small")
+  @include mq("tablet")
     padding-left: 128px
 
 .fluid

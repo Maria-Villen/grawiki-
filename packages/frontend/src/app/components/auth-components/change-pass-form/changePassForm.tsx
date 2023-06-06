@@ -1,6 +1,6 @@
 import classes from "./changePassForm.module.sass";
 import { LayoutCardForm, BasicButton, MsgSuccess, MsgError } from "../../../ui";
-import { PassChamp } from "../champs";
+import { PassField } from "../../../ui";
 import useChangePassDataForm from "./changePassDataForm";
 import { useAppSelector, useAppDispatch } from "../../../redux/store";
 import { reset } from "../../../redux/slices/auth/authSlice";
@@ -58,7 +58,7 @@ function ChangePassForm() {
           caracter especial.
         </p>
         <form className={classes.form} onSubmit={handleSubmit}>
-          <PassChamp
+          <PassField
             className={classes.contentForm_group}
             placeholder="Contraseña"
             isTouched={touched.password}
@@ -66,7 +66,7 @@ function ChangePassForm() {
             {...getFieldProps("password")}
           />
 
-          <PassChamp
+          <PassField
             className={classes.contentForm_group}
             placeholder="Repetir contraseña"
             isTouched={touched.confirmPass}

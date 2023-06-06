@@ -2,33 +2,78 @@
 
 import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
 
-<Meta title="Colors" />
+<Meta title="Foundation/Colors" />
+
+<h2> Main UI Color </h2>
+<p>Used as main colors for user interface and components</p>
 
 <ColorPalette>
+
+<ColorItem
+  title="Primary"
+  colors={{
+    primary: "#0066FF",
+    "primary-hover": "#06367D",
+    "primary-dark": "#01193D",
+  }}
+/>
+<ColorItem
+  title="Positive"
+  colors={{
+    positive: "#0B8C09",
+    "positive-hover": "#039E00",
+  }}
+/>
+
+<ColorItem
+  title="Negative"
+  colors={{
+    negative: "#D84B4B",
+    "negative-hover": "#BB2525",
+  }}
+/>
+
+<ColorItem
+  title="Warning"
+  colors={{
+    warning: "#DFE30C",
+    "warning-hover": "#95981c",
+  }}
+/>
+<ColorItem
+  title="Triarty"
+  colors={{
+    "triarty-white": "#ffffff",
+    "triarty-hover": "#e4e4e4",
+    disable: "#ababab",
+  }}
+/>
+
+</ColorPalette>
+
+<h2> Other Colors </h2>
+
+<ColorPalette>
+
+<ColorItem
+  title="Greyscale palette"
+  subtitle="Used as layout and text colors mainly"
+  colors={{
+    "greyscale-black": "#000000",
+    "greyscale-BlackClose": "#0b0b0b",
+    "greyscale-blackTag": "#151515",
+  }}
+/>
+
   <ColorItem
-    title="theme.color.primary"
-    subtitle="Primary Colors"
+    title="Color coding"
+    subtitle="Used at the context"
     colors={{
-      Blue: "#0066FF",
-      Red: "#D84B4B",
-      Black: "#01193D",
-      Gray: "#D9D9D9",
-      Green: "#0B8C09",
-    }}
-  />
-  <ColorItem
-    title="theme.color.secondary"
-    subtitle="Secondary Colors"
-    colors={{
-      Red: "#FF0000",
-      Yellow: "#DFE30C",
-      Green: "#039E00",
-    }}
-  />
-  <ColorItem
-    title="theme.button.primary"
-    subtitle="Button Primary Colors"
-    colors={{ Blue: "#06367D" }}
-  />
-  />
+      "color-darkIndigo": "#401694",
+      "color-navy": "#225091",
+      "color-aquamarine": "#4eccc6",
+      "color-blackish": "#333",
+      "color-americanGrey": "#808080",
+      "color-explosive": "#c4c4c4"}}  
+    />
 </ColorPalette>

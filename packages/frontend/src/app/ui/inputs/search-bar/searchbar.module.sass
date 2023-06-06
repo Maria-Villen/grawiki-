@@ -1,4 +1,4 @@
-@use "../../../styles/variables" as *
+@use "../../../ui/styles/variables" as *
 
 $barSize: 40px
 $border-rounded: 20px
@@ -14,22 +14,21 @@ $border-rounded: 20px
     align-items: center
     flex-wrap: nowrap
     height: 100%
-    background: white
+    background: $triarty-white
     border-radius: $border-rounded
     border: none
-  
+
   &_icon
     border: none
     border-bottom-left-radius: $border-rounded
     border-top-left-radius: $border-rounded
     height: 100%
     background: transparent
-    padding:9px
     img
       width: 100%
       height: 100%
       object-fit: contain
-    
+
   &_input
     width: 100%
     border-bottom-right-radius: $border-rounded
@@ -41,5 +40,5 @@ $border-rounded: 20px
       border: none
       outline: none
 
-.fluid 
-    width: 100%
+.fluid
+  width: 100%

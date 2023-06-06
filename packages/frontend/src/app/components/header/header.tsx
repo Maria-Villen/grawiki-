@@ -6,7 +6,6 @@ import {
   MenuNavbarCollapse,
 } from "../../ui";
 import { menuItems, IMenuItem } from "./navbarmenuConfig";
-import { Avatar, Create, LogoutIcon } from "../../assets";
 import { HTMLProps, useEffect, useState } from "react";
 import { useAppSelector } from "../../redux/store";
 
@@ -76,7 +75,7 @@ const Header = ({ className }: HTMLProps<HTMLDivElement>) => {
               <MenuListItemSimple
                 className={classes.header_navbar_item}
                 key="create"
-                icon={Create}
+                icon={{ name: "CreateIcon" }}
                 text="Crear Tema"
                 link="Create"
                 fluid
@@ -85,7 +84,7 @@ const Header = ({ className }: HTMLProps<HTMLDivElement>) => {
               <MenuListItem
                 className={classes.header_navbar_item}
                 key="create"
-                icon={Create}
+                icon={{ name: "CreateIcon" }}
                 text="Crear Tema"
                 link="Create"
                 fluid
@@ -98,7 +97,7 @@ const Header = ({ className }: HTMLProps<HTMLDivElement>) => {
                 <MenuListItemSimple
                   className={classes.header_navbar_item}
                   key="cerrarSesión"
-                  icon={LogoutIcon}
+                  icon={{ name: "CloseIcon" }}
                   text="Cerrar Sesión"
                   link="/logout"
                   fluid
@@ -108,7 +107,7 @@ const Header = ({ className }: HTMLProps<HTMLDivElement>) => {
                 <MenuListItemSimple
                   className={classes.header_navbar_item}
                   key="Perfil"
-                  icon={Avatar}
+                  icon={{ name: "AvatarIcon" }}
                   text="Perfil"
                   link="/login"
                   fluid
@@ -119,7 +118,7 @@ const Header = ({ className }: HTMLProps<HTMLDivElement>) => {
               <MenuListItem
                 className={classes.header_navbar_item}
                 key="cerrarSesión"
-                icon={LogoutIcon}
+                icon={{ name: "CloseIcon" }}
                 text="Cerrar sesión"
                 link="/logout"
                 fluid
@@ -129,7 +128,7 @@ const Header = ({ className }: HTMLProps<HTMLDivElement>) => {
               <MenuListItem
                 className={classes.header_navbar_item}
                 key="Perfil"
-                icon={Avatar}
+                icon={{ name: "AvatarIcon" }}
                 text="Perfil"
                 link="/login"
                 fluid

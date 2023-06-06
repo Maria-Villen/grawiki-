@@ -1,23 +1,26 @@
 import { Link, LinkProps } from "react-router-dom";
 import classes from "./iconLink.module.sass";
+import { IIcon } from "../../iconComponent/interfaceofIcon";
+import Icon from "../../iconComponent/Icon";
 
 interface IIconLinkProps extends LinkProps {
   /**
    * Icon to display
    */
-  icon: string;
+  icon: IIcon;
   /**
    * Alternative link to display if icon not loaded
    */
-  altText: string;
+  altText?: string;
+  className?: string;
 }
 /**
  * Link - And icon that link to a site when clicked
  */
-const IconLink = ({ className, icon, altText, ...props }: IIconLinkProps) => {
+const IconLink = ({ icon, altText, className, ...props }: IIconLinkProps) => {
   return (
     <Link className={`${classes.iconLink} ${className}`} {...props}>
-      <img src={icon} alt={altText} />
+      <Icon name={icon.name} {...icon.props} aria-label={altText} />
     </Link>
   );
 };

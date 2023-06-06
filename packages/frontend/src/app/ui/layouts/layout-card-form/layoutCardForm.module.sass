@@ -1,5 +1,5 @@
 /* Device=Desktop, Page=Login, State=Default */
-@use "../../../styles/variables" as *
+@use "../../../ui/styles/variables" as *
 .layout
   display: flex
   flex-direction: column
@@ -7,10 +7,10 @@
   align-items: center
   gap: 15px
   padding: 50.5px 20px
-  width:360px 
-  background: #FFFFFF
+  width: 360px
+  background: $triarty-white
   border-radius: 10px
-  @include mq("small")
+  @include mq("mobile")
     padding: 50.5px 60px
     max-width: 440px
     min-width: 360px

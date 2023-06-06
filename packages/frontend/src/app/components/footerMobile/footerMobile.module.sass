@@ -1,27 +1,25 @@
-@use "../../styles/variables" as *
-  
+@use "../../ui/styles/variables" as *
+
 .footerMobile
   text-align: center
-  background: white
-  @include mq("small")
+  background: $triarty-white
+  @include mq("mobile")
     align-self: end
-  
+
   &_follow
     flex-wrap: nowrap
     align-items: center
     justify-content: center
     line-height: 2.5rem
     display: flex
-    @include mq("medium")
+    @include mq("tablet")
 
   &_copyright
     justify-content: center
-    @include mq("medium")
+    @include mq("tablet")
       display: none
     & img
       padding: 3px
       vertical-align: middle
     & span
       vertical-align: middle
-
-      

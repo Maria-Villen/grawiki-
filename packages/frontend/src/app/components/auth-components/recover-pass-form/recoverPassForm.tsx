@@ -1,7 +1,7 @@
 import classes from "./recoverPassForm.module.sass";
 import { LayoutCardForm, BasicButton, MsgError } from "../../../ui";
 import { MsgEmailSent } from "../..";
-import { EmailChamp } from "../champs";
+import { EmailField } from "../../../ui";
 import useRecoverPassDataForm from "./recoverDataForm";
 
 /**
@@ -37,13 +37,13 @@ function RecoverPassForm() {
         {loading && <p>Cargando...</p>}
         <LayoutCardForm withLogo>
           <h2>Recuperación de contraseña</h2>
-          <p className={classes.centered}>
+          <p className="centered">
             Ingrese su correo electrónico asociado con la cuenta para
             recuperarla. Le enviaremos un enlace para restablecer la contraseña
             a esa dirección de correo electrónico
           </p>
           <form className={classes.form} onSubmit={handleSubmit}>
-            <EmailChamp
+            <EmailField
               className={classes.contentForm_group}
               placeholder="E-mail"
               isTouched={touched.email}

@@ -1,0 +1,56 @@
+/* COLORS */
+// Design: https://www.figma.com/file/8OFb5MbFJaMxxch3lVx1nd/Grawiki-Design-System-UI-KIT?type=design&node-id=7-34121&t=wae2h8cpeWjiN2cq-0
+// Main UI Color
+// Uses as main colors for user interface and components
+$primary: #0066FF
+$primary-hover: #06367D
+$primary-dark: #01193D
+$positive: #0B8C09
+$positive-hover: #039E00
+$negative: #D84B4B
+$negative-hover: #BB2525
+$warning: #DFE30C
+$warning-hover: #95981c
+$triarty-white: #ffffff
+$triarty-hover: #e4e4e4
+$disable: #ababab
+
+// Greyscale palette
+// Used as layout and text colors mainly
+
+$greyscale-black: #000000
+$greyscale-BlackClose: #0b0b0b
+$greyscale-blackTag: #151515
+
+// Color Coding
+// Uses as colors of the content
+$color-darkIndigo: #401694
+$color-navy: #225091
+$color-aquamarine: #4eccc6
+$color-blackish: #333
+$color-americanGrey: #808080
+$color-explosive: #c4c4c4
+
+// Typography
+$typo: 'Lato'
+
+/* fontStyles */
+$fontWeight: (black: 800,bold: 700,regular: 400,thin: 300)
+
+@mixin fontStyles($fs-style, $fs-styles: $fontWeight)
+  @if map-has-key($fs-styles, $fs-style)
+    $fs-style: map-get($fs-styles, $fs-style)
+    color-weight: $fs-style
+
+// BreackPoints
+
+$breakpoints: (mobile: 360px, mobilePerfectPixel: 375px, tablet: 768px, smallDesktop: 1024px ,mediumDesktop: 1440px, largeDesktop: 1920px)
+
+/* Break Points */
+
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints)
+  @if map-has-key($mq-breakpoints, $mq-breakpoint)
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint)
+
+  @media screen and (min-width: #{$mq-breakpoint})
+    @content

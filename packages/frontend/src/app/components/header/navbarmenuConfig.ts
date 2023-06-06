@@ -1,8 +1,8 @@
-import { Bank, Government, Health, Toys } from "../../assets";
+import { IIcon } from "../../ui/iconComponent/interfaceofIcon";
 
 export interface IMenuItem {
   id: string;
-  icon: string;
+  icon: IIcon;
   text: string;
   link: string;
 }
@@ -10,25 +10,25 @@ export interface IMenuItem {
 export const menuItems: Array<IMenuItem> = [
   {
     id: "1",
-    icon: Health,
+    icon: { name: "HealthIcon" },
     text: "Salud",
     link: "/category/health",
   },
   {
     id: "2",
-    icon: Toys,
+    icon: { name: "ToysIcon" },
     text: "Juguetes",
     link: "/category/Toys",
   },
   {
     id: "3",
-    icon: Bank,
+    icon: { name: "BankIcon" },
     text: "Bancos",
     link: "/category/banks",
   },
   {
     id: "4",
-    icon: Government,
+    icon: { name: "GovernmentIcon" },
     text: "Gobierno",
     link: "/category/government",
   },

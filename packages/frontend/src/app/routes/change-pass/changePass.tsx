@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import { useAppSelector } from "../../redux/store";
 import useStateCall from "../../services/useStateCall";
 import { LayoutCardForm, MsgError } from "../../ui";
-import classes from "./changePass.module.sass";
 
 const ChangePass = () => {
   const { loggedUser: user } = useAppSelector((state) => state.auth);
@@ -56,7 +55,7 @@ const ChangePass = () => {
       <div className="centeredPages">
         <LayoutCardForm withLogo>
           <p>spinner</p>
-          <p className={classes.centerText}>
+          <p className="centered">
             Verificando el link de recuperación de contraseña
           </p>
         </LayoutCardForm>

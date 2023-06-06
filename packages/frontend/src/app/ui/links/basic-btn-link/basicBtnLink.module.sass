@@ -1,72 +1,76 @@
-@use "../.././../styles/variables" as *
+@use "../../../ui/styles/variables" as *
 
 .button
   border-radius: 10px
   display: flex
   border: none
   padding: 0.4rem
-  min-height: 27px
-  min-width: 117px
+  min-height: 32px
+  min-width: 128px
   font-size: 1rem
   transition: background 200ms ease-in-out
   justify-content: center
   align-items: center
+  gap: 10px
   text-decoration: none
 
-  img
-    padding-right: 10px
+  & .icon
+    height: 18px
+    width: 18px
 
-.default
-  background: white
-  color: black
-  &:hover
-    background: $primary-gray
+// Categories
 
-.primary, .secondary
-  img
-    filter: invert(1)
+.disabled
+  background: $disable
+  color: $triarty-white
 
 .primary
-  background: $primary-blue
-  color: white
+  background: $primary
+  color: $triarty-white
   transition: background 200ms ease-in-out
   &:hover
-    background: $button-color-blue
+    background: $primary-hover
 
 .secondary
-  background: $primary-red
-  color: white
+  background: $negative
+  color: $triarty-white
   transition: background 200ms ease-in-out
   &:hover
-    background: $secondary-red
+    background: $negative-hover
+
+// Direction 
 
 .reverse
   flex-direction: row-reverse
-  img
-    padding-right: 0
-    padding-left: 10px
 
+// dimensions
 .small
-  width: 117px
-  height: 27px
+  height: 32px
   font-size: 14px
-  line-height: 28px
+  line-height: 17px
   border-radius: 5px
+  & .icon
+    height: 12px
+    width: 12px
+
+.normal
+  width: 205px
+  height: 40px
 
 .medium
-  width: 237px
-  height: 40px
-  font-size: 16px
+  width: 320px
+  height: 45px
+  font-size: 18px
+  line-height: 22px
 
-.large
+.big
   width: 280px
   height: 56px
   font-size: 18px
-
-.xlarge
-  width: 320px
-  height: 40px
-  font-size: 18px
+  line-height: 22px
+  & .icon
+    height: 24px
+    width: 24px
 
 .fluid
   width: 100%

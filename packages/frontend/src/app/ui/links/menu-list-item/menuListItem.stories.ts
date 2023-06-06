@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Bank, Toys, Government, Health } from "../../../assets";
+import { Bank, Toys, Government, Health } from "../../../assets/index.ts";
 import MenuListItem from "./menuListItem";
 import { withRouter } from "storybook-addon-react-router-v6";
 

@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Facebook, Instagram, Twitter } from "../../../assets";
 import { withRouter } from "storybook-addon-react-router-v6";
 import IconLink from "./iconLink";
 
@@ -20,7 +19,7 @@ type Story = StoryObj<typeof meta>;
 
 export const FacebookIconLink: Story = {
   args: {
-    icon: Facebook,
+    icon: { name: "FacebookIcon" },
     to: "https://facebook.com",
     altText: "Facebook",
   },
@@ -28,14 +27,14 @@ export const FacebookIconLink: Story = {
 
 export const InstagramIconLink: Story = {
   args: {
-    icon: Instagram,
+    icon: { name: "InstagramIcon" },
     to: "https://Instagram.com",
     altText: "Instagram",
   },
 };
 export const TwitterIconLink: Story = {
   args: {
-    icon: Twitter,
+    icon: { name: "TwitterIcon" },
     to: "https://Twitter.com",
     altText: "Twitter",
   },

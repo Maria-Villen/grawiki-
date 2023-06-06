@@ -1,5 +1,4 @@
 import ToggleButton from "./toggleButton";
-import { MenuIcon, ArrowDown, ArrowUp } from "../../../assets";
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 
 export default {
@@ -22,15 +21,15 @@ export default {
 
 export const Arrow = {
   args: {
-    iconOpen: ArrowUp,
-    iconClose: ArrowDown,
+    iconOpen: { name: "ArrowIcon", props: { direction: "up" } },
+    iconClose: { name: "ArrowIcon", props: { direction: "down" } },
     isOpen: false,
   },
 };
 
 export const Menu = {
   args: {
-    iconClose: MenuIcon,
+    iconClose: { name: "MenuIcon" },
     isOpen: false,
   },
 };

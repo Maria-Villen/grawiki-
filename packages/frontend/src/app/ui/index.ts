@@ -34,3 +34,8 @@ export { default as Searchbar } from "./inputs/search-bar/searchbar";
 export { default as ErrorFormMsg } from "./messages/error-form-msg/errorFormMsg";
 export { default as MsgSuccess } from "./messages/msg-success/msgSuccess";
 export { default as MsgError } from "./messages/msg-error/msgError";
+
+/** Fields */
+export { default as EmailField } from "./fields/emailField";
+export { default as PassField } from "./fields/passField";
+export { default as TextField } from "./fields/textField";

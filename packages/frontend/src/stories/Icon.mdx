@@ -1,0 +1,55 @@
+{/* Icons.mdx */}
+
+import Icon from "../app/ui/iconComponent/Icon.tsx";
+import { iconsConfig } from "./icons.config";
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Foundation/Icons" />
+
+# Icons
+
+#
+
+## How to use:
+
+You can use the following icons using the Icon component or with the component made with the name of the Icon.
+Example:
+
+`<Icon name:"BankIcon" />`
+or also
+`<BankIcon />`
+
+Some icons have properties:
+The properties are indicated in the icon name of the next list.
+
+ArrowIcon is the only icon with the property direction that allows "up", "down", "left" and "right" values.
+The others icons you can just add fill o hidden if it is indicated in the icon name of the next list.
+
+`<Icon name:"BankIcon" fill />`
+or also
+`<BankIcon fill /> `
+
+`<Icon name:"ArrowIcon" direction="up">`
+or also
+`<ArrowIcon direction="up">`
+
+<br />
+<h2>Grawiki Icons</h2>
+<br />
+
+<div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+  {iconsConfig.map((icon) => (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        margin: "10px",
+        width: "150px",
+      }}
+    >
+      <Icon name={icon.name} {...icon.props} />
+      <p style={{ textAlign: "center" }}>{icon.tag || icon.name}</p>
+    </div>
+  ))}
+</div>

@@ -1,5 +1,5 @@
 import classes from "./errorFormMsg.module.sass";
-import { Exclamation } from "../../../assets";
+import { Exclamation } from "../../../assets/index.ts";
 interface IErrorFormMsg {
   className?: string;
   text: string;
@@ -15,7 +15,7 @@ interface IErrorFormMsg {
 const BaseInput = ({ className, text }: IErrorFormMsg) => {
   return (
     <div className={`${classes.errorMsg} ${className}`}>
-      <img src={Exclamation} alt="Error" className={classes.errorMsg_icon} />
+      <ExclamationIcon className={classes.errorMsg_icon} />
       <span className={classes.errorMsg_text}>{text}</span>
     </div>
   );

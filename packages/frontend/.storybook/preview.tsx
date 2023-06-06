@@ -7,7 +7,7 @@ const preview: Preview = {
   parameters: {
     zeplinLink: "https://app.zeplin.io/project/644325fc6c3cec23e0985ad3",
     backgrounds: {
-      default: "dark",
+      default: "light",
       values: [
         { name: "light", value: "#fff" },
         { name: "dark", value: "#1e1e1e" },

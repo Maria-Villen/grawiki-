@@ -1,9 +1,8 @@
 import BaseInput from "./baseInput";
 import type { Meta, StoryObj } from "@storybook/react";
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 
 const meta = {
-  title: "Inputs/BaseInput",
+  title: "Fields/BaseInput",
   component: BaseInput,
   tags: ["autodocs"],
   parameters: {

@@ -1,5 +1,5 @@
 import classes from "./searchbar.module.sass";
-import { Search } from "../../../assets";
+import { FindIcon } from "../../icons";
 import { useState, ChangeEvent } from "react";
 
 interface ISearchInput extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -24,7 +24,7 @@ const Searchbar = ({ className, fluid, ...props }: ISearchInput) => {
     >
       <form onSubmit={onSubmit}>
         <button className={classes.searchbar_icon} type="submit">
-          <img src={Search} alt="Enviar búsqueda" />
+          <FindIcon />
         </button>
         <input
           type="text"
