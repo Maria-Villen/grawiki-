@@ -1,11 +1,12 @@
 import { IFillIcon } from "../iconComponent/interfaceofIcon";
 
-function ToysIcon({ fill }: IFillIcon) {
+function ToysIcon({ fill, className }: IFillIcon) {
   if (fill) {
     return (
       <svg
         width="32"
         height="32"
+        className={className}
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -50,6 +51,7 @@ function ToysIcon({ fill }: IFillIcon) {
     <svg
       width="32"
       height="32"
+      className={className}
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

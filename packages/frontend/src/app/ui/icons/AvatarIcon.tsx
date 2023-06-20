@@ -1,9 +1,10 @@
 import { IFillIcon } from "../iconComponent/interfaceofIcon";
 
-const AvatarIcon = ({ fill }: IFillIcon) => {
+const AvatarIcon = ({ fill, className }: IFillIcon) => {
   if (fill) {
     return (
       <svg
+        className={className}
         width="32"
         height="32"
         viewBox="0 0 32 32"
@@ -41,6 +42,7 @@ const AvatarIcon = ({ fill }: IFillIcon) => {
     <svg
       width="32"
       height="32"
+      className={className}
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

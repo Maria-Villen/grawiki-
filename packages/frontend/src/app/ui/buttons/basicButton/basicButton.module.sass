@@ -1,7 +1,6 @@
 @use "../../../ui/styles/variables" as *
 
 .button
-  border-radius: 10px
   display: flex
   border: 1px solid $triarty-hover
   padding: 0.4rem
@@ -14,6 +13,8 @@
   background: $triarty-white
   color: $greyscale-black
   gap: 10px
+  @inlcude BorderRadius("medium")
+
   &:hover
     background: $triarty-hover
 
@@ -21,7 +22,7 @@
     height: 18px
     width: 18px
 
-// Categories
+/* Categories
 
 .disabled
   background: $disable
@@ -32,6 +33,7 @@
   border: none
   background: $primary
   color: $triarty-white
+
   &:hover
     background: $primary-hover
 
@@ -39,20 +41,23 @@
   border: none
   background: $negative
   color: $triarty-white
+
   &:hover
     background: $negative-hover
 
-// Direction 
+/* Direction 
 
 .reverse
   flex-direction: row-reverse
 
-// dimensions
+/* dimensions
+ 
 .small
   height: 32px
   font-size: 14px
   line-height: 17px
-  border-radius: 5px
+  @include SmallBold
+
   &.onlyIcon
     min-width: auto
     width: 32px
@@ -64,6 +69,8 @@
 .normal
   width: 205px
   height: 40px
+  @include NormalBold
+
   &.onlyIcon
     min-width: auto
     width: 40px
@@ -71,8 +78,7 @@
 .medium
   width: 320px
   height: 45px
-  font-size: 18px
-  line-height: 22px
+  @include BigBold
   &.onlyIcon
     min-width: auto
     width: 45px
@@ -80,11 +86,12 @@
 .big
   width: 280px
   height: 56px
-  font-size: 18px
-  line-height: 22px
+  @include BigBold
+
   &.onlyIcon
     min-width: auto
     width: 56px
+
   & .icon
     height: 24px
     width: 24px

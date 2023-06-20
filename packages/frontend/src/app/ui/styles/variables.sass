@@ -1,7 +1,8 @@
 /* COLORS */
-// Design: https://www.figma.com/file/8OFb5MbFJaMxxch3lVx1nd/Grawiki-Design-System-UI-KIT?type=design&node-id=7-34121&t=wae2h8cpeWjiN2cq-0
+// Design:
 // Main UI Color
 // Uses as main colors for user interface and components
+
 $primary: #0066FF
 $primary-hover: #06367D
 $primary-dark: #01193D
@@ -24,6 +25,7 @@ $greyscale-blackTag: #151515
 
 // Color Coding
 // Uses as colors of the content
+
 $color-darkIndigo: #401694
 $color-navy: #225091
 $color-aquamarine: #4eccc6
@@ -31,26 +33,125 @@ $color-blackish: #333
 $color-americanGrey: #808080
 $color-explosive: #c4c4c4
 
+// Spacers 
+
+$spacer-xs: 4px
+$spacer-s: 8px
+$spacer-m: 16px
+$spacer-l: 24px
+$spacer-xl: 32px
+$spacer-xxl: 48px
+$spacer-xxxl: 64px
+
 // Typography
+// https://fonts.google.com/specimen/Lato
+
 $typo: 'Lato'
 
 /* fontStyles */
-$fontWeight: (black: 800,bold: 700,regular: 400,thin: 300)
 
-@mixin fontStyles($fs-style, $fs-styles: $fontWeight)
-  @if map-has-key($fs-styles, $fs-style)
-    $fs-style: map-get($fs-styles, $fs-style)
-    color-weight: $fs-style
+// Banner grawiki 
+
+@mixin MainHeading
+  font-family: $typo, sans-serif
+  font-style: normal
+  font-weight: 700
+  font-size: 32px
+  line-height: 36px
+  letter-spacing: -1px
+
+@mixin BigBold
+  font-family: $typo, sans-serif
+  font-style: normal
+  font-weight: 700
+  font-size: 18px
+  line-height: 22px
+
+@mixin BigRegular
+  font-family: $typo, sans-serif
+  font-style: normal
+  font-weight: 400
+  font-size: 24px
+  line-height: 28px
+
+@mixin BigUnderline
+  font-family: $typo, sans-serif
+  font-style: normal
+  font-weight: 400
+  font-size: 18px
+  line-height: 22px
+  text-decoration-line: underline
+
+@mixin NormalBold
+  font-family: $typo, sans-serif
+  font-style: normal
+  font-weight: 700
+  font-size: 16px
+  line-height: 19px
+
+@mixin NormalRegular
+  font-family: $typo, sans-serif
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+
+@mixin NormalUnderline
+  font-family: $typo, sans-serif
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+  text-decoration-line: underline
+
+@mixin SmallBold
+  font-family: $typo, sans-serif
+  font-style: normal
+  font-weight: 700
+  font-size: 14px
+  line-height: 17px
+
+@mixin SmallRegular
+  font-family: $typo, sans-serif
+  font-style: normal
+  font-weight: 400
+  font-size: 14px
+  line-height: 17px
+
+@mixin SmallUnderline
+  font-family: $typo, sans-serif
+  font-style: normal
+  font-weight: 400
+  font-size: 14px
+  line-height: 17px
+  text-decoration-line: underline
 
 // BreackPoints
 
 $breakpoints: (mobile: 360px, mobilePerfectPixel: 375px, tablet: 768px, smallDesktop: 1024px ,mediumDesktop: 1440px, largeDesktop: 1920px)
 
 /* Break Points */
-
 @mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints)
   @if map-has-key($mq-breakpoints, $mq-breakpoint)
     $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint)
 
   @media screen and (min-width: #{$mq-breakpoint})
     @content
+
+/** Shadows */
+/* InputShadow */
+
+@mixin Shadow
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.101025)
+
+@mixin MenuButtonShadow
+  box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.2)
+/* Border Radius */
+
+$bordersRadius: (big: 20px, large: 15px, medium: 8px, small: 4px)
+
+@mixin BorderRadius($my-borderRadius, $my-bordersRadius: $bordersRadius)
+  @if map-has-key($my-bordersRadius, $my-borderRadius)
+    $my-borderRadius: map-get($my-bordersRadius, $my-borderRadius)
+
+    border-radius: $my-borderRadius

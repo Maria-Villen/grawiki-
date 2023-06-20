@@ -1,13 +1,15 @@
 interface IPasswordEyeIconProps {
   hidden: boolean;
+  className?: string;
 }
 
-function PasswordEyeIcon({ hidden }: IPasswordEyeIconProps) {
+function PasswordEyeIcon({ hidden, className }: IPasswordEyeIconProps) {
   if (hidden) {
     return (
       <svg
         width="32"
         height="32"
+        className={className}
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -48,6 +50,7 @@ function PasswordEyeIcon({ hidden }: IPasswordEyeIconProps) {
     <svg
       width="32"
       height="32"
+      className={className}
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

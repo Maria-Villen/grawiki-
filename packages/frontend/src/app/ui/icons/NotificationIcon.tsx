@@ -1,11 +1,12 @@
 import { IFillIcon } from "../iconComponent/interfaceofIcon";
 
-function NotificationIcon({ fill }: IFillIcon) {
+function NotificationIcon({ fill, className }: IFillIcon) {
   if (fill) {
     return (
       <svg
         width="32"
         height="32"
+        className={className}
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -36,6 +37,7 @@ function NotificationIcon({ fill }: IFillIcon) {
     <svg
       width="32"
       height="32"
+      className={className}
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

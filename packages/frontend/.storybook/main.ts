@@ -11,6 +11,15 @@ const config: StorybookConfig = {
     "storybook-zeplin",
     "storybook-addon-react-router-v6",
     "@storybook/addon-a11y",
+    {
+      name: "@storybook/addon-styling",
+      options: {
+        sass: {
+          // Require your Sass preprocessor here
+          implementation: require("sass"),
+        },
+      },
+    },
   ],
   typescript: {
     // Overrides the default Typescript configuration to allow multi-package components to be documented via Autodocs.

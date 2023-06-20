@@ -1,11 +1,12 @@
 import { IFillIcon } from "../iconComponent/interfaceofIcon";
 
-const BotIcon = ({ fill }: IFillIcon) => {
+const BotIcon = ({ fill, className }: IFillIcon) => {
   if (fill) {
     return (
       <svg
         width="32"
         height="32"
+        className={className}
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -32,6 +33,7 @@ const BotIcon = ({ fill }: IFillIcon) => {
     <svg
       width="32"
       height="32"
+      className={className}
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

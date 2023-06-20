@@ -1,12 +1,14 @@
 interface IArrowIconProps {
   direction: "up" | "down" | "left" | "right";
+  className?: string;
 }
 
-const ArrowIcon = ({ direction }: IArrowIconProps) => {
+const ArrowIcon = ({ direction, className }: IArrowIconProps) => {
   switch (direction) {
     case "down":
       return (
         <svg
+          className={className}
           width="16"
           height="16"
           viewBox="0 0 16 16"

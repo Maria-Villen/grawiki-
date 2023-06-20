@@ -1,15 +1,11 @@
 import React from "react";
 import * as Icons from "../icons"; // Ajusta la ruta según tu estructura de directorios
+import { IIcon } from "../iconComponent/interfaceofIcon";
 
-interface IconProps {
-  name: string;
-  className?: string;
-}
-
-const Icon = ({ name, className, ...props }: IconProps) => {
+const Icon = ({ name, className, ...props }: IIcon) => {
   const IconComponent = Icons[
     name as keyof typeof Icons
-  ] as React.ComponentType<IconProps>;
+  ] as React.ComponentType<IIcon>;
 
   if (!IconComponent) {
     // En caso de que se proporcione un nombre de icono desconocido, puedes mostrar un icono de reemplazo o un mensaje de error.

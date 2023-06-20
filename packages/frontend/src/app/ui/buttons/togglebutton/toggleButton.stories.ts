@@ -15,6 +15,9 @@ export default {
     },
     onClick: {
       control: false,
+      default: (e: MouseEvent) => {
+        console.log(e);
+      },
     },
   },
 };
