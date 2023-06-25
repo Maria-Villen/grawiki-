@@ -20,6 +20,7 @@ const meta = {
   },
   args: {
     placeholder: "Contraseña",
+    disabled: false,
   },
 } satisfies Meta<typeof PassInput>;
 
@@ -33,7 +34,7 @@ export const Normal: Story = {};
 Normal.parameters = {
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki---Screens?type=design&node-id=609-4908https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki---Screens?type=design&node-id=1757-15899&t=umPaY8DNPB3fMhOb-4&t=cVYTp6YN9bkAe2Ro-4",
+    url: "https://www.figma.com/file/8OFb5MbFJaMxxch3lVx1nd/Grawiki-Design-System-UI-KIT?type=design&node-id=206-23056&mode=dev",
   },
 };
 
@@ -48,5 +49,19 @@ Fluid.parameters = {
   design: {
     type: "figma",
     url: "https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki---Screens?type=design&node-id=609-4908https://www.figma.com/file/lrjhxEoXZotJLOOwukMgzy/11---Grawiki---Screens?type=design&node-id=1757-15899&t=umPaY8DNPB3fMhOb-4&t=cVYTp6YN9bkAe2Ro-4",
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+  },
+};
+
+Disabled.parameters = {
+  layout: "centered",
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/8OFb5MbFJaMxxch3lVx1nd/Grawiki-Design-System-UI-KIT?type=design&node-id=206-23085&mode=dev",
   },
 };

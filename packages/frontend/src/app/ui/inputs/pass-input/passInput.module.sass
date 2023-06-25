@@ -1,7 +1,6 @@
-@use "../../../ui/styles/variables" as *
+@use "../../styles/variables" as *
 
 $barSize: 40px
-$border-rounded: 40px
 
 .pass
   background: $triarty-white
@@ -10,8 +9,8 @@ $border-rounded: 40px
   display: flex
   align-items: center
   flex-flow: row nowrap
-  border-radius: $border-rounded
-  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25)
+  @include ShadowInput()
+  @include BorderRadius("big")
   overflow: hidden
   padding-left: 1rem
 
@@ -36,3 +35,6 @@ $border-rounded: 40px
 
 .fluid
   width: 100%
+
+.disabled
+  opacity: 0.5

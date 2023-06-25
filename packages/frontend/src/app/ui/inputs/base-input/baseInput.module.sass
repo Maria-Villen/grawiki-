@@ -1,13 +1,18 @@
+@use "../../styles/variables" as *
+
 .input
   border: none
   width: 320px
   height: 40px
-  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25)
-  border-radius: 40px
+  @include ShadowInput()
+  @include BorderRadius("big")
   padding-left: 1rem
+  background: $triarty-white
 
+  &:active
+    outline: $primary
   &:focus-visible
-      outline: none
+    outline: none
 
 .fluid
   display: inline-block

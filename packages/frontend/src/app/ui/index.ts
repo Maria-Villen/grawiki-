@@ -1,5 +1,7 @@
 /** Layouts */
 
+export { default as Suggestions } from "./layouts/suggestions/suggestions";
+
 /* Section collapsed of navbarCollapse */
 export { default as MenuNavbarCollapse } from "./layouts/menu-navbar-collapse/menu-navbarCollapse";
 
@@ -15,8 +17,10 @@ export { default as Logo } from "./logos/logo";
 
 /** Buttons */
 export { default as ToggleButton } from "./buttons/togglebutton/toggleButton";
-export { default as MenuButton } from "./links/menu-button/menuButton";
+export { default as MenuButton } from "./buttons/menu-button/MenuButton";
 export { default as BasicButton } from "./buttons/basicButton/basicButton";
+export { default as ReactionButton } from "./buttons/reaction-button/reactionButton";
+export { default as SlipButton } from "./buttons/slip-button/SlipButton";
 
 /** Links */
 export { default as IconLink } from "./links/icon-link/iconLink";

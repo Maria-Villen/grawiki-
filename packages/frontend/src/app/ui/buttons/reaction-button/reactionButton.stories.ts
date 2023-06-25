@@ -30,3 +30,24 @@ export const Pinched: Story = {
     iconActive: { name: "Pinched3DIcon" },
   },
 };
+
+export const ThumbsUp: Story = {
+  args: {
+    icon: { name: "ThumbsUpIcon" },
+    iconActive: { name: "ThumbsUp3DIcon" },
+  },
+};
+
+export const ThumbsDown: Story = {
+  args: {
+    icon: { name: "ThumbsDownIcon" },
+    iconActive: { name: "ThumbsDown3DIcon" },
+  },
+};
+
+export const Clapping: Story = {
+  args: {
+    icon: { name: "ClappingIcon" },
+    iconActive: { name: "Clapping3DIcon" },
+  },
+};

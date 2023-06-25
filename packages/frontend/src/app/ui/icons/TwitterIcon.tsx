@@ -8,7 +8,7 @@ function TwitterIcon({ className }: { className: string }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_193_12014)">
+      <g clipPath="url(#clip0_193_12014)">
         <path
           d="M16.995 0H0.00498047C0.00222983 0 0 0.00222983 0 0.00498047V16.995C0 16.9978 0.00222983 17 0.00498047 17H16.995C16.9978 17 17 16.9978 17 16.995V0.00498047C17 0.00222983 16.9978 0 16.995 0Z"
           fill="#1DA1F2"

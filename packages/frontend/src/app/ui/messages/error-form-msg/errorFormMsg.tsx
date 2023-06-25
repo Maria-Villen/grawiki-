@@ -1,5 +1,6 @@
 import classes from "./errorFormMsg.module.sass";
-import { Exclamation } from "../../../assets/index.ts";
+import ExclamationIcon from "../../icons/ExclamationIcon.tsx";
+
 interface IErrorFormMsg {
   className?: string;
   text: string;

@@ -13,7 +13,12 @@ interface IBaseInput extends React.InputHTMLAttributes<HTMLInputElement> {
  */
 
 const BaseInput = ({ className, fluid, ...props }: IBaseInput) => {
-  return <input className={`${classes.input} ${fluid && classes.fluid} ${className}`} {...props} />;
+  return (
+    <input
+      className={`${classes.input} ${fluid && classes.fluid} ${className}`}
+      {...props}
+    />
+  );
 };
 
 export default BaseInput;

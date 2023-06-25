@@ -1,0 +1,70 @@
+@use "../../styles/variables" as *
+
+.container
+    position: relative
+
+.dataList
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @include BorderRadius("big")
+    min-width: 315px
+    height: 40px
+    background: $triarty-white
+    &_valueIcon
+        margin-left: 1rem
+
+    &.open
+        border-radius: 1rem
+        border-bottom: none
+        border-bottom-left-radius: 0
+        border-bottom-right-radius: 0
+
+    input
+        border: none
+        border-bottom-left-radius: 2rem
+        border-top-left-radius: 2rem
+        width: 100%
+        font-size: 1rem
+        line-height: 1.25rem
+        padding: 9px
+        padding-left: 1em
+        outline: none
+
+        &.inputWithIcon
+            padding-left: 0.5rem
+
+    &:focus-visible
+        outline: none
+
+    button
+        padding: 0.25rem 1rem
+        border-bottom-right-radius: 2rem
+        border-top-right-radius: 2rem
+
+    &_list
+        display: none
+
+    &_list_open
+        display: inherit
+        padding: 0
+        border: 1px solid #bfbfbf
+        border-bottom-left-radius: 1rem
+        border-bottom-right-radius: 1rem
+        border-top: none
+        position: absolute
+        width: calc(100% - 2px)
+        top: 2.5rem
+        background: white
+        z-index: 3
+
+        ul
+            padding: 0
+
+.open, input.open
+    border-bottom: none
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+
+.fluid
+    width: 100%
