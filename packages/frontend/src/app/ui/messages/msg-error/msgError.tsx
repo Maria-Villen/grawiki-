@@ -1,11 +1,12 @@
 import { FailImage } from "../../../assets/index.ts";
-import { LayoutCardForm, BasicBtnLink } from "../..";
+import { LayoutCardForm, BasicButton } from "../..";
+import { MouseEventHandler } from "react";
 
 interface IMsgError {
   message: string;
   label: string;
   link: string;
-  cb?: () => void;
+  cb?: MouseEventHandler<HTMLButtonElement> | undefined;
   linkInit?: boolean;
 }
 
@@ -14,19 +15,20 @@ const MsgError = ({ message, label, link, linkInit, cb }: IMsgError) => {
     <LayoutCardForm withLogo>
       <h2>{message}</h2>
       <img src={FailImage} alt="Acción realizada ha fallado" />
-      <BasicBtnLink
+      <BasicButton
         type="button"
         category="primary"
         label={label}
-        to={link}
+        value={link}
         onClick={cb}
       />
       {linkInit && (
-        <BasicBtnLink
+        <BasicButton
           type="button"
           category="primary"
           label="Ir a inicio"
-          to="/"
+          value="/"
+          onClick={cb}
         />
       )}
     </LayoutCardForm>

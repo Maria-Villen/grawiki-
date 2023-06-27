@@ -1,5 +1,5 @@
 import classes from "./loginForm.module.sass";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LayoutCardForm, CheckInput, BasicButton, MsgError } from "../../../ui";
 import useLoginDataForm from "./useLoginDataForm";
 import { EmailField, PassField } from "../../../ui";
@@ -26,9 +26,12 @@ const LoginForm = () => {
 
   const location = useLocation();
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
-  const resetStates = () => {
+  const resetStates = (e: React.MouseEvent<HTMLButtonElement>) => {
     dispatch(reset());
+    const value = (e.currentTarget as HTMLButtonElement).value;
+    navigate(value);
   };
 
   if (user) {

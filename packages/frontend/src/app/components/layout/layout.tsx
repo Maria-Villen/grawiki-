@@ -21,7 +21,7 @@ const Layout = ({ withFooter }: ILayout) => {
         className={`${classes.main} ${withFooter === false && classes.fluid}`}
       >
         <Outlet />
-        {withFooter && <Footer />}
+        {withFooter && <Footer dark />}
       </main>
     </div>
   );

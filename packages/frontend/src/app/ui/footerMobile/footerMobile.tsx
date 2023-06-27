@@ -1,5 +1,5 @@
 import classes from "./footerMobile.module.sass";
-import { IconLink } from "../../ui";
+import { IconLink } from "..";
 
 /**
  * @Component

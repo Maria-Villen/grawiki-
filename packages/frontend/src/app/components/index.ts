@@ -3,11 +3,10 @@
 /* General Layout for all pages */
 export { default as Layout } from "./layout/layout";
 /* Footer desktop only */
-export { default as Footer } from "./footer/footer";
-/* Footer mobile and desktop */
-export { default as FooterMobile } from "./footerMobile/footerMobile";
+
 /* Header */
 export { default as Header } from "./header/header";
+export { default as Footer } from "./footer/footer";
 
 /**  Forms */
 

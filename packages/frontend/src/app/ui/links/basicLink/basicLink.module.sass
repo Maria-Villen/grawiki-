@@ -1,0 +1,24 @@
+@use "../../styles/variables" as *
+
+.basiclink
+  color: $primary
+  text-decoration: none
+  display: flex
+  align-items: center
+  gap: 0.1875rem
+  @include SmallRegular
+
+  &.reverse
+    flex-direction: row-reverse
+
+  span
+    padding: 0
+    border-bottom: 1px solid transparent
+
+  &:hover
+    color: $primary-hover
+    span
+      border-bottom: 1px solid $primary-hover
+
+.disabled
+  opacity: 0.5

@@ -1,13 +1,47 @@
 @use "../../ui/styles/variables" as *
 
 .container
-	width: 100%
-	padding: 1rem
-	max-width: 1120px
-	margin: 0 auto
-	background: $triarty-white
-	display: flex
-	justify-content: space-around
-	@include mq("medium")
-		width: 90%
-		border-radius: 1rem
+  width: 100%
+  max-width: 1120px
+  margin: 0 auto
+  background: $triarty-white
+  display: flex
+  align-items: center
+  flex-direction: column
+  justify-content: center
+  padding: 1rem 0
+  @include mq("tablet")
+    justify-content: space-around
+    flex-direction: row
+    gap: 1.5rem
+
+.follow
+  display: flex
+  align-items: center
+  &_icon
+    padding: 3px
+    width: 18px
+    height: 18px
+
+.menu
+  display: flex
+  align-items: center
+  flex-grow: 1
+  justify-content: center
+  flex-wrap: wrap
+  font-size: 1rem
+  padding: 1rem
+  gap: 1.5rem
+  @include mq("tablet")
+    flex-wrap: nowrap
+    justify-content: end
+
+.container.dark
+  background: transparent
+  color: $triarty-white
+  & .menu_item
+    color: $triarty-white
+    padding: 0
+    border-bottom: 1px solid transparent
+    &:hover
+      border-bottom: 1px solid $triarty-white

@@ -70,4 +70,5 @@ export const iconsConfig = [
   { name: "InstagramIcon" },
   { name: "TwitterIcon" },
   { name: "LinkedinIcon" },
+  { name: "ReadMoreIcon" },
 ];

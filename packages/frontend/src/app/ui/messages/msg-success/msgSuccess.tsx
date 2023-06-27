@@ -1,11 +1,12 @@
 import { SuccessImage } from "../../../assets/index.ts";
-import { LayoutCardForm, BasicBtnLink } from "../..";
+import { LayoutCardForm, BasicButton } from "../..";
+import { MouseEventHandler } from "react";
 
 interface IMsgSuccess {
   message: string;
   label: string;
   link: string;
-  cb?: () => void;
+  cb?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
 const MsgSuccess = ({ message, label, link, cb }: IMsgSuccess) => {
@@ -13,11 +14,11 @@ const MsgSuccess = ({ message, label, link, cb }: IMsgSuccess) => {
     <LayoutCardForm withLogo>
       <h2>{message}</h2>
       <img src={SuccessImage} alt="Acción realizada con éxito" />
-      <BasicBtnLink
+      <BasicButton
         type="button"
         category="primary"
         label={label}
-        to={link}
+        value={link}
         onClick={cb}
       />
     </LayoutCardForm>

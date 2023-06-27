@@ -50,3 +50,4 @@ export { default as TwitterIcon } from "./TwitterIcon";
 export { default as UnderlineIcon } from "./UnderlineIcon";
 export { default as UnorderedListIcon } from "./UnorderedListIcon";
 export { default as Writing3DIcon } from "./Writing3DIcon";
+export { default as ReadMoreIcon } from "./ReadMoreIcon";

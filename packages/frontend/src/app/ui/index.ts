@@ -23,10 +23,7 @@ export { default as ReactionButton } from "./buttons/reaction-button/reactionBut
 export { default as SlipButton } from "./buttons/slip-button/SlipButton";
 
 /** Links */
-export { default as IconLink } from "./links/icon-link/iconLink";
-export { default as MenuListItem } from "./links/menu-list-item/menuListItem";
-export { default as MenuListItemSimple } from "./links/menu-list-item-simple/menuListItemSimple";
-export { default as BasicBtnLink } from "./links/basic-btn-link/basicBtnLink";
+export { default as BasicLink } from "./links/basicLink/basicLink";
 
 /** Inputs */
 export { default as BaseInput } from "./inputs/base-input/baseInput";

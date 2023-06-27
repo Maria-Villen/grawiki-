@@ -3,7 +3,7 @@ import { withRouter } from "storybook-addon-react-router-v6";
 import FooterLinksArea from "./footerLinksArea";
 
 const meta = {
-  title: "Layouts/FooterLinksArea",
+  title: "Layouts/footer/FooterLinksArea",
   component: FooterLinksArea,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ["autodocs"],
