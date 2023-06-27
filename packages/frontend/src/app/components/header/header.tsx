@@ -1,13 +1,10 @@
 import classes from "./header.module.sass";
-import {
-  Logo,
-  MenuListItem,
-  MenuListItemSimple,
-  MenuNavbarCollapse,
-} from "../../ui";
+import { Logo, MenuButton, MenuNavbarCollapse } from "../../ui";
 import { menuItems, IMenuItem } from "./navbarmenuConfig";
 import { HTMLProps, useEffect, useState } from "react";
-import { useAppSelector } from "../../redux/store";
+import { useAppDispatch, useAppSelector } from "../../redux/store";
+import { useNavigate } from "react-router-dom";
+import { logout } from "../../redux/slices/auth/authSlice";
 
 /**
  * @component
@@ -15,8 +12,10 @@ import { useAppSelector } from "../../redux/store";
  * @param ClassName: string
  * @returns
  */
+
 const Header = ({ className }: HTMLProps<HTMLDivElement>) => {
   const [width, setWidth] = useState<number>(window.innerWidth);
+  const navigate = useNavigate();
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
@@ -32,6 +31,18 @@ const Header = ({ className }: HTMLProps<HTMLDivElement>) => {
   const isMobile = width <= 768;
 
   const { loggedUser } = useAppSelector((state) => state.auth);
+  const dispatch = useAppDispatch();
+  const handleMenuItemClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    console.log((e.currentTarget as HTMLButtonElement).value);
+  };
+  const handleGoLogin = () => {
+    console.log("go login");
+    navigate("/login");
+  };
+
+  const handleLogout = () => {
+    dispatch(logout());
+  };
 
   return (
     <div className={`${classes.header} ${className}`}>
@@ -44,95 +55,45 @@ const Header = ({ className }: HTMLProps<HTMLDivElement>) => {
         </div>
         <div className={classes.header_navbar_area}>
           <ul className={classes.header_navbar_itemlist}>
-            {menuItems.map(({ id, icon, text, link }: IMenuItem) => {
-              if (isMobile) {
-                return (
-                  <MenuListItemSimple
-                    className={classes.header_navbar_item}
-                    key={id}
-                    icon={icon}
-                    text={text}
-                    link={link}
-                    inverse
-                    fluid
-                  />
-                );
-              } else {
-                return (
-                  <MenuListItem
-                    className={classes.header_navbar_item}
-                    key={id}
-                    icon={icon}
-                    text={text}
-                    link={link}
-                    dark
-                    fluid
-                  />
-                );
-              }
-            })}
-            {isMobile ? (
-              <MenuListItemSimple
-                className={classes.header_navbar_item}
-                key="create"
-                icon={{ name: "CreateIcon" }}
-                text="Crear Tema"
-                link="Create"
+            {menuItems.map(({ id, icon, text, link }: IMenuItem) => (
+              <MenuButton
+                key={id}
+                icon={icon}
+                label={text}
+                variant={isMobile ? "horizontal" : "vertical"}
+                value={link}
+                onClick={handleMenuItemClick}
                 fluid
               />
-            ) : (
-              <MenuListItem
-                className={classes.header_navbar_item}
-                key="create"
-                icon={{ name: "CreateIcon" }}
-                text="Crear Tema"
-                link="Create"
-                fluid
-              />
-            )}
+            ))}
+            <MenuButton
+              iconColor="black"
+              iconBackground="white"
+              key="create"
+              icon={{ name: "CreateMoreIcon" }}
+              label="Crear Tema"
+              variant={isMobile ? "horizontal" : "vertical"}
+              fluid
+            />
           </ul>
           <ul className={classes.header_navbar_itemlist}>
-            {isMobile ? (
-              loggedUser ? (
-                <MenuListItemSimple
-                  className={classes.header_navbar_item}
-                  key="cerrarSesión"
-                  icon={{ name: "CloseIcon" }}
-                  text="Cerrar Sesión"
-                  link="/logout"
-                  fluid
-                  inverse
-                />
-              ) : (
-                <MenuListItemSimple
-                  className={classes.header_navbar_item}
-                  key="Perfil"
-                  icon={{ name: "AvatarIcon" }}
-                  text="Perfil"
-                  link="/login"
-                  fluid
-                  inverse
-                />
-              )
-            ) : loggedUser ? (
-              <MenuListItem
-                className={classes.header_navbar_item}
+            {loggedUser ? (
+              <MenuButton
                 key="cerrarSesión"
                 icon={{ name: "CloseIcon" }}
-                text="Cerrar sesión"
-                link="/logout"
+                label="Cerrar Sesión"
+                onClick={handleLogout}
+                variant={isMobile ? "horizontal" : "vertical"}
                 fluid
-                dark
               />
             ) : (
-              <MenuListItem
-                className={classes.header_navbar_item}
+              <MenuButton
                 key="Perfil"
                 icon={{ name: "AvatarIcon" }}
-                text="Perfil"
-                link="/login"
+                label="Perfil"
+                onClick={handleGoLogin}
+                variant={isMobile ? "horizontal" : "vertical"}
                 fluid
-                dark
               />
             )}
           </ul>

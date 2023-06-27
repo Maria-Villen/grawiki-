@@ -25,6 +25,10 @@
   & .label
     padding: 6.5px 19px 6.5px 5px
 
+  &:hover
+    background: $primary-hover
+    color: white
+
 .vertical
   flex-direction: column
   justify-content: center
@@ -35,8 +39,6 @@
     height: 47px
     width: 47px
     border-radius: 50%
-    background: $primary
-    color: $triarty-white
     padding: 0
     display: flex
     align-items: center
@@ -44,8 +46,15 @@
     transition: background 200ms ease-in-out
     @include MenuButtonShadow
 
+    &.colorClass
+      color: $triarty-white
+
+    &.backgroundClass
+      background-color: $primary
+
     &:hover
       background: $primary-hover
+      color: white
 
 .fluid
   width: 100%

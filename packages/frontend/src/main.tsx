@@ -13,6 +13,7 @@ import {
   Unauthorised,
   ProtectedRoute,
   Profile,
+  PersistLogin,
 } from "./app/routes";
 import { Layout } from "./app/components";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -34,60 +35,51 @@ i18next.init({
 });
 
 const router = createBrowserRouter([
+  // With persistLogin
   {
-    element: <Layout withFooter />,
+    element: <PersistLogin />,
     children: [
+      // Layout with Footer not protected
       {
-        path: "/",
-        element: <Home />,
-      },
-      { path: "/category/:type", element: <Home /> },
-    ],
-  },
-  {
-    element: <Layout withFooter={false} />,
-    children: [
-      {
-        path: "/login",
-        element: <Login />,
+        element: <Layout withFooter />,
+        children: [
+          { path: "/", element: <Home /> },
+          { path: "/category/:type", element: <Home /> },
+        ],
       },
       {
-        path: "/register",
-        element: <Register />,
+        element: <Layout withFooter={false} />,
+        children: [
+          { path: "/login", element: <Login /> },
+          { path: "/register", element: <Register /> },
+          { path: "/recover", element: <RecoverPass /> },
+          { path: "/password/:token", element: <ChangePass /> },
+          { path: "/unauthorized", element: <Unauthorised /> },
+        ],
       },
-      { path: "/recover", element: <RecoverPass /> },
-      { path: "/password/:token", element: <ChangePass /> },
-      { path: "/unauthorized", element: <Unauthorised /> },
-    ],
-  },
-  {
-    element: <ProtectedRoute allowedRoles={["admin"]} />,
-    children: [
+      // Layout without Footer for admin
       {
-        element: <Layout />,
+        element: <ProtectedRoute allowedRoles={["admin"]} />,
         children: [
           {
-            path: "/adminPannel",
-            element: <AdminPannel />,
+            element: <Layout />,
+            children: [{ path: "/adminPannel", element: <AdminPannel /> }],
+          },
+        ],
+      },
+      // Layout without Footer for logged users (user and a)
+      {
+        element: <ProtectedRoute allowedRoles={["user", "admin"]} />,
+        children: [
+          {
+            element: <Layout />,
+            children: [{ path: "/profile", element: <Profile /> }],
           },
         ],
       },
     ],
   },
-  {
-    element: <ProtectedRoute allowedRoles={["user", "admin"]} />,
-    children: [
-      {
-        element: <Layout />,
-        children: [
-          {
-            path: "/profile",
-            element: <Profile />,
-          },
-        ],
-      },
-    ],
-  },
+  // Not found pages
   {
     path: "*",
     element: <NotFound />,

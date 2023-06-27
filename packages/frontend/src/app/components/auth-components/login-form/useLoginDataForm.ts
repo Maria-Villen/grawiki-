@@ -7,7 +7,7 @@ import {
 } from "../../../redux/slices/auth/authSlice";
 import { userLogin } from "../../../redux/slices/auth/authActions";
 import { useFormik } from "formik";
-import { ChangeEvent } from "react";
+import { ChangeEvent, useState } from "react";
 
 /**
  * Handles de logic of Login Form
@@ -30,6 +30,11 @@ const useLoginDataForm = () => {
 
   const onSubmit = (values: IUserLogin) => {
     dispatch(userLogin({ email: values.email, password: values.password }));
+    if (rememberMe) {
+      dispatch(addPersistence());
+    } else {
+      dispatch(removePersistence());
+    }
   };
 
   const { handleSubmit, errors, touched, getFieldProps } = useFormik({
@@ -45,21 +50,15 @@ const useLoginDataForm = () => {
     persist,
   } = useAppSelector((state) => state.auth);
 
-  const rememberThisDevice = (e: ChangeEvent<HTMLInputElement>) => {
-    const remember = e.target.checked;
-    if (remember) {
-      dispatch(addPersistence());
-    } else {
-      dispatch(removePersistence());
-    }
-  };
+  const [rememberMe, setRememberMe] = useState(persist ? true : false);
 
   return {
     handleSubmit,
     errors,
     touched,
     getFieldProps,
-    rememberThisDevice,
+    setRememberMe,
+    rememberMe,
     user,
     loading,
     error,

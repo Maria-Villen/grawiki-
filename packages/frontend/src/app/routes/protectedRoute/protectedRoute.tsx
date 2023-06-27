@@ -1,6 +1,5 @@
 import { useLocation, Navigate, Outlet } from "react-router-dom";
 import { useAppSelector } from "../../redux/store";
-import { PersistLogin } from "..";
 
 interface IprotectedRouteProps {
   allowedRoles: Array<string>;
@@ -14,11 +13,7 @@ const ProtectedRoute = ({ allowedRoles }: IprotectedRouteProps) => {
   const location = useLocation();
 
   if (loggedUser && allowedRoles.includes(loggedUser.role)) {
-    return (
-      <PersistLogin>
-        <Outlet />
-      </PersistLogin>
-    );
+    return <Outlet />;
   } else if (loggedUser) {
     return <Navigate to="/unauthorized" state={{ from: location }} replace />;
   } else {

@@ -1,33 +1,38 @@
-import { useState, useEffect, ReactNode } from "react";
+import { useState, useEffect } from "react";
 import { getNewToken } from "../../redux/slices/auth/authActions";
 import { useAppSelector, useAppDispatch } from "../../redux/store";
+import { Outlet } from "react-router-dom";
 
-const PersistLogin = ({ children }: { children: ReactNode }) => {
+const PersistLogin = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const { loggedUser, persist, loading, error } = useAppSelector(
-    (state) => state.auth
-  );
+  const { loggedUser, persist } = useAppSelector((state) => state.auth);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (!persist) {
-      setIsLoading(false);
-    } else if (loggedUser && loggedUser.token) {
-      setIsLoading(false);
+    let isMounted = true;
+    if (loggedUser) {
+      console.log("usuario logueado");
+      isMounted && setIsLoading(false);
+    } else if (!loggedUser && persist) {
+      try {
+        dispatch(getNewToken());
+      } catch (err) {
+        console.log(err);
+      } finally {
+        isMounted && setIsLoading(false);
+      }
     } else {
-      dispatch(getNewToken());
+      console.log("Persitence off");
       setIsLoading(false);
     }
-  }, [persist, loggedUser, dispatch]);
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
-  if (isLoading || loading) {
-    return <p>Loading...</p>;
-  } else if (error.message) {
-    console.log("error", error.message);
-    return <p>Se ha producido un error. Intente nuevamente.</p>;
-  } else {
-    return <>{children}</>;
-  }
+  return (
+    <>{!persist ? <Outlet /> : isLoading ? <p>Loading...</p> : <Outlet />}</>
+  );
 };
 
 export default PersistLogin;

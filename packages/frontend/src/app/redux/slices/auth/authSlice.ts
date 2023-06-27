@@ -9,7 +9,7 @@ import { IUserLoggedIn } from "../../../interfaces/auth";
 
 interface IInitialState {
   loggedUser: IUserLoggedIn | null;
-  persist: string;
+  persist: string | false;
   loading: boolean;
   error: SerializedError;
 }
@@ -18,7 +18,7 @@ const initialState: IInitialState = {
   loggedUser: null,
   loading: false,
   error: {},
-  persist: localStorage.getItem("rememberGrawiki") || "false",
+  persist: localStorage.getItem("rememberGrawiki") || false,
 };
 
 const authSlice = createSlice({
@@ -27,6 +27,7 @@ const authSlice = createSlice({
   reducers: {
     logout: () => {
       console.log("logout");
+      localStorage.removeItem("auth.token");
       return { ...initialState };
     },
     reset: () => {

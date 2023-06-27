@@ -11,6 +11,7 @@ export const auth = {
       (user) => user.email === email && user.password === password
     );
     if (userFounded) {
+      localStorage.setItem("auth.token", JSON.stringify(userFounded.token));
       return {
         id: userFounded.id,
         role: userFounded.role,
@@ -64,13 +65,15 @@ export const auth = {
       return false;
     }
   },
-
   getNewToken: () => {
-    return {
-      id: "1",
-      role: "user",
-      token: "secret-token",
-    };
+    const token = localStorage.getItem("auth.token");
+    if (token) {
+      return {
+        id: "1",
+        role: "user",
+        token: "secret-token",
+      };
+    }
   },
   // via direct call
   userRecoverPass: (email: string): boolean => {

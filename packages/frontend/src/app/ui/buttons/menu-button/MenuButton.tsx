@@ -24,6 +24,14 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
    * An button that can adapt to the parent container
    */
   fluid?: boolean;
+  /**
+   * Icon color
+   */
+  iconColor?: string;
+  /**
+   * Icon Background color
+   */
+  iconBackground?: string;
 }
 
 const MenuButton = ({
@@ -32,17 +40,25 @@ const MenuButton = ({
   variant = "responsive",
   isActive,
   fluid,
+  iconColor,
+  iconBackground,
   ...props
 }: Props) => {
+  const containerClasses = `
+  ${classes.iconContainer}
+  ${iconColor ? { color: iconColor } : classes.colorClass}
+  ${iconBackground ? { background: iconBackground } : classes.backgroundClass}`;
+
   return (
     <button
       className={`
         ${classes.button} 
         ${classes[variant]} 
-        ${fluid && classes.fluid}`}
+        ${fluid && classes.fluid}
+`}
       {...props}
     >
-      <span className={classes.iconContainer}>
+      <span className={`${classes.iconContainer} ${containerClasses}`}>
         <Icon className={classes.icon} name={icon.name} fill={isActive} />
       </span>
       <span className={classes.label}>{label}</span>

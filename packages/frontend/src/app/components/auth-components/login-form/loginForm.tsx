@@ -16,7 +16,8 @@ const LoginForm = () => {
     errors,
     touched,
     getFieldProps,
-    rememberThisDevice,
+    rememberMe,
+    setRememberMe,
     user,
     loading,
     error,
@@ -69,8 +70,8 @@ const LoginForm = () => {
           <label htmlFor="rememberMe" className={classes.checkbox}>
             <CheckInput
               id="rememberMe"
-              onChange={rememberThisDevice}
-              checked={persist === "true" ? true : false}
+              checked={rememberMe === true ? true : false}
+              onChange={() => setRememberMe(!rememberMe)}
             />
             Recordarme
           </label>
