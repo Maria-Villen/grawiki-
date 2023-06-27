@@ -1,35 +1,46 @@
 import classes from "./slipButton.module.sass";
 import { ToggleButton } from "../../index";
-import { useState, InputHTMLAttributes, Ref, forwardRef } from "react";
+import {
+  useState,
+  InputHTMLAttributes,
+  Ref,
+  forwardRef,
+  useEffect,
+} from "react";
 import { IIcon } from "../../iconComponent/interfaceofIcon";
 import Icon from "../../iconComponent/Icon";
+
 /**
- * Component ListInput
+ * Component SlipButton
  * Description: A selector with suggestions
  */
 
 interface SlipButtonProps extends InputHTMLAttributes<HTMLInputElement> {
   icon?: IIcon;
-  opened?: boolean;
   fluid?: boolean;
-  onClose?: () => void;
+  closeControler?: boolean;
 }
 const SlipButton = forwardRef<HTMLInputElement, SlipButtonProps>(
   (
-    { icon, children, opened, fluid, ...props }: SlipButtonProps,
+    { icon, children, fluid, closeControler, ...props }: SlipButtonProps,
     ref: Ref<HTMLInputElement>
   ) => {
-    const [isOpen, setIsOpen] = useState(opened);
-
+    const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => {
       setIsOpen(!isOpen);
     };
 
+    useEffect(() => {
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    }, [closeControler]);
+
     return (
       <div className={classes.container}>
         <div
-          className={`${classes.dataList} ${isOpen ? classes.open : null} ${
-            fluid && classes.fluid
+          className={`${classes.dataList} ${isOpen ? classes.open : ""} ${
+            fluid ? classes.fluid : ""
           }`}
         >
           {icon && (

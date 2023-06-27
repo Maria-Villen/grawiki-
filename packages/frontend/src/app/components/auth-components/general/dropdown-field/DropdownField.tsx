@@ -9,7 +9,6 @@ import { ChangeEvent, InputHTMLAttributes, useRef, useState } from "react";
 interface DropDownFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   icon?: IIcon;
   fluid?: boolean;
-  opened?: boolean;
   data: Array<DataProps>;
   value?: string | number | readonly string[] | undefined;
 }
@@ -18,14 +17,13 @@ const DropdownField = ({
   icon,
   fluid,
   data,
-  opened,
   value,
   onChange,
   ...props
 }: DropDownFieldProps) => {
   const [myIcon, setMyIcon] = useState(icon);
   const [myValue, setValue] = useState(value || "");
-  const [isOpen, setIsOpen] = useState(opened || false);
+  const [closeControl, setCloseControl] = useState(false);
   const [suggestionList, setSuggestionList] = useState(data);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -36,7 +34,7 @@ const DropdownField = ({
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter" || event.key === "Tab") {
-      setIsOpen(false); // Cierra las sugerencias
+      setCloseControl(!closeControl); // Cierra las sugerencias
       inputRef.current?.blur(); // Remueve el foco del elemento de entrada
     }
   };
@@ -46,7 +44,6 @@ const DropdownField = ({
     if (!newvalue) {
       setMyIcon(undefined);
       setSuggestionList(data);
-      setIsOpen(opened || false);
       changeValue("", event);
     } else {
       changeValue(newvalue, event);
@@ -60,14 +57,12 @@ const DropdownField = ({
         const suggestionList = data.filter(
           (el) => el.text.toLowerCase() !== newList[0].text.toLowerCase()
         );
-        setIsOpen(false);
         setMyIcon(newList[0].icon);
         setSuggestionList(suggestionList);
         changeValue(newList[0].text, event);
       } else {
         setSuggestionList(newList);
         setMyIcon(undefined);
-        setIsOpen(opened || false);
       }
     }
   };
@@ -79,7 +74,7 @@ const DropdownField = ({
       (el) => el.text.toLowerCase() !== value.target.value.toLowerCase()
     );
     setSuggestionList(newList);
-    setIsOpen(false);
+    setCloseControl(!closeControl);
     onChange &&
       onChange({
         target: { value: value.target.value },
@@ -92,7 +87,7 @@ const DropdownField = ({
         ref={inputRef}
         icon={myIcon}
         fluid={fluid}
-        opened={isOpen}
+        closeControler={closeControl}
         value={myValue}
         onChange={onChangeHandler}
         onKeyDown={handleKeyDown}
