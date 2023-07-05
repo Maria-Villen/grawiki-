@@ -11,6 +11,7 @@ export { default as LayoutCardForm } from "./layouts/layout-card-form/layoutCard
 /** Components */
 export { default as FooterLinksArea } from "./layouts/footer-links-area/footerLinksArea";
 export { default as BasicListWithLink } from "./list-components/basic-list-with-link/basicListWithLink";
+export { default as ReactionPanel } from "./reaction-panel/ReactionPanel";
 
 /** Logo */
 export { default as Logo } from "./logos/logo";
@@ -45,6 +46,7 @@ export { default as TextField } from "./fields/textField";
 /** Tags */
 export { default as Tag } from "./tags/tag/Tag";
 export { default as CategoryTag } from "./tags/categoryTag/CategoryTag";
+export { default as IconCounterTag } from "./tags/iconCounter/IconCounter";
 
 /** Bars */
 export { default as ToogleViewBar } from "./bars/toggle-view-bar/ToggleViewBar";

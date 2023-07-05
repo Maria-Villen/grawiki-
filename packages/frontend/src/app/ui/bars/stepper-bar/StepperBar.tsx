@@ -6,9 +6,10 @@ import { CircleButton } from "../..";
 interface IStepperBarProps {
   pages: number;
   active: number;
+  onChange: (page: number) => void;
 }
 
-const StepperBar = ({ pages, active }: IStepperBarProps) => {
+const StepperBar = ({ pages, active, onChange }: IStepperBarProps) => {
   const [isBackActive, setIsBackActive] = useState(false);
   const [isNextActive, setIsNextActive] = useState(false);
   const [activePage, setActivePage] = useState(active);
@@ -21,6 +22,7 @@ const StepperBar = ({ pages, active }: IStepperBarProps) => {
     }
     setActivePage(page);
     updateButtonStates(page);
+    onChange(activePage);
   };
 
   const updateButtonStates = (page: number) => {

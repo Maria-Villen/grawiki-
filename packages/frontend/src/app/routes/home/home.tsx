@@ -5,13 +5,18 @@ import TabProfile from "../../ui/tabs/tabs-profile/TabProfile";
 import SweetProfileAlert from "../../ui/alerts/SweetProfileAlert";
 import {
   CategoryTag,
+  ReactionPanel,
   ReturnBar,
   SeeMoreBar,
   StepperBar,
-  Tag,
   ToogleViewBar,
 } from "../../ui";
-
+import CheckField from "../../ui/fields/checkField";
+import IconCounter from "../../ui/tags/iconCounter/IconCounter";
+import {
+  countedReactions,
+  userReacted,
+} from "../../services/data/reactions.data";
 const Home = () => {
   const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
@@ -41,7 +46,18 @@ const Home = () => {
         </CategoryTag>
       </ToogleViewBar>
       <SeeMoreBar />
-      <StepperBar pages={5} active={3} />
+      <StepperBar
+        pages={5}
+        active={3}
+        onChange={(page) => {
+          console.log(page);
+        }}
+      />
+      <CheckField isTouched={false} isError={""}>
+        Remember Me
+      </CheckField>
+      <IconCounter icon={{ name: "ThumbsUp3DIcon" }} quantity={10} />
+      <ReactionPanel data={countedReactions} userReacted={userReacted} />
     </div>
   );
 };

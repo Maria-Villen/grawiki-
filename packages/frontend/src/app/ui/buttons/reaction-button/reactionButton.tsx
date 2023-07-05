@@ -11,7 +11,7 @@ interface ReactionButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Icon when the reaction is active
    */
-  iconActive: IIcon;
+  iconActive?: IIcon;
   /**
    * To change to isSelected or not
    */
@@ -28,7 +28,7 @@ function ReactionButton({
     <button type="button" className={classes.reaction} {...props}>
       <Icon
         className={classes.reaction_icon}
-        name={isActive ? iconActive.name : icon.name}
+        name={isActive && iconActive ? iconActive.name : icon.name}
       />
     </button>
   );
