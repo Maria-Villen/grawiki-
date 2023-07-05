@@ -5,9 +5,10 @@ import { useState, ChangeEvent } from "react";
 interface ISearchInput extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   fluid?: boolean;
+  disabled?: boolean;
 }
 
-const Searchbar = ({ className, fluid, ...props }: ISearchInput) => {
+const Searchbar = ({ className, fluid, disabled, ...props }: ISearchInput) => {
   const [value, setValue] = useState<string>("");
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -20,7 +21,9 @@ const Searchbar = ({ className, fluid, ...props }: ISearchInput) => {
 
   return (
     <div
-      className={`${classes.searchbar} ${fluid && classes.fluid} ${className}`}
+      className={`${classes.searchbar} ${disabled && classes.disabled} ${
+        fluid && classes.fluid
+      } ${className}`}
     >
       <form onSubmit={onSubmit}>
         <button className={classes.searchbar_icon} type="submit">
@@ -32,6 +35,7 @@ const Searchbar = ({ className, fluid, ...props }: ISearchInput) => {
           placeholder="Buscar temas"
           onChange={handleChange}
           value={value}
+          disabled={disabled}
           {...props}
         />
       </form>

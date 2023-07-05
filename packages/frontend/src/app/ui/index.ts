@@ -21,6 +21,7 @@ export { default as MenuButton } from "./buttons/menu-button/MenuButton";
 export { default as BasicButton } from "./buttons/basicButton/basicButton";
 export { default as ReactionButton } from "./buttons/reaction-button/reactionButton";
 export { default as SlipButton } from "./buttons/slip-button/SlipButton";
+export { default as CircleButton } from "./buttons/circle-button/CircleButton";
 
 /** Links */
 export { default as BasicLink } from "./links/basicLink/basicLink";
@@ -40,3 +41,13 @@ export { default as MsgError } from "./messages/msg-error/msgError";
 export { default as EmailField } from "./fields/emailField";
 export { default as PassField } from "./fields/passField";
 export { default as TextField } from "./fields/textField";
+
+/** Tags */
+export { default as Tag } from "./tags/tag/Tag";
+export { default as CategoryTag } from "./tags/categoryTag/CategoryTag";
+
+/** Bars */
+export { default as ToogleViewBar } from "./bars/toggle-view-bar/ToggleViewBar";
+export { default as ReturnBar } from "./bars/return-bar/ReturnBar";
+export { default as SeeMoreBar } from "./bars/see-more-bar/SeeMoreBar";
+export { default as StepperBar } from "./bars/stepper-bar/StepperBar";

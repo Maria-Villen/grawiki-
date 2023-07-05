@@ -1,0 +1,24 @@
+@use "../../styles/variables" as *
+
+.button
+  width: 12px
+  height: 12px
+  padding: 12px
+  background: $triarty-white
+  border-radius: 50%
+  border: none
+  flex: 0
+  transition: background 500ms ease-in-out
+  &:hover
+    background: $triarty-hover
+
+  &.active
+    width: 22px
+    height: 22px
+    padding: 22px
+    max-height: 22px
+    max-width: 22px
+    background: $primary
+
+    &:hover
+      background: $primary-hover

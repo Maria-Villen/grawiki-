@@ -11,7 +11,7 @@ function ListIcon({ className }: { className: string }) {
       <path
         d="M11.5 9H28M4 9H8.5M11.5 16.5001H28M4 16.5001H8.5M11.5 23.9999H28M4 23.9999H8.5"
         stroke="currentColor"
-        stroke-width="3.7218"
+        strokeWidth="3.7218"
       />
     </svg>
   );

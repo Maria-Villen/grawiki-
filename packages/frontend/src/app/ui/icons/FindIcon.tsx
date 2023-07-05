@@ -1,4 +1,4 @@
-function FindIcon({ className }: { className: string }) {
+function FindIcon({ className }: { className?: string }) {
   return (
     <svg
       width="32"

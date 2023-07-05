@@ -1,0 +1,37 @@
+@use "../../styles/variables" as *
+
+.buttons
+  display: flex
+  gap: $spacer-s
+  align-items: center
+  justify-content: center
+  @include NormalRegular
+
+.stepperBar
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  color: $triarty-white
+  position: relative
+  /**gap: 4rem
+  height: 24px
+
+.back, .next
+  display: flex
+  flex-flow: row nowrap
+  gap: 0.5rem
+  align-items: center
+  position: absolute
+
+.back
+  right: calc(100% + 4rem)
+
+.next
+  left: calc(100% + 4rem)
+
+  &:hover
+    @include NormalBold
+
+  & .icon
+    width: 16px
+    height: 16px

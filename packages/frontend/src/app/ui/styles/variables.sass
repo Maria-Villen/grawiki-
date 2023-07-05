@@ -22,6 +22,8 @@ $disable: #ababab
 $greyscale-black: #000000
 $greyscale-BlackClose: #0b0b0b
 $greyscale-blackTag: #151515
+$black-close-tag-30: rgba(0,0,0,0.3)
+$black-close-Opacity-50: rgba(0,0,0,0.5)
 
 // Color Coding
 // Uses as colors of the content
@@ -71,8 +73,8 @@ $typo: 'Lato'
   font-family: $typo, sans-serif
   font-style: normal
   font-weight: 400
-  font-size: 24px
-  line-height: 28px
+  font-size: 18px
+  line-height: 22px
 
 @mixin BigUnderline
   font-family: $typo, sans-serif
@@ -158,3 +160,6 @@ $bordersRadius: (big: 20px, large: 15px, medium: 8px, small: 4px)
     $my-borderRadius: map-get($my-bordersRadius, $my-borderRadius)
 
     border-radius: $my-borderRadius
+
+/* Background */
+$background: "../../assets/background/background.svg"

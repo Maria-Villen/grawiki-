@@ -1,10 +1,12 @@
 import classes from "./header.module.sass";
 import { Logo, MenuButton, MenuNavbarCollapse } from "../../ui";
-import { menuItems, IMenuItem } from "./navbarmenuConfig";
-import { HTMLProps, useEffect, useState } from "react";
+import { ICategory } from "../../interfaces/categories";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../../redux/slices/auth/authSlice";
+import { getCategories } from "../../redux/slices/categories/categoryActions";
+import { FindIcon, NotificationIcon } from "../../ui/icons";
+import { HTMLProps, useEffect, useState } from "react";
 
 /**
  * @component
@@ -15,6 +17,7 @@ import { logout } from "../../redux/slices/auth/authSlice";
 
 const Header = ({ className }: HTMLProps<HTMLDivElement>) => {
   const [width, setWidth] = useState<number>(window.innerWidth);
+  const { categories } = useAppSelector((state) => state.category);
   const navigate = useNavigate();
 
   function handleWindowSizeChange() {
@@ -26,6 +29,10 @@ const Header = ({ className }: HTMLProps<HTMLDivElement>) => {
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
+  }, []);
+
+  useEffect(() => {
+    dispatch(getCategories());
   }, []);
 
   const isMobile = width <= 768;
@@ -49,23 +56,26 @@ const Header = ({ className }: HTMLProps<HTMLDivElement>) => {
       <div className={classes.header_logo_mobile}>
         <Logo type="vertical" />
       </div>
+      {isMobile && <FindIcon />}
+      {isMobile && <NotificationIcon />}
       <MenuNavbarCollapse className={classes.header_nabvar}>
         <div className={classes.header_logo_desktop}>
           <Logo type="horizontal" />
         </div>
         <div className={classes.header_navbar_area}>
           <ul className={classes.header_navbar_itemlist}>
-            {menuItems.map(({ id, icon, text, link }: IMenuItem) => (
-              <MenuButton
-                key={id}
-                icon={icon}
-                label={text}
-                variant={isMobile ? "horizontal" : "vertical"}
-                value={link}
-                onClick={handleMenuItemClick}
-                fluid
-              />
-            ))}
+            {categories &&
+              categories.map(({ id, icon, text, link }: ICategory) => (
+                <MenuButton
+                  key={id}
+                  icon={icon}
+                  label={text}
+                  variant={isMobile ? "horizontal" : "vertical"}
+                  value={link}
+                  onClick={handleMenuItemClick}
+                  fluid
+                />
+              ))}
             <MenuButton
               iconColor="black"
               iconBackground="white"

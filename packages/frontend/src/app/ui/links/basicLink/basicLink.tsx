@@ -9,6 +9,7 @@ interface BasicLinkProps extends LinkProps {
   reverse?: boolean;
   disabled?: boolean;
   className?: string;
+  dark?: boolean;
 }
 
 const BasicLink = ({
@@ -17,6 +18,7 @@ const BasicLink = ({
   reverse,
   disabled,
   className,
+  dark,
   ...props
 }: BasicLinkProps) => {
   return (
@@ -24,8 +26,9 @@ const BasicLink = ({
       {...props}
       className={`
       ${classes.basiclink} 
-      ${disabled ? classes.disabled : ""} 
-      ${reverse ? classes.reverse : ""} 
+      ${disabled && classes.disabled} 
+      ${reverse && classes.reverse} 
+      ${dark && classes.dark}
       ${className && className}`}
     >
       {icon && (

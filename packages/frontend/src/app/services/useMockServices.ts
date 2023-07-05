@@ -1,4 +1,4 @@
-import { users } from "./data/users.data";
+import { users, categories } from "./data";
 import { IUserLogin, IUserRegister, IUserLoggedIn } from "../interfaces/auth";
 import { IUserWithToken } from "../interfaces/user";
 
@@ -73,6 +73,8 @@ export const auth = {
         role: "user",
         token: "secret-token",
       };
+    } else {
+      throw new Error("Oups, se ha producido un error");
     }
   },
   // via direct call
@@ -86,4 +88,8 @@ export const auth = {
       return false;
     }
   },
+};
+
+export const category = {
+  getAll: () => categories,
 };

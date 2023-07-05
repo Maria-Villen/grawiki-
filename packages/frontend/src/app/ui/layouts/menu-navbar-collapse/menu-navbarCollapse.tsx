@@ -1,6 +1,6 @@
 import { FC, ReactNode, MouseEvent } from "react";
 import classes from "./menu-navbarCollapse.module.sass";
-import { MenuIcon, CloseIcon } from "../../icons";
+import { CloseIcon } from "../../icons";
 import { ToggleButton } from "../..";
 import { useState } from "react";
 

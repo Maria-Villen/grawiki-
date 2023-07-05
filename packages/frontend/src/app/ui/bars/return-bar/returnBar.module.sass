@@ -1,0 +1,18 @@
+@use "../../styles/variables" as *
+
+.returnBar
+  display: flex
+  align-items: center
+  color: $triarty-white
+  width: 100%
+  gap: $spacer-m
+  @include BigBold
+
+  &_icon
+    width: 32px
+    height: 32px
+
+  &_child
+    display: flex
+    justify-content: center
+    flex-grow: 1

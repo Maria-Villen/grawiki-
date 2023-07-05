@@ -1,13 +1,13 @@
 @use "../../../ui/styles/variables" as *
 
-$barSize: 40px
+$barSize: 2.5rem
 $border-rounded: 20px
 
 .searchbar
-  background: transparent
-  width: 360px
+  width: 20rem
   height: $barSize
   border: none
+  @include ShadowInput
 
   form
     display: flex
@@ -15,7 +15,8 @@ $border-rounded: 20px
     flex-wrap: nowrap
     height: 100%
     background: $triarty-white
-    border-radius: $border-rounded
+    @include BorderRadius("big")
+
     border: none
 
   &_icon
@@ -42,3 +43,6 @@ $border-rounded: 20px
 
 .fluid
   width: 100%
+
+.disabled
+  opacity: 0.5

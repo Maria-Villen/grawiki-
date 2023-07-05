@@ -1,0 +1,24 @@
+@use "../../styles/variables" as *
+
+.toggleViewBar
+  display: flex
+  justify-content: space-between
+  border-bottom: 1px solid $triarty-white
+  align-items: center
+  width: 100%
+  padding: 0
+  max-width: 1125px
+
+  &_icons
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    gap: $spacer-xs
+
+.active
+  border-bottom: 3px solid $triarty-white
+
+.icon
+  color: $triarty-white
+  width: 36px
+  heigt: 36px

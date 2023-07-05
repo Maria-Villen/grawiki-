@@ -1,0 +1,67 @@
+@use "../../styles/variables" as *
+
+.button
+  display: flex
+  border: 1px solid $triarty-hover
+  transition: background 200ms ease-in-out
+  justify-content: center
+  align-items: center
+  background: $triarty-white
+  color: $greyscale-black
+  padding: $spacer-xs
+  @include BorderRadius("medium")
+
+  &.rounded
+    border-radius: 50%
+
+  &:hover
+    background: $triarty-hover
+
+  & .icon
+    height: 18px
+    width: 18px
+
+/* Categories
+
+.disabled
+  background: $disable
+  color: $triarty-white
+  border: none
+
+.primary
+  border: none
+  background: $primary
+  color: $triarty-white
+
+  &:hover
+    background: $primary-hover
+
+.secondary
+  border: none
+  background: $negative
+  color: $triarty-white
+
+  &:hover
+    background: $negative-hover
+
+/* dimensions
+ 
+.small
+  & .icon
+    height: 12px
+    width: 12px
+
+.normal
+  & .icon
+    height: 18px
+    width: 18px
+
+.medium
+  & .icon
+    height: 24px
+    width: 24px
+
+.big
+  & .icon
+    height: 32px
+    width: 32px

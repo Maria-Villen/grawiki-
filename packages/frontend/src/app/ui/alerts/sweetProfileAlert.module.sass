@@ -1,0 +1,13 @@
+@use "../styles/variables" as *
+
+.container
+  padding: 0.5625rem 1rem
+  background: $triarty-white
+  color: black
+  width: 320px
+  @include BorderRadius("big")
+  @include BigBold
+  @include mq(tablet)
+    width: auto
+  & span
+    width: 100%

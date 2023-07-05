@@ -28,7 +28,7 @@ const ToggleButton = ({
     >
       <Icon
         name={isOpen ? iconOpen?.name || iconClose.name : iconClose.name}
-        {...(isOpen ? iconOpen?.props || iconClose?.props : iconClose?.props)}
+        {...(isOpen ? iconOpen?.props : iconClose?.props)}
       />
     </button>
   );

@@ -8,17 +8,28 @@
     align-items: center
     justify-content: space-between
     @include BorderRadius("big")
-    min-width: 315px
+    min-width: 316px
     height: 40px
     background: $triarty-white
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25) inset
+
     &_valueIcon
-        margin-left: 1rem
+        vertical-align: middle
+        padding-left: 1.3rem
+        padding-right: 0.5rem
+        width: 3rem
 
     &.open
         border-radius: 1rem
+        border: 1px solid $primary
         border-bottom: none
         border-bottom-left-radius: 0
         border-bottom-right-radius: 0
+
+    &_containerList
+        margin: 0
+        border-top: 1px solid rgba(0,0,0,0.1)
+        padding: 0
 
     input
         border: none
@@ -30,6 +41,7 @@
         padding: 9px
         padding-left: 1em
         outline: none
+        background: transparent
 
         &.inputWithIcon
             padding-left: 0.5rem
@@ -48,25 +60,23 @@
     &_list_open
         display: inherit
         padding: 0
-        border: 1px solid #bfbfbf
+        border: 1px solid $primary
         border-bottom-left-radius: 1rem
         border-bottom-right-radius: 1rem
         border-top: none
         position: absolute
-        width: calc(100% - 2px)
-        top: 2.5rem
+        width: calc(100% - 0.1rem)
+        top: 41px
         background: white
         z-index: 3
         max-height: 500px
-        overflow-y: scroll
-
-        ul
-            padding: 0
+        overflow-y: auto
 
 .open, input.open
     border-bottom: none
     border-bottom-left-radius: 0
     border-bottom-right-radius: 0
+    box-shadow: none
 
 .fluid
     width: 100%

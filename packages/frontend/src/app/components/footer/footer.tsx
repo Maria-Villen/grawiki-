@@ -36,22 +36,31 @@ const Footer = ({ dark }: { dark?: boolean }) => {
           to="/terms"
           label="Aviso legal"
           className={classes.menu_item}
+          dark={dark}
         />
         <BasicLink
           to="/aboutus"
           label="¿Quiénes somos?"
           className={classes.menu_item}
+          dark={dark}
         />
         <BasicLink
           to="/privacy"
           label="Privacidad"
           className={classes.menu_item}
+          dark={dark}
         />
-        <BasicLink to="/help" label="Ayuda" className={classes.menu_item} />
+        <BasicLink
+          to="/help"
+          label="Ayuda"
+          className={classes.menu_item}
+          dark={dark}
+        />
         <BasicLink
           to="/contact"
           label="Contacto"
           className={classes.menu_item}
+          dark={dark}
         />
       </div>
       <div className={classes.footerMobile_copyright}>

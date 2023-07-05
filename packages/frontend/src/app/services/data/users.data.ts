@@ -1,6 +1,6 @@
 import { IUserWithToken } from "../../interfaces/user";
 
-export const users: Array<IUserWithToken> = [
+const users: Array<IUserWithToken> = [
   {
     id: "1",
     userName: "John",
@@ -34,3 +34,5 @@ export const users: Array<IUserWithToken> = [
     token: "secret token",
   },
 ];
+
+export default users;

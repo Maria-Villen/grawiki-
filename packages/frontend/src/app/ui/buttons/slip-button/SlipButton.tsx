@@ -71,7 +71,7 @@ const SlipButton = forwardRef<HTMLInputElement, SlipButtonProps>(
             isOpen ? classes.dataList_list_open : classes.dataList_list
           }
         >
-          <ul>{children}</ul>
+          <ul className={classes.dataList_containerList}>{children}</ul>
         </div>
       </div>
     );

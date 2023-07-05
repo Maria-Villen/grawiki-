@@ -1,4 +1,4 @@
-import { tags } from "../../../../services/data/tags.data";
+import { tags } from "../../../../services/data/category.data";
 import DropdownField from "./DropdownField";
 import type { Meta, StoryObj } from "@storybook/react";
 
