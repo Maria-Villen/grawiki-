@@ -71,5 +71,5 @@ export const iconsConfig = [
   { name: "TwitterIcon" },
   { name: "LinkedinIcon" },
   { name: "ReadMoreIcon" },
-  { nam: "CloseSimpleIcon" },
+  { name: "CloseSimpleIcon" },
 ];

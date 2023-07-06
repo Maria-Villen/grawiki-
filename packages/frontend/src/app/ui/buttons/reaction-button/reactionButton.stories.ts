@@ -51,3 +51,10 @@ export const Clapping: Story = {
     iconActive: { name: "Clapping3DIcon" },
   },
 };
+export const ClappingActive: Story = {
+  args: {
+    isActive: true,
+    icon: { name: "ClappingIcon" },
+    iconActive: { name: "Clapping3DIcon" },
+  },
+};

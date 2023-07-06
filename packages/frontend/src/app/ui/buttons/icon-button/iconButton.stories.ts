@@ -196,3 +196,59 @@ export const SecondaryBigRounded: Story = {
     dimension: "big",
   },
 };
+
+export const DisabledSmall: Story = {
+  args: {
+    category: "disabled",
+    dimension: "small",
+  },
+};
+
+export const DisabledNormal: Story = {
+  args: {
+    ...DisabledSmall.args,
+    dimension: "normal",
+  },
+};
+
+export const DisabledMedium: Story = {
+  args: {
+    ...DisabledSmall.args,
+    dimension: "medium",
+  },
+};
+
+export const DisabledBig: Story = {
+  args: {
+    ...DisabledSmall.args,
+    dimension: "big",
+  },
+};
+
+export const DisabledSmallRounded: Story = {
+  args: {
+    ...DisabledSmall.args,
+    rounded: true,
+  },
+};
+
+export const DisabledNormalRounded: Story = {
+  args: {
+    ...DisabledSmallRounded.args,
+    dimension: "normal",
+  },
+};
+
+export const DisabledMediumRounded: Story = {
+  args: {
+    ...DisabledSmallRounded.args,
+    dimension: "medium",
+  },
+};
+
+export const DisabledBigRounded: Story = {
+  args: {
+    ...DisabledSmallRounded.args,
+    dimension: "big",
+  },
+};

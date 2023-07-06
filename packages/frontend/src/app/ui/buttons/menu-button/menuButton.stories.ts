@@ -57,3 +57,12 @@ export const Active: Story = {
     isActive: true,
   },
 };
+
+export const ActiveHorizontal: Story = {
+  args: {
+    icon: { name: "BankIcon" },
+    label: "Banco",
+    variant: "horizontal",
+    isActive: true,
+  },
+};

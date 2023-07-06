@@ -10,7 +10,9 @@ interface IReactionInfo {
   quantity: number;
 }
 interface IReactionPanel {
+  // data of all the reactions, icons and the number of reactions
   data: Array<IReactionInfo>;
+  // array of the reactions that the user has made
   userReacted: Array<string>;
 }
 

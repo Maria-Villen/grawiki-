@@ -1,0 +1,27 @@
+.StoryBookComponentContainerStyle {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+
+.StoryBookHeadingSection {
+  padding: 1rem;
+}
+
+.StoryBookHeadingComponent {
+  background: #b3e5fc;
+  padding: 1rem !important;
+}
+
+.StoryBookArticle {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1;
+  align-items: center;
+}
+
+.StoryBookArticle h4 {
+  white-space: nowrap;
+}

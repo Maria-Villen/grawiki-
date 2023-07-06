@@ -1,6 +1,9 @@
 import { HTMLAttributes } from "react";
 import classes from "./circleButton.module.sass";
 
+/**
+ * Circle Button is only for the pagination bar
+ */
 interface ICirculeButtonProps extends HTMLAttributes<HTMLButtonElement> {
   active?: boolean;
 }

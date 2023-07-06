@@ -1,0 +1,320 @@
+{/* Buttons.mdx */}
+import "./stylesStorybook.css";
+import { Canvas, Story, Meta } from "@storybook/blocks";
+
+import * as BasicButton from "./basicButton/basicButton.stories.ts";
+import * as IconButton from "./icon-button/iconButton.stories.ts";
+import * as MenuButton from "./menu-button/menuButton.stories.ts";
+import * as ReactionButton from "./reaction-button/reactionButton.stories.ts";
+import * as SlipButton from "./slip-button/slipbutton.stories.ts";
+import * as ToggleButton from "./togglebutton/toggleButton.stories.ts";
+
+<Meta title="Buttons" />
+
+<h1 style={{ paddingBottom: "4rem" }}>Buttons</h1>
+
+{/* BASICBUTTON */}
+
+<h2 className="StoryBookHeadingComponent">BasicButton</h2>
+<p> BasicButton is a general purpose button. Use it for accions.</p>
+<br />
+
+{/* ROLES */}
+
+<div className="StoryBookHeadingSection">
+  <h3>ROLES</h3>
+  <p>
+    BasicButtons have four roles of buttons: default, primary, secondary and
+    disabled.
+  </p>
+</div>
+
+<div className="StoryBookComponentContainerStyle">
+
+<div className="StoryBookArticle">
+  <h4> Default </h4>
+  <Story of={BasicButton.DefaultNormal} />
+</div>
+
+<div className="StoryBookArticle">
+  <h4> Primary </h4>
+  <Story of={BasicButton.PrimaryNormal} />
+</div>
+
+<div className="StoryBookArticle">
+  <h4> Secondary </h4>
+  <Story of={BasicButton.SecondaryNormal} />
+</div>
+
+  <div className="StoryBookArticle">
+    <h4> Disabled </h4>
+    <Story of={BasicButton.DisabledNormal} />
+  </div>
+</div>
+
+<br />
+
+{/* SIZES */}
+
+<div className="StoryBookHeadingSection">
+  <h3>SIZES</h3>
+  <p>We can choose different sizes: </p>
+</div>
+<br />
+<div className="StoryBookComponentContainerStyle">
+  <div className="StoryBookArticle">
+    <h4>Small</h4>
+    <Story of={BasicButton.PrimarySmall} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Normal</h4>
+    <Story of={BasicButton.PrimaryNormal} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Medium</h4>
+    <Story of={BasicButton.PrimaryMedium} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Big</h4>
+    <Story of={BasicButton.PrimaryBig} />
+  </div>
+</div>
+
+<br />
+{/* TYPES */}
+<div className="StoryBookHeadingSection">
+  <h3>TYPES</h3>
+  <p>We can choose different types of BasicButtons: </p>
+</div>
+
+<div className="StoryBookComponentContainerStyle">
+  <div className="StoryBookArticle">
+    <h4>Normal</h4>
+    <Story of={BasicButton.SecondaryNormal} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>With Icon</h4>
+    <Story of={BasicButton.SecondaryNormalWithIcon} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>With Icon Reverse</h4>
+    <Story of={BasicButton.SecondaryNormalWithIconReverse} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Only Icon</h4>
+    <Story of={BasicButton.SecondaryNormalOnlyIcon} />
+  </div>
+</div>
+<br />
+{/* ICONBUTTON */}
+
+<h2 className="StoryBookHeadingComponent">IconButton</h2>
+<p>
+  IconButton is a button that only accept an icon and no text. Use it for
+  accions.
+</p>
+<br />
+
+{/* CATEGORIES */}
+
+<div className="StoryBookHeadingSection">
+  <h3>CATEGORIES</h3>
+  <p>We can choose different categories of IconButton: </p>
+</div>
+
+<div className="StoryBookComponentContainerStyle">
+
+<div className="StoryBookArticle">
+  <h4> Default </h4>
+  <Story of={IconButton.DefaultNormal} />
+</div>
+
+<div className="StoryBookArticle">
+  <h4> Primary </h4>
+  <Story of={IconButton.PrimaryNormal} />
+</div>
+
+<div className="StoryBookArticle">
+  <h4> Secondary </h4>
+  <Story of={IconButton.SecondaryNormal} />
+</div>
+
+  <div className="StoryBookArticle">
+    <h4> Disabled </h4>
+    <Story of={IconButton.DisabledNormal} />
+  </div>
+</div>
+
+{/* SIZES */}
+
+<div style={{ padding: "1rem" }}>
+  <h3>SIZES</h3>
+  <p>We can choose different sizes: </p>
+</div>
+<div className="StoryBookComponentContainerStyle">
+
+  <div className="StoryBookArticle">
+    <h4>Small</h4>
+    <Story of={IconButton.PrimarySmallRounded}/>
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Normal</h4>
+    <Story of={IconButton.PrimaryNormalRounded}/>
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Medium</h4>
+    <Story of={IconButton.PrimaryMediumRounded}/>
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Big</h4>
+    <Story of={IconButton.PrimaryBigRounded}/>
+  </div>
+</div>
+
+{/* TYPES */}
+
+<div className="StoryBookHeadingSection">
+  <h3>TYPES</h3>
+  <p>We can choose different types of IconButton: </p>
+</div>
+
+<div className="StoryBookComponentContainerStyle">
+  <div className="StoryBookArticle">
+    <h4>Normal</h4>
+    <Story of={IconButton.SecondaryNormal} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Rounded</h4>
+    <Story of={IconButton.PrimaryNormalRounded} />
+  </div>
+</div>
+<br />
+
+{/* MENUBUTTON */}
+
+<h2 className="StoryBookHeadingComponent">MenuButton</h2>
+<p> MenuButton is a button to use in menues.</p>
+<br />
+
+{/* TYPES */}
+
+<div className="StoryBookHeadingSection">
+  <h3>TYPES</h3>
+  <p>We can choose different types: </p>
+</div>
+<div className="StoryBookComponentContainerStyle">
+  <div className="StoryBookArticle">
+    <h4>Horizontal</h4>
+    <Story of={MenuButton.Horizontal} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Vertical</h4>
+    <Story of={MenuButton.Vertical} />
+  </div>
+</div>
+<div className="StoryBookHeadingSection">
+  <h3>STATES</h3>
+  <p>We have normal an active states: </p>
+</div>
+<div className="StoryBookComponentContainerStyle">
+  <div className="StoryBookArticle">
+    <h4>Horizontal</h4>
+    <Story of={MenuButton.Horizontal} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Active Horizontal</h4>
+    <Story of={MenuButton.ActiveHorizontal} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Vertical</h4>
+    <Story of={MenuButton.Vertical} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Active</h4>
+    <Story of={MenuButton.Active} />
+  </div>
+</div>
+
+{/* REACTIONBUTTONS */}
+
+<h2 className="StoryBookHeadingComponent">ReactionButton</h2>
+<p>ReactionButton is a button to express and control reactions.</p>
+<br />
+<div className="StoryBookComponentContainerStyle">
+  <div className="StoryBookArticle">
+    <h4>Pinched</h4>
+    <Story of={ReactionButton.Pinched} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>ThumbsUp</h4>
+    <Story of={ReactionButton.ThumbsUp} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>ThumbsDown</h4>
+    <Story of={ReactionButton.ThumbsDown} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Clapping</h4>
+    <Story of={ReactionButton.Clapping} />
+  </div>
+</div>
+<p>
+  It admits 2 icons: one for the normal state and the other for the active
+  state.
+</p>
+<div className="StoryBookComponentContainerStyle">
+  <div className="StoryBookArticle">
+    <h4>Clapping</h4>
+    <Story of={ReactionButton.Clapping} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Clapping Active</h4>
+    <Story of={ReactionButton.ClappingActive} />
+  </div>
+</div>
+
+{/* SlipButton */}
+
+<h2 className="StoryBookHeadingComponent">SlipButton</h2>
+<p>
+  Use this button for dropdown components. Accept an icon, a value of an input
+  and a placeholder.
+</p>
+<br />
+<div className="StoryBookComponentContainerStyle">
+  <div className="StoryBookArticle">
+    <h4>Normal</h4>
+    <Story of={SlipButton.Normal} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>With Icon</h4>
+    <Story of={SlipButton.Icon} />
+  </div>
+</div>
+
+{/* TOGGLEBUTTON */}
+
+<h2 className="StoryBookHeadingComponent">ToggleButton</h2>
+<p>
+  Use this button to show or hide a container. You can use one icon for open and
+  close state, or you can specify a second icon for open state.
+</p>
+<br />
+<div className="StoryBookComponentContainerStyle">
+  <div className="StoryBookArticle">
+    <h4>Arrow Close</h4>
+    <Story of={ToggleButton.Arrow} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Arrow Open</h4>
+    <Story of={ToggleButton.ArrowOpen} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Menu Close</h4>
+    <Story of={ToggleButton.Menu} />
+  </div>
+  <div className="StoryBookArticle">
+    <h4>Menu Open</h4>
+    <Story of={ToggleButton.MenuOpen} />
+  </div>
+</div>

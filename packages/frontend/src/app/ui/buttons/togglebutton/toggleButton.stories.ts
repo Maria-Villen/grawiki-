@@ -36,3 +36,17 @@ export const Menu = {
     isOpen: false,
   },
 };
+export const ArrowOpen = {
+  args: {
+    iconOpen: { name: "ArrowIcon", props: { direction: "up" } },
+    iconClose: { name: "ArrowIcon", props: { direction: "down" } },
+    isOpen: true,
+  },
+};
+
+export const MenuOpen = {
+  args: {
+    iconClose: { name: "MenuIcon" },
+    isOpen: true,
+  },
+};
