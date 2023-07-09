@@ -102,3 +102,8 @@
   line-height: 17px;
   text-decoration-line: underline;
 }
+
+.StoryBookBackgroundColor {
+  background-color: lightblue;
+  padding: 8px;
+}

@@ -1,5 +1,4 @@
 import { ChangeEvent } from "react";
-import DropdownField from "../../components/auth-components/general/dropdown-field/DropdownField";
 import { categories } from "../../services/data";
 import TabProfile from "../../ui/tabs/tabs-profile/TabProfile";
 import SweetProfileAlert from "../../ui/alerts/SweetProfileAlert";
@@ -10,6 +9,7 @@ import {
   SeeMoreBar,
   StepperBar,
   ToogleViewBar,
+  DropdownField,
 } from "../../ui";
 import CheckField from "../../ui/fields/checkField";
 import IconCounter from "../../ui/tags/iconCounter/IconCounter";
@@ -36,7 +36,7 @@ const Home = () => {
         <SweetProfileAlert message="😊Estás creando un nuevo tema👏, estás ayudando a la comunidad de Grawiki" />
       </TabProfile>
       <ToogleViewBar
-        selected={false}
+        selected={"list"}
         onChoice={() => {
           console.log("change");
         }}

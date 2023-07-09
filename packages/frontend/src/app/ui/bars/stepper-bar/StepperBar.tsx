@@ -10,8 +10,8 @@ interface IStepperBarProps {
 }
 
 const StepperBar = ({ pages, active, onChange }: IStepperBarProps) => {
-  const [isBackActive, setIsBackActive] = useState(false);
-  const [isNextActive, setIsNextActive] = useState(false);
+  const [isBackActive, setIsBackActive] = useState(true);
+  const [isNextActive, setIsNextActive] = useState(true);
   const [activePage, setActivePage] = useState(active);
 
   const handlePageChange = (page: number) => {
@@ -35,15 +35,21 @@ const StepperBar = ({ pages, active, onChange }: IStepperBarProps) => {
   } else {
     return (
       <div className={classes.stepperBar}>
-        {isBackActive && (
-          <div
-            className={classes.back}
-            onClick={() => handlePageChange(activePage - 1)}
-          >
-            <Icon className={classes.icon} name="ArrowIcon" direction="left" />
-            <span>Atras</span>
-          </div>
-        )}
+        <div className={classes.backContainer}>
+          {isBackActive && (
+            <div
+              className={classes.back}
+              onClick={() => handlePageChange(activePage - 1)}
+            >
+              <Icon
+                className={classes.icon}
+                name="ArrowIcon"
+                direction="left"
+              />
+              <span>Atrás</span>
+            </div>
+          )}
+        </div>
         <div className={classes.buttons}>
           {[...Array(pages)].map((_, index) => (
             <CircleButton
@@ -54,15 +60,21 @@ const StepperBar = ({ pages, active, onChange }: IStepperBarProps) => {
             />
           ))}
         </div>
-        {isNextActive && (
-          <div
-            className={classes.next}
-            onClick={() => handlePageChange(activePage + 1)}
-          >
-            <span>Siguiente</span>
-            <Icon className={classes.icon} name="ArrowIcon" direction="right" />
-          </div>
-        )}
+        <div className={classes.nextContainer}>
+          {isNextActive && (
+            <div
+              className={classes.next}
+              onClick={() => handlePageChange(activePage + 1)}
+            >
+              <span>Siguiente</span>
+              <Icon
+                className={classes.icon}
+                name="ArrowIcon"
+                direction="right"
+              />
+            </div>
+          )}
+        </div>
       </div>
     );
   }

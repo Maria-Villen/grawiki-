@@ -1,9 +1,6 @@
-import { SlipButton, Suggestions } from "../../../../ui";
-import {
-  DataProps,
-  ResultProps,
-} from "../../../../ui/layouts/suggestions/suggestions";
-import { IIcon } from "../../../../ui/iconComponent/interfaceofIcon";
+import { SlipButton, Suggestions } from "..";
+import { DataProps, ResultProps } from "../layouts/suggestions/suggestions";
+import { IIcon } from "../iconComponent/interfaceofIcon";
 import { ChangeEvent, InputHTMLAttributes, useRef, useState } from "react";
 
 interface DropDownFieldProps extends InputHTMLAttributes<HTMLInputElement> {

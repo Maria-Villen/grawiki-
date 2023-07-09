@@ -1,8 +1,23 @@
-import categories from "../../../../services/data/category.data";
 import DropdownField from "./DropdownField";
 import type { Meta, StoryObj } from "@storybook/react";
+import { withRouter } from "storybook-addon-react-router-v6";
 
-const myData = categories;
+const myData = [
+  {
+    id: "1",
+    icon: { name: "HealthIcon" },
+    text: "Salud",
+    link: "/category/health",
+    tags: ["9", "13"],
+  },
+  {
+    id: "2",
+    icon: { name: "ToysIcon" },
+    text: "Juguetes",
+    link: "/category/Toys",
+    tags: ["10", "11", "12"],
+  },
+];
 
 const meta = {
   title: "Fields/DropdownField",
@@ -10,7 +25,11 @@ const meta = {
   tags: ["autodocs"],
   args: {
     data: myData,
+    onChange: () => {
+      console.log("changed");
+    },
   },
+  decorators: [withRouter],
   parameters: {
     layout: "centered",
   },

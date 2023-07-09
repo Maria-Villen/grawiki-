@@ -5,7 +5,7 @@ import Icon from "../../iconComponent/Icon";
 
 interface IIconCounter extends HTMLAttributes<HTMLDivElement> {
   icon: IIcon;
-  quantity: number;
+  quantity?: number;
 }
 
 const IconCounter = ({ icon, quantity, ...props }: IIconCounter) => {
@@ -15,6 +15,10 @@ const IconCounter = ({ icon, quantity, ...props }: IIconCounter) => {
       <span className={classes.quantity}>{quantity}</span>
     </div>
   );
+};
+
+IconCounter.defaultProps = {
+  quantity: 0,
 };
 
 export default IconCounter;

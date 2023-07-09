@@ -42,6 +42,7 @@ export { default as MsgError } from "./messages/msg-error/msgError";
 export { default as EmailField } from "./fields/emailField";
 export { default as PassField } from "./fields/passField";
 export { default as TextField } from "./fields/textField";
+export { default as DropdownField } from "./fields/DropdownField";
 
 /** Tags */
 export { default as Tag } from "./tags/tag/Tag";
@@ -53,3 +54,10 @@ export { default as ToogleViewBar } from "./bars/toggle-view-bar/ToggleViewBar";
 export { default as ReturnBar } from "./bars/return-bar/ReturnBar";
 export { default as SeeMoreBar } from "./bars/see-more-bar/SeeMoreBar";
 export { default as StepperBar } from "./bars/stepper-bar/StepperBar";
+
+/**
+ * Icons
+ */
+
+export { default as Icon } from "./iconComponent/Icon";
+export { default as IconLazy } from "./iconComponent/IconLazy";

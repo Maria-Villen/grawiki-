@@ -8,7 +8,6 @@ interface BasicLinkProps extends LinkProps {
   icon?: IIcon;
   reverse?: boolean;
   disabled?: boolean;
-  className?: string;
   dark?: boolean;
 }
 

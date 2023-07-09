@@ -5,7 +5,7 @@ import { withLayout } from "../../../stories/decorators";
 import Footer from "./footer";
 
 const meta = {
-  title: "Layouts/Foo",
+  title: "Layouts/FooterLinkArea",
   component: Footer,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ["autodocs"],
@@ -18,7 +18,11 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    children: "Mobile Footer",
+  },
+};
 
 Default.parameters = {
   design: {

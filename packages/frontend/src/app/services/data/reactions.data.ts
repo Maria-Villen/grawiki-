@@ -21,4 +21,4 @@ export const countedReactions = [
   },
 ];
 
-export const userReacted = ["ClappingIcon", "ThumbsDownIcon"];
+export const userReacted = "ClappingIcon";

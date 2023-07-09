@@ -17,6 +17,13 @@ const meta = {
       control: false,
     },
   },
+  parameters: {
+    backgrounds: {
+      default: {
+        value: "dark",
+      },
+    },
+  },
 } satisfies Meta<typeof SearchBar>;
 
 export default meta;

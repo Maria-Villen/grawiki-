@@ -1,16 +1,16 @@
 import { footerLinkMenu } from "./footerConfig";
 import { FooterLinksArea } from "../../ui";
-import { FooterMobile } from "../";
 import classes from "./footer.module.sass";
+import { HTMLAttributes } from "react";
 
 /** Footer component of the app */
-function Footer() {
+function Footer({ children }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div className={classes.container}>
       {footerLinkMenu.map(({ id, title, links }) => {
         return <FooterLinksArea key={id} title={title} links={links} />;
       })}
-      <FooterMobile />
+      {children}
     </div>
   );
 }

@@ -8,7 +8,7 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "storybook-addon-designs",
-    "storybook-zeplin",
+    // "storybook-zeplin",
     "storybook-addon-react-router-v6",
     "@storybook/addon-a11y",
     {
