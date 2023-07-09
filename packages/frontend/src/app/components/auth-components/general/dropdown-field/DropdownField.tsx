@@ -57,7 +57,7 @@ const DropdownField = ({
         const suggestionList = data.filter(
           (el) => el.text.toLowerCase() !== newList[0].text.toLowerCase()
         );
-        setMyIcon(newList[0].icon);
+        if (newList[0].icon) setMyIcon(newList[0].icon);
         setSuggestionList(suggestionList);
         changeValue(newList[0].text, event);
       } else {
@@ -69,7 +69,7 @@ const DropdownField = ({
 
   const selectHandler = (value: ResultProps) => {
     setValue(value.target.value);
-    setMyIcon(value.icon);
+    if (value.icon) setMyIcon(value.icon);
     const newList = data.filter(
       (el) => el.text.toLowerCase() !== value.target.value.toLowerCase()
     );

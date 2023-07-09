@@ -13,10 +13,21 @@ const meta = {
     },
   },
   argTypes: {
+    placeholder: {
+      control: false,
+    },
     onClick: {
       control: false,
     },
   },
+  render: () => (
+    <SlipButton placeholder="Categorías">
+      <ul>
+        <li>Uno</li>
+        <li>Dos</li>
+      </ul>
+    </SlipButton>
+  ),
 } satisfies Meta<typeof SlipButton>;
 
 export default meta;
@@ -25,25 +36,20 @@ type Story = StoryObj<typeof meta>;
 // DEFAULT CATEGORY
 
 export const Normal: Story = {
-  args: {
-    placeholder: "Categories",
-  },
+  args: {},
 };
-
 export const Fluid: Story = {
   decorators: [withLayout],
   parameters: {
     layout: "fullscreen",
   },
   args: {
-    placeholder: "Categories",
     fluid: true,
   },
 };
 
 export const Icon: Story = {
   args: {
-    placeholder: "Categories",
     icon: { name: "BankIcon" },
     value: "Bank",
   },

@@ -37,11 +37,11 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  refs: {
-    "design-system": {
-      title: "Storybook Design System",
-      url: "https://6442d2d93473cf6d994da8a0-kagkunslld.chromatic.com/",
-    },
-  },
+  // refs: {
+  //   "design-system": {
+  //     title: "Storybook Design System",
+  //     url: "https://6442d2d93473cf6d994da8a0-ffphrufwfk.chromatic.com/",
+  //   },
+  // },
 };
 export default config;

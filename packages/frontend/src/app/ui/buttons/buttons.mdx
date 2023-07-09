@@ -1,12 +1,12 @@
 {/* Buttons.mdx */}
-import "./stylesStorybook.css";
+import "../../../stories/stylesStorybook.css";
 import { Canvas, Story, Meta } from "@storybook/blocks";
 
 import * as BasicButton from "./basicButton/basicButton.stories.ts";
 import * as IconButton from "./icon-button/iconButton.stories.ts";
 import * as MenuButton from "./menu-button/menuButton.stories.ts";
 import * as ReactionButton from "./reaction-button/reactionButton.stories.ts";
-import * as SlipButton from "./slip-button/slipbutton.stories.ts";
+import * as SlipButton from "./slip-button/slipbutton.stories.tsx";
 import * as ToggleButton from "./togglebutton/toggleButton.stories.ts";
 
 <Meta title="Buttons" />
@@ -16,7 +16,7 @@ import * as ToggleButton from "./togglebutton/toggleButton.stories.ts";
 {/* BASICBUTTON */}
 
 <h2 className="StoryBookHeadingComponent">BasicButton</h2>
-<p> BasicButton is a general purpose button. Use it for accions.</p>
+<p> BasicButton is a general-purpose button. Use it for actions.</p>
 <br />
 
 {/* ROLES */}
@@ -24,7 +24,7 @@ import * as ToggleButton from "./togglebutton/toggleButton.stories.ts";
 <div className="StoryBookHeadingSection">
   <h3>ROLES</h3>
   <p>
-    BasicButtons have four roles of buttons: default, primary, secondary and
+    BasicButtons have four button roles: default, primary, secondary, and
     disabled.
   </p>
 </div>
@@ -110,8 +110,8 @@ import * as ToggleButton from "./togglebutton/toggleButton.stories.ts";
 
 <h2 className="StoryBookHeadingComponent">IconButton</h2>
 <p>
-  IconButton is a button that only accept an icon and no text. Use it for
-  accions.
+  IconButton is a button that only accepts an icon and no text. Use it for
+  actions.
 </p>
 <br />
 
@@ -149,7 +149,7 @@ import * as ToggleButton from "./togglebutton/toggleButton.stories.ts";
 
 <div style={{ padding: "1rem" }}>
   <h3>SIZES</h3>
-  <p>We can choose different sizes: </p>
+  <p>We can choose different sizes of IconButton:</p>
 </div>
 <div className="StoryBookComponentContainerStyle">
 
@@ -193,7 +193,7 @@ import * as ToggleButton from "./togglebutton/toggleButton.stories.ts";
 {/* MENUBUTTON */}
 
 <h2 className="StoryBookHeadingComponent">MenuButton</h2>
-<p> MenuButton is a button to use in menues.</p>
+<p> MenuButton is a button to use in menus.</p>
 <br />
 
 {/* TYPES */}
@@ -214,7 +214,7 @@ import * as ToggleButton from "./togglebutton/toggleButton.stories.ts";
 </div>
 <div className="StoryBookHeadingSection">
   <h3>STATES</h3>
-  <p>We have normal an active states: </p>
+  <p>We have normal and active states: </p>
 </div>
 <div className="StoryBookComponentContainerStyle">
   <div className="StoryBookArticle">
@@ -259,7 +259,7 @@ import * as ToggleButton from "./togglebutton/toggleButton.stories.ts";
   </div>
 </div>
 <p>
-  It admits 2 icons: one for the normal state and the other for the active
+  It accepts 2 icons: one for the normal state and the other for the active
   state.
 </p>
 <div className="StoryBookComponentContainerStyle">
@@ -277,8 +277,9 @@ import * as ToggleButton from "./togglebutton/toggleButton.stories.ts";
 
 <h2 className="StoryBookHeadingComponent">SlipButton</h2>
 <p>
-  Use this button for dropdown components. Accept an icon, a value of an input
-  and a placeholder.
+  SlipButton is used for dropdown components. It accepts an icon, an input
+  value, and a placeholder. This button also allows children. Example `
+  <SlipButton>Mi lista</SlipButton>`
 </p>
 <br />
 <div className="StoryBookComponentContainerStyle">
@@ -296,8 +297,8 @@ import * as ToggleButton from "./togglebutton/toggleButton.stories.ts";
 
 <h2 className="StoryBookHeadingComponent">ToggleButton</h2>
 <p>
-  Use this button to show or hide a container. You can use one icon for open and
-  close state, or you can specify a second icon for open state.
+  ToggleButton is used to show or hide a container. You can use one icon for the
+  open and close state, or you can specify a second icon for the open state.
 </p>
 <br />
 <div className="StoryBookComponentContainerStyle">

@@ -1,0 +1,104 @@
+.StoryBookComponentContainerStyle {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+
+.StoryBookHeadingSection {
+  padding: 1rem;
+}
+
+.StoryBookHeadingComponent {
+  background: #b3e5fc;
+  padding: 1rem !important;
+}
+
+.StoryBookArticle {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1;
+  align-items: center;
+}
+
+.StoryBookArticle h4 {
+  white-space: nowrap;
+}
+
+.StoryBookMainHeading {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -1px;
+}
+
+.StoryBookBigBold {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.StoryBookBigRegular {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+.StoryBookBigUnderline {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration-line: underline;
+}
+.StoryBookNormalBold {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+.StoryBookNormalRegular {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+.StoryBookNormalUnderline {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration-line: underline;
+}
+.StoryBookSmallBold {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+.StoryBookSmallRegular {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+.StoryBookSmallUnderline {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration-line: underline;
+}

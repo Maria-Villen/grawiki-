@@ -6,6 +6,7 @@ import {
   Ref,
   forwardRef,
   useEffect,
+  ReactNode,
 } from "react";
 import { IIcon } from "../../iconComponent/interfaceofIcon";
 import Icon from "../../iconComponent/Icon";
@@ -15,10 +16,11 @@ import Icon from "../../iconComponent/Icon";
  * Description: A selector with suggestions
  */
 
-interface SlipButtonProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface SlipButtonProps extends InputHTMLAttributes<HTMLInputElement> {
   icon?: IIcon;
   fluid?: boolean;
   closeControler?: boolean;
+  children?: ReactNode;
 }
 const SlipButton = forwardRef<HTMLInputElement, SlipButtonProps>(
   (

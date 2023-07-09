@@ -1,24 +1,28 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import TabProfile from "./TabProfile";
-import { withRouter } from "storybook-addon-react-router-v6";
+import Suggestions from "./suggestions";
+import { categories } from "../../../services/data";
 
 const meta = {
-  title: "Components/TabProfile",
-  component: TabProfile,
+  title: "Layouts/Suggestions",
+  component: Suggestions,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ["autodocs"],
   args: {
-    children: "Hola",
+    data: categories,
+    onSelect: () => {
+      console.log("selected");
+    },
   },
-  decorators: [withRouter],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
-    layout: "padded",
+    layout: "fullscreen",
     backgrounds: { default: "light" },
   },
-} satisfies Meta<typeof TabProfile>;
+} satisfies Meta<typeof Suggestions>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {},
+};

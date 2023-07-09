@@ -1,5 +1,5 @@
 {/* Typography.mdx */}
-
+import "./stylesStorybook.css";
 import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
 
 <Meta title="Foundation/Typography" />
@@ -9,3 +9,32 @@ import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
 <p>
   Lato: <a>https://fonts.google.com/specimen/Lato</a>
 </p>
+<br />
+<h2> Types of fonts </h2>
+<p>
+  These are the names of the custom font variables to use. You can add them to
+  your Sass styles using the following mixin: `@include [mixinName]`. This mixin
+  is a Sass mixin that adds the necessary styles. Make sure to import the
+  variables.sass file in your module.sass using ` @import
+  "../ui/styles/variables.sass"`.
+</p>
+<br />
+<p className="StoryBookMainHeading">MainHeading: 32px</p>
+
+<p className="StoryBookBigBold">BigBold: 18px</p>
+
+<p className="StoryBookBigRegular">BigRegular: 18px</p>
+
+<p className="StoryBookBigUnderline">BigUnderline: 18px</p>
+
+<p className="StoryBookNormalBold">NormalBold: 16px</p>
+
+<p className="StoryBookNormalRegular">NormalRegular: 16px</p>
+
+<p className="StoryBookNormalUnderline">NormalUnderline: 16px</p>
+
+<p className="StoryBookSmallBold">SmallBold: 14px</p>
+
+<p className="StoryBookSmallRegular">SmallRegular: 14px</p>
+
+<p className="StoryBookSmallUnderline">SmallUnderline: 14px</p>
