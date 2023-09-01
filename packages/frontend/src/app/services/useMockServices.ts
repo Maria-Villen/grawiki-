@@ -1,13 +1,16 @@
 import { users, categories } from "./data";
-import { IUserLogin, IUserRegister, IUserLoggedIn } from "../interfaces/auth";
-import { IUserWithToken } from "../interfaces/user";
+import {
+  IUserLogin,
+  IUserRegister,
+  IUserResponseLogin,
+} from "./interfaces/auth";
 
 // AUTH API CALL
 
 export const auth = {
   // via reducer auth
   login: ({ email, password }: IUserLogin) => {
-    const userFounded: undefined | IUserWithToken = users.find(
+    const userFounded: undefined | IUserResponseLogin = users.find(
       (user) => user.email === email && user.password === password
     );
     if (userFounded) {
@@ -21,6 +24,7 @@ export const auth = {
       throw { message: "User Not Found" };
     }
   },
+
   // via reducer auth
   register: ({ userName, email, password }: IUserRegister) => {
     console.log(password, userName, email);
@@ -52,7 +56,7 @@ export const auth = {
   },
 
   // via reducer auth
-  changePass: (password: string): IUserLoggedIn => {
+  changePass: (password: string): IUserResponseLogin => {
     console.log(password);
     return { id: "100", role: "user", token: "secret-token" };
   },

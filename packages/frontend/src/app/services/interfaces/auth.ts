@@ -1,15 +1,9 @@
 export interface IUserLogin {
-  /**
-   * Email del usuario
-   */
   email: string;
-  /**
-   * Password del usuario
-   */
   password: string;
 }
 
-export interface IUserLoggedIn {
+export interface IUserResponseLogin {
   id: string;
   role: string;
   token: string;

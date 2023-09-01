@@ -40,7 +40,7 @@ const ReactionPanel = ({ data, userReacted }: IReactionPanel) => {
   };
 
   const getActive = (reaction: string) => {
-    const type = userReaction.find((el) => el === reaction);
+    const type = userReaction.includes(reaction);
     return type ? true : false;
   };
 

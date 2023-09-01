@@ -69,8 +69,8 @@ function Pencil3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(6.19904 26) rotate(-45.6437) scale(19.6676 12.1998)"
         >
-          <stop stop-color="#FF9130" />
-          <stop offset="1" stop-color="#F3633D" />
+          <stop stopColor="#FF9130" />
+          <stop offset="1" stopColor="#F3633D" />
         </radialGradient>
         <linearGradient
           id="paint1_linear_116_9312"
@@ -80,8 +80,8 @@ function Pencil3DIcon({ className }: { className: string }) {
           y2="16.375"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#EE9B6A" />
-          <stop offset="1" stop-color="#EE9B6A" stop-opacity="0" />
+          <stop stopColor="#EE9B6A" />
+          <stop offset="1" stopColor="#EE9B6A" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_116_9312"
@@ -91,8 +91,8 @@ function Pencil3DIcon({ className }: { className: string }) {
           y2="16.9375"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E66A62" />
-          <stop offset="1" stop-color="#E66A62" stop-opacity="0" />
+          <stop stopColor="#E66A62" />
+          <stop offset="1" stopColor="#E66A62" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint3_radial_116_9312"
@@ -102,8 +102,8 @@ function Pencil3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(5.94904 25.8125) rotate(-44.8606) scale(18.1639 4.06177)"
         >
-          <stop stop-color="#FF994D" />
-          <stop offset="1" stop-color="#FF994D" stop-opacity="0" />
+          <stop stopColor="#FF994D" />
+          <stop offset="1" stopColor="#FF994D" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint4_linear_116_9312"
@@ -113,8 +113,8 @@ function Pencil3DIcon({ className }: { className: string }) {
           y2="30.2187"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#D8A587" />
-          <stop offset="1" stop-color="#CE7A98" />
+          <stop stopColor="#D8A587" />
+          <stop offset="1" stopColor="#CE7A98" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_116_9312"
@@ -124,8 +124,8 @@ function Pencil3DIcon({ className }: { className: string }) {
           y2="26.8124"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.207411" stop-color="#FFC09F" />
-          <stop offset="1" stop-color="#FCB196" stop-opacity="0" />
+          <stop offset="0.207411" stopColor="#FFC09F" />
+          <stop offset="1" stopColor="#FCB196" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_116_9312"
@@ -135,8 +135,8 @@ function Pencil3DIcon({ className }: { className: string }) {
           y2="26.1249"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DEBCA3" />
-          <stop offset="1" stop-color="#DEBCA3" stop-opacity="0" />
+          <stop stopColor="#DEBCA3" />
+          <stop offset="1" stopColor="#DEBCA3" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_116_9312"
@@ -146,8 +146,8 @@ function Pencil3DIcon({ className }: { className: string }) {
           y2="9.00003"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF6153" />
-          <stop offset="1" stop-color="#FF6154" />
+          <stop stopColor="#FF6153" />
+          <stop offset="1" stopColor="#FF6154" />
         </linearGradient>
         <linearGradient
           id="paint8_linear_116_9312"
@@ -157,8 +157,8 @@ function Pencil3DIcon({ className }: { className: string }) {
           y2="7.56253"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1553E" />
-          <stop offset="1" stop-color="#F1553E" stop-opacity="0" />
+          <stop stopColor="#F1553E" />
+          <stop offset="1" stopColor="#F1553E" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint9_radial_116_9312"
@@ -168,8 +168,8 @@ function Pencil3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(27.2303 5.87503) rotate(135) scale(1.37002 3.11227)"
         >
-          <stop offset="0.177419" stop-color="#FF786D" />
-          <stop offset="1" stop-color="#FF786D" stop-opacity="0" />
+          <stop offset="0.177419" stopColor="#FF786D" />
+          <stop offset="1" stopColor="#FF786D" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint10_linear_116_9312"
@@ -179,8 +179,8 @@ function Pencil3DIcon({ className }: { className: string }) {
           y2="11.125"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C5C4CB" />
-          <stop offset="1" stop-color="#E8DEFA" />
+          <stop stopColor="#C5C4CB" />
+          <stop offset="1" stopColor="#E8DEFA" />
         </linearGradient>
         <linearGradient
           id="paint11_linear_116_9312"
@@ -190,8 +190,8 @@ function Pencil3DIcon({ className }: { className: string }) {
           y2="12.125"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C9B9E0" />
-          <stop offset="1" stop-color="#C9B9E0" stop-opacity="0" />
+          <stop stopColor="#C9B9E0" />
+          <stop offset="1" stopColor="#C9B9E0" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint12_linear_116_9312"
@@ -201,8 +201,8 @@ function Pencil3DIcon({ className }: { className: string }) {
           y2="30.0011"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#461E49" />
-          <stop offset="1" stop-color="#450F51" />
+          <stop stopColor="#461E49" />
+          <stop offset="1" stopColor="#450F51" />
         </linearGradient>
       </defs>
     </svg>

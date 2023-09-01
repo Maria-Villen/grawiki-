@@ -8,7 +8,7 @@ function Clapping3DIcon({ className }: { className: string }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_45_9816)">
+      <g clipPath="url(#clip0_45_9816)">
         <path
           d="M23.2623 22.4476L23.1076 13.0575C23.0086 12.1665 22.5197 10.9692 20.849 10.9692C18.8998 11.062 18.8225 13.0575 18.8225 13.0575L15.8523 7.75151C15.1098 6.62222 13.892 6.54363 13.1297 7.00895C12.3674 7.47428 12.2015 8.41669 12.2015 8.41669L11.5827 7.61227C11.1174 6.84993 9.72491 6.76115 9.0148 7.1946C7.83616 7.91403 7.66488 9.4036 8.42696 10.2266C8.37697 10.1726 7.79455 9.97095 6.81812 10.567C6.05578 11.0323 5.8203 12.4234 6.24572 13.2123C6.67115 14.0011 6.73302 14.1249 6.73302 14.1249C6.73302 14.1249 6.07557 13.8155 5.03911 14.5116C4.29768 15.0096 4.03234 16.4875 4.49767 17.2498L6.99384 21.4585L10.4293 27.0721C12.449 29.9348 16.7553 30.9233 19.8843 29.0225C22.0178 27.7264 23.4655 24.9876 23.2623 22.4476Z"
           fill="#FF9D25"
@@ -50,27 +50,27 @@ function Clapping3DIcon({ className }: { className: string }) {
           fill="url(#paint8_radial_45_9816)"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M6.69017 14.1086C6.57808 14.0842 6.47173 14.0675 6.37592 14.0572C6.52807 14.0625 6.63509 14.0903 6.69017 14.1086ZM6.7292 14.1174C6.7606 14.1247 6.79238 14.1326 6.82447 14.1412C7.15008 14.2278 7.45014 14.366 7.65217 14.5456C7.75349 14.6357 7.90682 14.8211 8.10435 15.1011C8.29549 15.3721 8.50732 15.7014 8.72643 16.0544C8.90351 16.3397 9.08825 16.6455 9.26841 16.9437C9.52328 17.3656 9.76898 17.7722 9.97081 18.0842C10.1208 18.316 10.4304 18.3823 10.6622 18.2323C10.8941 18.0823 10.9604 17.7728 10.8104 17.5409C10.613 17.2358 10.3849 16.858 10.14 16.4523L10.1399 16.4523L10.1399 16.4523C9.95933 16.1531 9.76954 15.8387 9.57606 15.527C9.3534 15.1683 9.12951 14.8196 8.9215 14.5247C8.71989 14.2389 8.51065 13.9707 8.31653 13.7982C7.95606 13.4778 7.49309 13.2843 7.08173 13.1748C6.76105 13.0894 6.43769 13.0461 6.16833 13.0442C6.19112 13.1026 6.2169 13.1588 6.2457 13.2122C6.61586 13.8987 6.71079 14.0815 6.7292 14.1174Z"
           fill="url(#paint9_radial_45_9816)"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M8.37751 10.1988C8.29738 10.177 8.22197 10.1624 8.15162 10.1533C8.25538 10.1608 8.33132 10.1804 8.37751 10.1988ZM8.40995 10.208C8.68987 10.2898 9.02514 10.4605 9.40216 10.7956C9.43079 10.821 9.49762 10.8967 9.60463 11.0472C9.70544 11.1889 9.82419 11.3715 9.95706 11.5867C10.2226 12.0169 10.5319 12.5573 10.8479 13.1211C11.0139 13.4173 11.1827 13.7218 11.3477 14.0194L11.3477 14.0194L11.3477 14.0195C11.8011 14.8372 12.226 15.6035 12.4864 16.006C12.6364 16.2379 12.946 16.3042 13.1778 16.1542C13.4097 16.0042 13.476 15.6946 13.326 15.4628C13.0855 15.0911 12.6894 14.3767 12.2447 13.5746L12.2446 13.5745C12.0749 13.2685 11.8981 12.9496 11.7202 12.6322C11.4031 12.0664 11.0852 11.5107 10.808 11.0615C10.6696 10.8371 10.5381 10.6342 10.4195 10.4676C10.3072 10.3097 10.1856 10.154 10.0665 10.0482C9.27076 9.34083 8.53734 9.14482 7.96985 9.14026C7.99726 9.53586 8.14506 9.91302 8.40995 10.208Z"
           fill="url(#paint10_radial_45_9816)"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M12.2016 8.41619L12.2933 8.56373C12.6278 9.10191 13.081 9.83059 13.5558 10.5925C14.5036 12.1138 15.5418 13.7748 15.8885 14.3107C16.0385 14.5425 16.348 14.6088 16.5799 14.4588C16.8117 14.3088 16.8781 13.9992 16.728 13.7674C16.3872 13.2407 15.3551 11.5893 14.4045 10.0637C13.93 9.30216 13.477 8.5738 13.1426 8.03581L12.7421 7.3913L12.7204 7.35645C12.3107 7.82484 12.2047 8.39878 12.2016 8.41619Z"
           fill="url(#paint11_radial_45_9816)"
         />
         <g filter="url(#filter0_f_45_9816)">
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M22.1527 13.6707L22.2951 22.3123C22.4821 24.6499 21.1498 27.1704 19.1863 28.3632C18.8159 28.5883 18.4275 28.7693 18.0279 28.9083C15.874 28.9303 13.7251 27.9342 12.4924 26.187L10.0532 22.8635L8.46544 20.1078C8.0329 19.3991 8.27955 18.0254 8.96874 17.5625C9.93218 16.9154 10.5433 17.203 10.5433 17.203C10.5433 17.203 9.75322 15.9315 9.35776 15.1982C8.96231 14.4649 9.17417 13.3466 9.8828 12.9141C10.7904 12.3601 11.5316 13.0123 11.5781 13.0625C10.9844 12.2578 10.9356 10.45 12.0312 9.78127C12.6913 9.37836 13.8862 9.28408 14.3188 9.99271L14.894 10.7405C14.894 10.7405 15.0481 9.86444 15.7567 9.4319C15.7765 9.41986 15.7965 9.40822 15.8169 9.39697L18.2091 13.6707C18.2091 13.6707 18.2581 12.4074 19.2982 11.9276L21.0485 15.0544C21.0485 15.0544 21.0962 13.8237 22.093 13.3205C22.1209 13.4402 22.1402 13.5581 22.1527 13.6707Z"
             fill="#F06B0C"
           />
@@ -169,58 +169,58 @@ function Clapping3DIcon({ className }: { className: string }) {
           <path
             d="M13.5625 10.9062C13.9896 10.9375 14.347 11.0028 14.847 11.7778C15.347 12.5528 16.9511 15.1841 17.7845 16.4966"
             stroke="#FFE240"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <g filter="url(#filter3_f_45_9816)">
           <path
             d="M11.9062 14.75C12.3333 14.7812 12.6907 14.8466 13.1907 15.6216C13.6907 16.3966 14.6042 18.1875 15.4375 19.5"
             stroke="#FFE240"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <g filter="url(#filter4_f_45_9816)">
           <path
             d="M13 12.5312C13.4271 12.5625 13.9095 12.7396 14.4095 13.5146C14.9095 14.2896 15.9792 16.4688 16.8125 17.7812"
             stroke="url(#paint30_linear_45_9816)"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <g filter="url(#filter5_f_45_9816)">
           <path
             d="M14.75 8.8125C15.1771 8.84375 16.191 9.16238 16.691 9.93738C17.191 10.7124 18.6042 13.4375 19.4375 14.75"
             stroke="url(#paint31_linear_45_9816)"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <g filter="url(#filter6_f_45_9816)">
           <path
             d="M15.7781 7.78296C16.2052 7.81421 16.5625 7.87954 17.0625 8.65454C17.5625 9.42954 20.3229 13.5938 21.1563 14.9062"
             stroke="#FFE240"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <g filter="url(#filter7_f_45_9816)">
           <path
             d="M19.5225 7.55029C19.9496 7.58154 20.307 7.64688 20.807 8.42188C21.307 9.19687 24.0986 14.3906 24.932 15.7031"
             stroke="#FFE240"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <g filter="url(#filter8_f_45_9816)">
           <path
             d="M27.3463 11.8419C27.7009 12.082 27.9781 12.3168 28.0251 13.2379C28.0721 14.159 27.9024 20.053 27.9703 21.6062"
             stroke="#FFE240"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
       </g>
@@ -232,9 +232,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           width="19.0621"
           height="24.5117"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -253,9 +253,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           width="19.8556"
           height="23.9406"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -274,9 +274,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           width="7.22205"
           height="8.59042"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -295,9 +295,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           width="6.53131"
           height="7.75009"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -316,9 +316,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           width="6.81268"
           height="8.25015"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -337,9 +337,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           width="7.68768"
           height="8.93765"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -358,9 +358,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           width="8.3783"
           height="10.1234"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -379,9 +379,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           width="8.40955"
           height="11.1529"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -400,9 +400,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           width="3.68713"
           height="12.7644"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -422,8 +422,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           y2="15.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF6C4C" />
-          <stop offset="1" stop-color="#FF6D47" stop-opacity="0" />
+          <stop stopColor="#FF6C4C" />
+          <stop offset="1" stopColor="#FF6D47" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint1_radial_45_9816"
@@ -433,8 +433,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(9.46875 12.8125) rotate(58.4429) scale(4.65751 1.86185)"
         >
-          <stop stop-color="#FFAF33" />
-          <stop offset="1" stop-color="#FA8221" />
+          <stop stopColor="#FFAF33" />
+          <stop offset="1" stopColor="#FA8221" />
         </radialGradient>
         <radialGradient
           id="paint2_radial_45_9816"
@@ -444,8 +444,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(8.34375 11.3125) rotate(92.0826) scale(1.71989 1.71091)"
         >
-          <stop stop-color="#FFAE28" />
-          <stop offset="1" stop-color="#FFAF31" stop-opacity="0" />
+          <stop stopColor="#FFAE28" />
+          <stop offset="1" stopColor="#FFAF31" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint3_radial_45_9816"
@@ -455,8 +455,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(7.125 16.2187) rotate(57.3311) scale(4.86307 1.39303)"
         >
-          <stop stop-color="#FE9E29" />
-          <stop offset="1" stop-color="#FE9E28" stop-opacity="0" />
+          <stop stopColor="#FE9E29" />
+          <stop offset="1" stopColor="#FE9E28" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint4_radial_45_9816"
@@ -466,8 +466,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(6.8125 15.6875) rotate(63.4349) scale(2.02644 1.65669)"
         >
-          <stop stop-color="#FF9D25" />
-          <stop offset="1" stop-color="#FF9F24" stop-opacity="0" />
+          <stop stopColor="#FF9D25" />
+          <stop offset="1" stopColor="#FF9F24" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint5_radial_45_9816"
@@ -477,8 +477,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(10.7813 8.78125) rotate(58.3392) scale(4.4057 1.90405)"
         >
-          <stop stop-color="#FFC133" />
-          <stop offset="1" stop-color="#FFC93C" stop-opacity="0" />
+          <stop stopColor="#FFC133" />
+          <stop offset="1" stopColor="#FFC93C" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint6_radial_45_9816"
@@ -488,8 +488,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(10.5938 7.96875) rotate(52.3738) scale(1.89391 1.44733)"
         >
-          <stop stop-color="#FFC53A" />
-          <stop offset="1" stop-color="#FFC83C" stop-opacity="0" />
+          <stop stopColor="#FFC53A" />
+          <stop offset="1" stopColor="#FFC83C" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint7_radial_45_9816"
@@ -499,8 +499,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(14.1875 11.125) rotate(90.6384) scale(37.1273 32.1071)"
         >
-          <stop offset="0.370081" stop-color="#FF6C5E" stop-opacity="0" />
-          <stop offset="0.540093" stop-color="#FF6B5E" />
+          <stop offset="0.370081" stopColor="#FF6C5E" stopOpacity="0" />
+          <stop offset="0.540093" stopColor="#FF6B5E" />
         </radialGradient>
         <radialGradient
           id="paint8_radial_45_9816"
@@ -510,8 +510,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(14.0938 7.15625) rotate(59.8163) scale(3.54285 3.89595)"
         >
-          <stop stop-color="#FFAC31" />
-          <stop offset="1" stop-color="#FFA92E" stop-opacity="0" />
+          <stop stopColor="#FFAC31" />
+          <stop offset="1" stopColor="#FFA92E" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint9_radial_45_9816"
@@ -521,9 +521,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(8.28122 16.6875) rotate(-35.0958) scale(1.41318 4.33549)"
         >
-          <stop stop-color="#DB5703" />
-          <stop offset="0.594695" stop-color="#C94A04" />
-          <stop offset="1" stop-color="#D65A05" stop-opacity="0" />
+          <stop stopColor="#DB5703" />
+          <stop offset="0.594695" stopColor="#C94A04" />
+          <stop offset="1" stopColor="#D65A05" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint10_radial_45_9816"
@@ -533,9 +533,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(9.65622 13.6562) rotate(-42.6141) scale(2.12316 6.81377)"
         >
-          <stop stop-color="#DB5703" />
-          <stop offset="0.594695" stop-color="#C94A04" />
-          <stop offset="1" stop-color="#D65A05" stop-opacity="0" />
+          <stop stopColor="#DB5703" />
+          <stop offset="0.594695" stopColor="#C94A04" />
+          <stop offset="1" stopColor="#D65A05" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint11_radial_45_9816"
@@ -545,9 +545,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(13 11.4687) rotate(-42.1844) scale(1.34955 4.43081)"
         >
-          <stop stop-color="#DB5703" />
-          <stop offset="0.594695" stop-color="#C94A04" />
-          <stop offset="1" stop-color="#D65A05" stop-opacity="0" />
+          <stop stopColor="#DB5703" />
+          <stop offset="0.594695" stopColor="#C94A04" />
+          <stop offset="1" stopColor="#D65A05" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint12_radial_45_9816"
@@ -557,9 +557,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(21.5625 20.125) rotate(73.3649) scale(10.6977 7.10071)"
         >
-          <stop stop-color="#FFD945" />
-          <stop offset="0.633239" stop-color="#FFD343" />
-          <stop offset="1" stop-color="#FFD543" stop-opacity="0" />
+          <stop stopColor="#FFD945" />
+          <stop offset="0.633239" stopColor="#FFD343" />
+          <stop offset="1" stopColor="#FFD543" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint13_radial_45_9816"
@@ -569,8 +569,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(28.9723 15.8125) rotate(98.4363) scale(14.7218 3.88781)"
         >
-          <stop stop-color="#FFE044" />
-          <stop offset="1" stop-color="#FFE143" stop-opacity="0" />
+          <stop stopColor="#FFE044" />
+          <stop offset="1" stopColor="#FFE143" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint14_radial_45_9816"
@@ -580,8 +580,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(19.6875 33.25) rotate(-124.618) scale(23.5432 18.5289)"
         >
-          <stop stop-color="#FA825D" />
-          <stop offset="0.882533" stop-color="#F67B7D" stop-opacity="0" />
+          <stop stopColor="#FA825D" />
+          <stop offset="0.882533" stopColor="#F67B7D" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint15_linear_45_9816"
@@ -591,13 +591,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           y2="13.2344"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#D48820" />
-          <stop
-            offset="0.344595"
-            stop-color="#E39C2A"
-            stop-opacity="0.648599"
-          />
-          <stop offset="0.735218" stop-color="#FFC03C" stop-opacity="0" />
+          <stop stopColor="#D48820" />
+          <stop offset="0.344595" stopColor="#E39C2A" stopOpacity="0.648599" />
+          <stop offset="0.735218" stopColor="#FFC03C" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint16_radial_45_9816"
@@ -607,10 +603,10 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(23.5625 20.4375) rotate(134.506) scale(10.2534 26.8268)"
         >
-          <stop stop-color="#FFDB45" />
-          <stop offset="0.484081" stop-color="#FFD646" />
-          <stop offset="0.915211" stop-color="#FFDA45" stop-opacity="0" />
-          <stop offset="0.970164" stop-color="#FFDA45" stop-opacity="0" />
+          <stop stopColor="#FFDB45" />
+          <stop offset="0.484081" stopColor="#FFD646" />
+          <stop offset="0.915211" stopColor="#FFDA45" stopOpacity="0" />
+          <stop offset="0.970164" stopColor="#FFDA45" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint17_linear_45_9816"
@@ -620,8 +616,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           y2="5.06547"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2065A3" />
-          <stop offset="1" stop-color="#2067AE" stop-opacity="0" />
+          <stop stopColor="#2065A3" />
+          <stop offset="1" stopColor="#2067AE" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint18_linear_45_9816"
@@ -631,8 +627,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           y2="5.87212"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.605233" stop-color="#1C60FF" />
-          <stop offset="1" stop-color="#1963FF" stop-opacity="0" />
+          <stop offset="0.605233" stopColor="#1C60FF" />
+          <stop offset="1" stopColor="#1963FF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint19_linear_45_9816"
@@ -642,8 +638,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           y2="4.79146"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2093F1" />
-          <stop offset="1" stop-color="#2294F3" stop-opacity="0" />
+          <stop stopColor="#2093F1" />
+          <stop offset="1" stopColor="#2294F3" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint20_linear_45_9816"
@@ -653,8 +649,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           y2="2.75521"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2065A3" />
-          <stop offset="1" stop-color="#2067AE" stop-opacity="0" />
+          <stop stopColor="#2065A3" />
+          <stop offset="1" stopColor="#2067AE" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint21_linear_45_9816"
@@ -664,8 +660,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           y2="4.18815"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.605233" stop-color="#1C60FF" />
-          <stop offset="1" stop-color="#1963FF" stop-opacity="0" />
+          <stop offset="0.605233" stopColor="#1C60FF" />
+          <stop offset="1" stopColor="#1963FF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint22_linear_45_9816"
@@ -675,8 +671,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           y2="3.03267"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2093F1" />
-          <stop offset="1" stop-color="#2294F3" stop-opacity="0" />
+          <stop stopColor="#2093F1" />
+          <stop offset="1" stopColor="#2294F3" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint23_linear_45_9816"
@@ -686,8 +682,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           y2="8.34375"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2065A3" />
-          <stop offset="1" stop-color="#2067AE" stop-opacity="0" />
+          <stop stopColor="#2065A3" />
+          <stop offset="1" stopColor="#2067AE" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint24_linear_45_9816"
@@ -697,8 +693,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           y2="8.9375"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.605233" stop-color="#1C60FF" />
-          <stop offset="1" stop-color="#1963FF" stop-opacity="0" />
+          <stop offset="0.605233" stopColor="#1C60FF" />
+          <stop offset="1" stopColor="#1963FF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint25_linear_45_9816"
@@ -708,8 +704,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           y2="7.91797"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2093F1" />
-          <stop offset="1" stop-color="#2294F3" stop-opacity="0" />
+          <stop stopColor="#2093F1" />
+          <stop offset="1" stopColor="#2294F3" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint26_radial_45_9816"
@@ -719,8 +715,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(13.6563 15.6623) rotate(57.1255) scale(5.23917 0.981437)"
         >
-          <stop stop-color="#B64200" />
-          <stop offset="1" stop-color="#FFB02E" stop-opacity="0" />
+          <stop stopColor="#B64200" />
+          <stop offset="1" stopColor="#FFB02E" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint27_radial_45_9816"
@@ -730,8 +726,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(15.8124 12.3285) rotate(57.5206) scale(6.16885 1.1483)"
         >
-          <stop stop-color="#B64200" />
-          <stop offset="1" stop-color="#FFB02E" stop-opacity="0" />
+          <stop stopColor="#B64200" />
+          <stop offset="1" stopColor="#FFB02E" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint28_radial_45_9816"
@@ -741,8 +737,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(15.8124 12.3285) rotate(57.5206) scale(6.16885 1.1483)"
         >
-          <stop stop-color="#B64200" />
-          <stop offset="1" stop-color="#FFB02E" stop-opacity="0" />
+          <stop stopColor="#B64200" />
+          <stop offset="1" stopColor="#FFB02E" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint29_linear_45_9816"
@@ -752,8 +748,8 @@ function Clapping3DIcon({ className }: { className: string }) {
           y2="9.9375"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E49224" />
-          <stop offset="0.589269" stop-color="#FFB02E" stop-opacity="0" />
+          <stop stopColor="#E49224" />
+          <stop offset="0.589269" stopColor="#FFB02E" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint30_linear_45_9816"
@@ -763,9 +759,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           y2="13.5937"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FDB137" />
-          <stop offset="0.447171" stop-color="#FFBA3C" stop-opacity="0" />
-          <stop offset="1" stop-color="#FCAD33" stop-opacity="0" />
+          <stop stopColor="#FDB137" />
+          <stop offset="0.447171" stopColor="#FFBA3C" stopOpacity="0" />
+          <stop offset="1" stopColor="#FCAD33" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint31_linear_45_9816"
@@ -775,9 +771,9 @@ function Clapping3DIcon({ className }: { className: string }) {
           y2="10.0165"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FDB137" />
-          <stop offset="0.447171" stop-color="#FFBA3C" stop-opacity="0" />
-          <stop offset="1" stop-color="#FCAD33" stop-opacity="0" />
+          <stop stopColor="#FDB137" />
+          <stop offset="0.447171" stopColor="#FFBA3C" stopOpacity="0" />
+          <stop offset="1" stopColor="#FCAD33" stopOpacity="0" />
         </linearGradient>
         <clipPath id="clip0_45_9816">
           <rect width="32" height="32" fill="white" />

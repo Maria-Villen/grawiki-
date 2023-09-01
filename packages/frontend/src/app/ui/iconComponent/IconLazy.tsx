@@ -8,7 +8,9 @@ import classes from "./icon.module.sass";
 
 const IconLazy = ({ name, className, rounded, ...props }: IIcon) => {
   const iconName = name.charAt(0).toUpperCase() + name.slice(1);
-  const IconComponent = lazy(() => import(`../icons/${iconName}`));
+  const IconComponent = lazy(
+    () => import(/* @vite-ignore */ `../icons/${iconName}.js`)
+  );
 
   return (
     <Suspense fallback={null}>

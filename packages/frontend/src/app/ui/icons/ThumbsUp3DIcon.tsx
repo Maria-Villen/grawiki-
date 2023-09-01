@@ -121,7 +121,7 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
         rx="2.98188"
         transform="rotate(90 27.0386 19.8651)"
         fill="#C4C4C4"
-        fill-opacity="0.66"
+        fillOpacity="0.66"
       />
       <g filter="url(#filter5_i_45_9812)">
         <rect
@@ -228,9 +228,9 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           width="19.0479"
           height="27.8091"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -263,9 +263,9 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           width="12.9085"
           height="20.6154"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -284,9 +284,9 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           width="9.54352"
           height="5.82022"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -319,9 +319,9 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           width="9.36084"
           height="6.1636"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -354,9 +354,9 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           width="7.87024"
           height="3.9762"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -375,9 +375,9 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           width="10.6593"
           height="6.46378"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -410,9 +410,9 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           width="9.22485"
           height="3.9762"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -431,9 +431,9 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           width="10.6136"
           height="6.33325"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -466,9 +466,9 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           width="8.63568"
           height="5.01553"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -487,9 +487,9 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           width="9.67206"
           height="5.01553"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -508,9 +508,9 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           width="5.36523"
           height="10.4974"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -530,8 +530,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           y2="27.9572"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFCA44" />
-          <stop offset="1" stop-color="#F8A528" />
+          <stop stopColor="#FFCA44" />
+          <stop offset="1" stopColor="#F8A528" />
         </linearGradient>
         <radialGradient
           id="paint1_radial_45_9812"
@@ -541,8 +541,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(20.5234 4.97445) rotate(141.116) scale(5.01564 14.8034)"
         >
-          <stop stop-color="#FFE34C" />
-          <stop offset="1" stop-color="#FFE34C" stop-opacity="0" />
+          <stop stopColor="#FFE34C" />
+          <stop offset="1" stopColor="#FFE34C" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint2_radial_45_9812"
@@ -552,8 +552,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(11.3925 15.9046) rotate(125.191) scale(7.43021 5.38256)"
         >
-          <stop stop-color="#FFCA2E" />
-          <stop offset="1" stop-color="#FFCA2E" stop-opacity="0" />
+          <stop stopColor="#FFCA2E" />
+          <stop offset="1" stopColor="#FFCA2E" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint3_radial_45_9812"
@@ -563,8 +563,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(19.4529 18.2615) rotate(146.743) scale(16.1907 28.3343)"
         >
-          <stop offset="0.681103" stop-color="#E18E3F" stop-opacity="0" />
-          <stop offset="1" stop-color="#E18E3F" />
+          <stop offset="0.681103" stopColor="#E18E3F" stopOpacity="0" />
+          <stop offset="1" stopColor="#E18E3F" />
         </radialGradient>
         <linearGradient
           id="paint4_linear_45_9812"
@@ -574,8 +574,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           y2="30.7928"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#D8796F" stop-opacity="0" />
-          <stop offset="1" stop-color="#D8796F" />
+          <stop stopColor="#D8796F" stopOpacity="0" />
+          <stop offset="1" stopColor="#D8796F" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_45_9812"
@@ -585,8 +585,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           y2="25.5753"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#D1730B" />
-          <stop offset="1" stop-color="#E27D47" />
+          <stop stopColor="#D1730B" />
+          <stop offset="1" stopColor="#E27D47" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_45_9812"
@@ -596,8 +596,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           y2="19.9042"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFDB44" />
-          <stop offset="1" stop-color="#F9A928" />
+          <stop stopColor="#FFDB44" />
+          <stop offset="1" stopColor="#F9A928" />
         </linearGradient>
         <radialGradient
           id="paint7_radial_45_9812"
@@ -607,8 +607,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(31.53 18.4333) rotate(127.367) scale(2.3211 1.55368)"
         >
-          <stop stop-color="#D98320" />
-          <stop offset="1" stop-color="#D98320" stop-opacity="0" />
+          <stop stopColor="#D98320" />
+          <stop offset="1" stopColor="#D98320" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint8_linear_45_9812"
@@ -618,8 +618,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           y2="33.0064"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFDB44" />
-          <stop offset="1" stop-color="#F9A928" />
+          <stop stopColor="#FFDB44" />
+          <stop offset="1" stopColor="#F9A928" />
         </linearGradient>
         <radialGradient
           id="paint9_radial_45_9812"
@@ -629,8 +629,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(31.4037 31.2114) rotate(-90) scale(7.31347 2.78222)"
         >
-          <stop stop-color="#F29545" />
-          <stop offset="1" stop-color="#F29545" stop-opacity="0" />
+          <stop stopColor="#F29545" />
+          <stop offset="1" stopColor="#F29545" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint10_radial_45_9812"
@@ -640,8 +640,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(26.7344 31.5624) rotate(-90) scale(7.4169 1.99096)"
         >
-          <stop stop-color="#DA810B" />
-          <stop offset="1" stop-color="#FFB610" stop-opacity="0" />
+          <stop stopColor="#DA810B" />
+          <stop offset="1" stopColor="#FFB610" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint11_linear_45_9812"
@@ -651,8 +651,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           y2="28.5759"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DC7C6A" />
-          <stop offset="1" stop-color="#DC7C6A" stop-opacity="0" />
+          <stop stopColor="#DC7C6A" />
+          <stop offset="1" stopColor="#DC7C6A" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint12_radial_45_9812"
@@ -662,8 +662,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(28.5719 34.1792) rotate(-90) scale(5.60324 8.4227)"
         >
-          <stop stop-color="#E38811" />
-          <stop offset="1" stop-color="#E38811" stop-opacity="0" />
+          <stop stopColor="#E38811" />
+          <stop offset="1" stopColor="#E38811" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint13_linear_45_9812"
@@ -673,8 +673,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           y2="26.2336"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF166" />
-          <stop offset="1" stop-color="#FFF166" stop-opacity="0" />
+          <stop stopColor="#FFF166" />
+          <stop offset="1" stopColor="#FFF166" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint14_linear_45_9812"
@@ -684,8 +684,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           y2="30.0244"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFDB44" />
-          <stop offset="1" stop-color="#F9A928" />
+          <stop stopColor="#FFDB44" />
+          <stop offset="1" stopColor="#F9A928" />
         </linearGradient>
         <radialGradient
           id="paint15_radial_45_9812"
@@ -695,8 +695,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(33.0023 27.9664) rotate(-90) scale(8.38517 2.92967)"
         >
-          <stop stop-color="#F29545" />
-          <stop offset="1" stop-color="#F29545" stop-opacity="0" />
+          <stop stopColor="#F29545" />
+          <stop offset="1" stopColor="#F29545" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint16_radial_45_9812"
@@ -706,8 +706,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(28.0855 28.3689) rotate(-90) scale(8.50376 2.09648)"
         >
-          <stop stop-color="#DA810B" />
-          <stop offset="1" stop-color="#FFB610" stop-opacity="0" />
+          <stop stopColor="#DA810B" />
+          <stop offset="1" stopColor="#FFB610" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint17_linear_45_9812"
@@ -717,8 +717,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           y2="22.3636"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF166" />
-          <stop offset="1" stop-color="#FFF166" stop-opacity="0" />
+          <stop stopColor="#FFF166" />
+          <stop offset="1" stopColor="#FFF166" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint18_linear_45_9812"
@@ -728,8 +728,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           y2="25.5288"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFDB44" />
-          <stop offset="1" stop-color="#F9A928" />
+          <stop stopColor="#FFDB44" />
+          <stop offset="1" stopColor="#F9A928" />
         </linearGradient>
         <radialGradient
           id="paint19_radial_45_9812"
@@ -739,8 +739,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(32.1209 23.4372) rotate(-90) scale(5.50067 2.44847)"
         >
-          <stop stop-color="#F29545" />
-          <stop offset="1" stop-color="#F29545" stop-opacity="0" />
+          <stop stopColor="#F29545" />
+          <stop offset="1" stopColor="#F29545" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint20_radial_45_9812"
@@ -750,8 +750,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(12.6205 4.97445) rotate(90) scale(6.36013 2.36143)"
         >
-          <stop stop-color="#F3A52A" />
-          <stop offset="1" stop-color="#F3A52A" stop-opacity="0" />
+          <stop stopColor="#F3A52A" />
+          <stop offset="1" stopColor="#F3A52A" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint21_radial_45_9812"
@@ -761,8 +761,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(10.7628 9.16206) rotate(42.9975) scale(3.18567 4.82045)"
         >
-          <stop stop-color="#CDA25E" />
-          <stop offset="1" stop-color="#CDA25E" stop-opacity="0" />
+          <stop stopColor="#CDA25E" />
+          <stop offset="1" stopColor="#CDA25E" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint22_linear_45_9812"
@@ -772,8 +772,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           y2="12.3445"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF166" />
-          <stop offset="1" stop-color="#FFF166" stop-opacity="0" />
+          <stop stopColor="#FFF166" />
+          <stop offset="1" stopColor="#FFF166" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint23_linear_45_9812"
@@ -783,8 +783,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           y2="16.82"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF166" />
-          <stop offset="1" stop-color="#FFF166" stop-opacity="0" />
+          <stop stopColor="#FFF166" />
+          <stop offset="1" stopColor="#FFF166" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint24_linear_45_9812"
@@ -794,8 +794,8 @@ function ThumbsUp3DIcon({ className }: { className: string }) {
           y2="5.43549"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF166" />
-          <stop offset="1" stop-color="#FFF166" stop-opacity="0" />
+          <stop stopColor="#FFF166" />
+          <stop offset="1" stopColor="#FFF166" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

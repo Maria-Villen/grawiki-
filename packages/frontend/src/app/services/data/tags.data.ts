@@ -1,4 +1,4 @@
-import { ITag } from "../../interfaces/categories";
+import { ITag } from "./../interfaces/categories";
 
 const tags: Array<ITag> = [
   {

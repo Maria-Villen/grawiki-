@@ -207,9 +207,9 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           width="18.9331"
           height="27.6371"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -242,9 +242,9 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           width="12.6772"
           height="20.8697"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -263,9 +263,9 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           width="12.0878"
           height="5.25974"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -285,8 +285,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           y2="29.6371"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFDB34" />
-          <stop offset="1" stop-color="#E99A30" />
+          <stop stopColor="#FFDB34" />
+          <stop offset="1" stopColor="#E99A30" />
         </linearGradient>
         <radialGradient
           id="paint1_radial_45_9818"
@@ -296,8 +296,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(24.7965 7.13291) rotate(151.39) scale(7.27358 8.34686)"
         >
-          <stop stop-color="#FFF163" />
-          <stop offset="1" stop-color="#FFF163" stop-opacity="0" />
+          <stop stopColor="#FFF163" />
+          <stop offset="1" stopColor="#FFF163" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint2_radial_45_9818"
@@ -307,8 +307,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(19.185 25.9023) scale(4.64396 9.96517)"
         >
-          <stop stop-color="#FFE14F" />
-          <stop offset="1" stop-color="#FFE14F" stop-opacity="0" />
+          <stop stopColor="#FFE14F" />
+          <stop offset="1" stopColor="#FFE14F" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint3_radial_45_9818"
@@ -318,8 +318,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(16.5761 10.0333) rotate(90) scale(20.0228 12.9389)"
         >
-          <stop offset="0.902214" stop-color="#D87E83" stop-opacity="0" />
-          <stop offset="0.99262" stop-color="#D87E83" />
+          <stop offset="0.902214" stopColor="#D87E83" stopOpacity="0" />
+          <stop offset="0.99262" stopColor="#D87E83" />
         </radialGradient>
         <linearGradient
           id="paint4_linear_45_9818"
@@ -329,8 +329,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           y2="29.8186"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#EC9B2A" />
-          <stop offset="1" stop-color="#FFC043" />
+          <stop stopColor="#EC9B2A" />
+          <stop offset="1" stopColor="#FFC043" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_45_9818"
@@ -340,8 +340,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           y2="25.3249"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#D58191" />
-          <stop offset="1" stop-color="#D67F8D" stop-opacity="0" />
+          <stop stopColor="#D58191" />
+          <stop offset="1" stopColor="#D67F8D" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint6_radial_45_9818"
@@ -351,8 +351,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(9.54512 28.4738) rotate(-90) scale(2.58086 2.00356)"
         >
-          <stop stop-color="#FFE160" />
-          <stop offset="1" stop-color="#FFE160" stop-opacity="0" />
+          <stop stopColor="#FFE160" />
+          <stop offset="1" stopColor="#FFE160" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint7_radial_45_9818"
@@ -362,8 +362,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(10.505 24.7669) rotate(180) scale(0.931292 4.89838)"
         >
-          <stop stop-color="#DF7F02" />
-          <stop offset="1" stop-color="#DF7F02" stop-opacity="0" />
+          <stop stopColor="#DF7F02" />
+          <stop offset="1" stopColor="#DF7F02" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint8_radial_45_9818"
@@ -373,8 +373,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(8.88423 28.1467) rotate(-91.3531) scale(7.31765 8.00427)"
         >
-          <stop offset="0.807914" stop-color="#D8A96F" stop-opacity="0" />
-          <stop offset="1" stop-color="#D8A96F" />
+          <stop offset="0.807914" stopColor="#D8A96F" stopOpacity="0" />
+          <stop offset="1" stopColor="#D8A96F" />
         </radialGradient>
         <linearGradient
           id="paint9_linear_45_9818"
@@ -384,8 +384,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           y2="15.6411"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F2A430" />
-          <stop offset="1" stop-color="#FFCE27" />
+          <stop stopColor="#F2A430" />
+          <stop offset="1" stopColor="#FFCE27" />
         </linearGradient>
         <radialGradient
           id="paint10_radial_45_9818"
@@ -395,8 +395,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(7.17456 11.9434) scale(1.06838 4.40184)"
         >
-          <stop stop-color="#E69510" />
-          <stop offset="1" stop-color="#E69510" stop-opacity="0" />
+          <stop stopColor="#E69510" />
+          <stop offset="1" stopColor="#E69510" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint11_radial_45_9818"
@@ -406,8 +406,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(10.0769 14.8165) rotate(-90) scale(2.78495 2.38236)"
         >
-          <stop stop-color="#FFEE65" />
-          <stop offset="1" stop-color="#FFEE65" stop-opacity="0" />
+          <stop stopColor="#FFEE65" />
+          <stop offset="1" stopColor="#FFEE65" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint12_radial_45_9818"
@@ -417,8 +417,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(9.10469 14.7964) rotate(-91.3438) scale(7.16983 7.78893)"
         >
-          <stop offset="0.807914" stop-color="#D8A96F" stop-opacity="0" />
-          <stop offset="1" stop-color="#D8A96F" />
+          <stop offset="0.807914" stopColor="#D8A96F" stopOpacity="0" />
+          <stop offset="1" stopColor="#D8A96F" />
         </radialGradient>
         <linearGradient
           id="paint13_linear_45_9818"
@@ -428,8 +428,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           y2="20.9234"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F2A430" />
-          <stop offset="1" stop-color="#FFCE27" />
+          <stop stopColor="#F2A430" />
+          <stop offset="1" stopColor="#FFCE27" />
         </linearGradient>
         <radialGradient
           id="paint14_radial_45_9818"
@@ -439,8 +439,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(5.93102 16.8296) scale(1.125 5.04687)"
         >
-          <stop stop-color="#E69510" />
-          <stop offset="1" stop-color="#E69510" stop-opacity="0" />
+          <stop stopColor="#E69510" />
+          <stop offset="1" stopColor="#E69510" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint15_radial_45_9818"
@@ -450,8 +450,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(8.52586 20.0456) rotate(-90) scale(2.68226 2.10732)"
         >
-          <stop stop-color="#FFEE65" />
-          <stop offset="1" stop-color="#FFEE65" stop-opacity="0" />
+          <stop stopColor="#FFEE65" />
+          <stop offset="1" stopColor="#FFEE65" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint16_radial_45_9818"
@@ -461,8 +461,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(7.96344 20.1007) rotate(-91.2342) scale(8.22013 8.20208)"
         >
-          <stop offset="0.807914" stop-color="#D8A96F" stop-opacity="0" />
-          <stop offset="1" stop-color="#D8A96F" />
+          <stop offset="0.807914" stopColor="#D8A96F" stopOpacity="0" />
+          <stop offset="1" stopColor="#D8A96F" />
         </radialGradient>
         <linearGradient
           id="paint17_linear_45_9818"
@@ -472,8 +472,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           y2="25.3339"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F2A430" />
-          <stop offset="1" stop-color="#FFCE27" />
+          <stop stopColor="#F2A430" />
+          <stop offset="1" stopColor="#FFCE27" />
         </linearGradient>
         <radialGradient
           id="paint18_radial_45_9818"
@@ -483,8 +483,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(4.79022 19.8499) scale(2.38035 7.9345)"
         >
-          <stop stop-color="#E48747" />
-          <stop offset="1" stop-color="#E48747" stop-opacity="0" />
+          <stop stopColor="#E48747" />
+          <stop offset="1" stopColor="#E48747" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint19_radial_45_9818"
@@ -494,8 +494,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(8.49405 24.4313) rotate(-90) scale(2.6702 2.06121)"
         >
-          <stop stop-color="#FFEE65" />
-          <stop offset="1" stop-color="#FFEE65" stop-opacity="0" />
+          <stop stopColor="#FFEE65" />
+          <stop offset="1" stopColor="#FFEE65" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint20_radial_45_9818"
@@ -505,8 +505,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(7.94393 24.4861) rotate(-91.2127) scale(8.1831 8.02265)"
         >
-          <stop offset="0.807914" stop-color="#D8A96F" stop-opacity="0" />
-          <stop offset="1" stop-color="#D8A96F" />
+          <stop offset="0.807914" stopColor="#D8A96F" stopOpacity="0" />
+          <stop offset="1" stopColor="#D8A96F" />
         </radialGradient>
         <linearGradient
           id="paint21_linear_45_9818"
@@ -516,8 +516,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           y2="29.3659"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFF598" />
-          <stop offset="1" stop-color="#FFC99F" />
+          <stop stopColor="#FFF598" />
+          <stop offset="1" stopColor="#FFC99F" />
         </linearGradient>
         <radialGradient
           id="paint22_radial_45_9818"
@@ -527,8 +527,8 @@ function ThumbsDown3DIcon({ className }: { className: string }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(17.8895 27.0722) rotate(34.279) scale(1.81263 3.95649)"
         >
-          <stop offset="0.549892" stop-color="#F4BBC8" stop-opacity="0" />
-          <stop offset="1" stop-color="#F4BBC8" />
+          <stop offset="0.549892" stopColor="#F4BBC8" stopOpacity="0" />
+          <stop offset="1" stopColor="#F4BBC8" />
         </radialGradient>
       </defs>
     </svg>

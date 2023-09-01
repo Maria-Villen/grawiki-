@@ -66,8 +66,8 @@ const Pinched3DIcon = ({ className }: { className: string }) => {
         <path
           d="M26.3462 12.2479C26.8599 17.1981 23.3107 22.335 19.4347 23.5025"
           stroke="url(#paint11_linear_45_9808)"
-          stroke-width="2"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeLinecap="round"
         />
       </g>
       <defs>
@@ -78,9 +78,9 @@ const Pinched3DIcon = ({ className }: { className: string }) => {
           width="26.58"
           height="27.521"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -113,9 +113,9 @@ const Pinched3DIcon = ({ className }: { className: string }) => {
           width="11.9615"
           height="16.2549"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -135,8 +135,8 @@ const Pinched3DIcon = ({ className }: { className: string }) => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(18.7187 4.21875) rotate(-4.86899) scale(4.23403 5.74969)"
         >
-          <stop stop-color="#D59430" />
-          <stop offset="1" stop-color="#D59430" stop-opacity="0" />
+          <stop stopColor="#D59430" />
+          <stop offset="1" stopColor="#D59430" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint1_radial_45_9808"
@@ -146,8 +146,8 @@ const Pinched3DIcon = ({ className }: { className: string }) => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(23.4773 10.5575) rotate(-32.25) scale(4.48566 10.4433)"
         >
-          <stop stop-color="#D59430" />
-          <stop offset="0.948403" stop-color="#D59430" stop-opacity="0" />
+          <stop stopColor="#D59430" />
+          <stop offset="0.948403" stopColor="#D59430" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint2_radial_45_9808"
@@ -157,8 +157,8 @@ const Pinched3DIcon = ({ className }: { className: string }) => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(26.4129 23.5643) rotate(-65.731) scale(8.57053 2.66744)"
         >
-          <stop stop-color="#D59430" />
-          <stop offset="1" stop-color="#D59430" stop-opacity="0" />
+          <stop stopColor="#D59430" />
+          <stop offset="1" stopColor="#D59430" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint3_radial_45_9808"
@@ -168,8 +168,8 @@ const Pinched3DIcon = ({ className }: { className: string }) => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(31.1875 17.5937) rotate(-125.623) scale(19.5296 10.2943)"
         >
-          <stop offset="0.91355" stop-color="#D6B05C" stop-opacity="0" />
-          <stop offset="1" stop-color="#D6B05C" />
+          <stop offset="0.91355" stopColor="#D6B05C" stopOpacity="0" />
+          <stop offset="1" stopColor="#D6B05C" />
         </radialGradient>
         <radialGradient
           id="paint4_radial_45_9808"
@@ -179,8 +179,8 @@ const Pinched3DIcon = ({ className }: { className: string }) => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(-0.312498 25.0625) rotate(-23.6561) scale(30.9972 29.5828)"
         >
-          <stop offset="0.86904" stop-color="#FFE749" stop-opacity="0" />
-          <stop offset="1" stop-color="#FFE749" />
+          <stop offset="0.86904" stopColor="#FFE749" stopOpacity="0" />
+          <stop offset="1" stopColor="#FFE749" />
         </radialGradient>
         <radialGradient
           id="paint5_radial_45_9808"
@@ -190,8 +190,8 @@ const Pinched3DIcon = ({ className }: { className: string }) => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(18.9677 17.8052) rotate(122.005) scale(6.60842 4.63172)"
         >
-          <stop offset="0.140824" stop-color="#FFE031" />
-          <stop offset="1" stop-color="#FFE031" stop-opacity="0" />
+          <stop offset="0.140824" stopColor="#FFE031" />
+          <stop offset="1" stopColor="#FFE031" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint6_radial_45_9808"
@@ -201,8 +201,8 @@ const Pinched3DIcon = ({ className }: { className: string }) => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(2.2493 23.8294) scale(10.414 5.43789)"
         >
-          <stop stop-color="#FFD231" />
-          <stop offset="1" stop-color="#FFD231" stop-opacity="0" />
+          <stop stopColor="#FFD231" />
+          <stop offset="1" stopColor="#FFD231" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint7_radial_45_9808"
@@ -212,8 +212,8 @@ const Pinched3DIcon = ({ className }: { className: string }) => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(9.02072 16.7395) rotate(59.8722) scale(4.09374 4.1866)"
         >
-          <stop stop-color="#E19B38" />
-          <stop offset="1" stop-color="#E19B38" stop-opacity="0" />
+          <stop stopColor="#E19B38" />
+          <stop offset="1" stopColor="#E19B38" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint8_radial_45_9808"
@@ -223,8 +223,8 @@ const Pinched3DIcon = ({ className }: { className: string }) => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(20.5625 6.87503) rotate(123.389) scale(3.29358 5.05169)"
         >
-          <stop stop-color="#FFE53F" />
-          <stop offset="1" stop-color="#FFE53F" stop-opacity="0" />
+          <stop stopColor="#FFE53F" />
+          <stop offset="1" stopColor="#FFE53F" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint9_radial_45_9808"
@@ -234,8 +234,8 @@ const Pinched3DIcon = ({ className }: { className: string }) => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(19.9687 13.6563) rotate(0.711713) scale(5.03164 5.22107)"
         >
-          <stop stop-color="#E78923" />
-          <stop offset="1" stop-color="#E78923" stop-opacity="0" />
+          <stop stopColor="#E78923" />
+          <stop offset="1" stopColor="#E78923" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint10_radial_45_9808"
@@ -245,8 +245,8 @@ const Pinched3DIcon = ({ className }: { className: string }) => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(19.6214 10.2399) rotate(-17.6501) scale(3.23442 4.10889)"
         >
-          <stop offset="0.360205" stop-color="#DA7834" />
-          <stop offset="1" stop-color="#DA7834" stop-opacity="0" />
+          <stop offset="0.360205" stopColor="#DA7834" />
+          <stop offset="1" stopColor="#DA7834" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint11_linear_45_9808"
@@ -256,8 +256,8 @@ const Pinched3DIcon = ({ className }: { className: string }) => {
           y2="26.2506"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFE338" />
-          <stop offset="1" stop-color="#FFE338" stop-opacity="0" />
+          <stop stopColor="#FFE338" />
+          <stop offset="1" stopColor="#FFE338" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
